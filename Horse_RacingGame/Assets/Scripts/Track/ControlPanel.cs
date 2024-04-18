@@ -48,18 +48,22 @@ public class ControlPanel : MonoBehaviour
 
     public void Plus()
     {
+        callback.AddAmount(1, modifier);
+
         betAmount += 1;
         BetDisplay(betAmount);
 
-        callback.AddAmount(betAmount, modifier);
     }
 
     public void Minus()
     {
+        if (betAmount <= 0)
+            return;
+
+        callback.SubstractAmount(1, modifier);
+
         betAmount -= 1;
         BetDisplay(betAmount);
-
-        callback.SubstractAmount(betAmount,modifier);
     }
 
     #endregion

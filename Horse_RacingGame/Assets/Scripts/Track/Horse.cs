@@ -5,10 +5,6 @@ using UnityEngine;
 using UnityEngine.Splines;
 using DG.Tweening;
 
-public interface HorseDelegate
-{
-    public void ReachedAction(Horse.Hero hero);
-}
 
 [RequireComponent(typeof(SplineAnimate))]
 [RequireComponent (typeof(Animator))]
@@ -26,8 +22,6 @@ public class Horse : MonoBehaviour
 
     [SerializeField] string _horsName;
     string HorseName => _horsName;
-
-    public HorseDelegate callback;
 
     private void OnEnable()
     {
@@ -49,13 +43,16 @@ public class Horse : MonoBehaviour
 
     private void OnSplineUpdate(Vector3 vector, Quaternion quaternion)
     {
-       if((int)splineAnimate.ElapsedTime == (int)splineAnimate.duration)
-       {
-            Debug.Log("Stopped");
+        float time = Mathf.Round(splineAnimate.ElapsedTime * 10f) / 10f;
+        float duration = Mathf.Round(splineAnimate.duration * 10f) / 10f;
 
-            callback.ReachedAction(_hero);
-            return;
-       }
+       // if (time == duration)
+       //{
+       //     Debug.Log("Stopped");
+
+       //     callback.ReachedAction(_hero);
+       //     return;
+       //}
     }
 
     public void SubscribeAnimateEvent(bool enable)

@@ -28,12 +28,17 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     private void Start()
     {
         Actions.RestartAction += RestartAction;
-
-        amount_Text.text = "Amount: " + amount.ToString();
+        Actions.WalletAmount += UpdateWalletAction;
 
         horseTrackManager.callback = this;
 
         //Actions.UpdateAmount += UpdateAmount;
+    }
+
+    private void UpdateWalletAction(float obj)
+    {
+        amount = obj;
+        amount_Text.text = "Amount: " + amount.ToString();
     }
 
     /// <summary>

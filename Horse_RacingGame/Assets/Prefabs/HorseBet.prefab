@@ -1924,7 +1924,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2560737388264358228}
         m_TargetAssemblyTypeName: ControlPanel, Assembly-CSharp
-        m_MethodName: Empty
+        m_MethodName: Minus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

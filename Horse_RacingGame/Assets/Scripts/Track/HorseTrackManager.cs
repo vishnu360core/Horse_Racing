@@ -8,7 +8,7 @@ public interface HorseTrackDelegate
 }
 
 
-public class HorseTrackManager : MonoBehaviour,HorseDelegate
+public class HorseTrackManager : MonoBehaviour
 {
     [Header("Horse List:")]
     [SerializeField] List<Horse> _horses = new List<Horse>();
@@ -17,10 +17,9 @@ public class HorseTrackManager : MonoBehaviour,HorseDelegate
 
     private void Start()
     {
-        for (int i = 0; i < _horses.Count; i++)
-            _horses[i].callback = this;
-
+       
         Actions.StartAction += PlayAction;
+        Actions.ReachedDestinmation += ReachedAction;
     }
 
     public void PlannedTrackAction()
