@@ -2,15 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public interface HorseTrackDelegate
+{
+    void RaceFinished(Horse.Hero hero);
+}
+
+
 public class HorseTrackManager : MonoBehaviour,HorseDelegate
 {
     [Header("Horse List:")]
     [SerializeField] List<Horse> _horses = new List<Horse>();
 
+    public HorseTrackDelegate callback;
+
     private void Start()
     {
         for (int i = 0; i < _horses.Count; i++)
             _horses[i].callback = this;
+
+        Actions.StartAction += PlayAction;
     }
 
     public void PlannedTrackAction()
@@ -18,9 +28,15 @@ public class HorseTrackManager : MonoBehaviour,HorseDelegate
 
     }
 
-    public void ReachedAction(string name)
+    public void PlayAction()
     {
-        Debug.Log("Won >>>" + name);
+         for(int i=0; i < _horses.Count;i++)
+            _horses[i].PlayAction();
+    }
+
+    public void ReachedAction(Horse.Hero hero)
+    {
+        Debug.Log("Won >>>" + hero);
 
         for (int i = 0; i < _horses.Count; i++)
         {
@@ -28,7 +44,9 @@ public class HorseTrackManager : MonoBehaviour,HorseDelegate
             _horses[i].SubscribeAnimateEvent(false);
         }
 
-        ResetAction();
+        callback.RaceFinished(hero);
+       
+       // ResetAction();
     }
 
     void ResetAction()

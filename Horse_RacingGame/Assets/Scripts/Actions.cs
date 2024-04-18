@@ -6,4 +6,8 @@ using UnityEngine;
 public static class Actions
 {
     public static Action RestartAction;
+
+    public static Action StartAction;
+
+    public static Action<float,float> UpdateAmount;
 }

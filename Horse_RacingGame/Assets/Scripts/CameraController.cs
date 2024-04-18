@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using UnityEngine.Splines;
 using DG.Tweening;
+using System;
 
 public class CameraController : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         Actions.RestartAction += ResetAction;
+        Actions.StartAction += StartAction;
+    }
+
+    private void StartAction()
+    {
+        _targetCamera.Play();
     }
 
     void ResetAction()

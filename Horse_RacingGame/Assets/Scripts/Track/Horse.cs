@@ -7,13 +7,18 @@ using DG.Tweening;
 
 public interface HorseDelegate
 {
-    public void ReachedAction(string name);
+    public void ReachedAction(Horse.Hero hero);
 }
 
 [RequireComponent(typeof(SplineAnimate))]
 [RequireComponent (typeof(Animator))]
 public class Horse : MonoBehaviour
 {
+    public enum Hero { Blazer,Wrangler,Sheriff,Kentucky,Diesel,Tennessee,LadyBird,Sassy}
+
+    [SerializeField] Hero _hero;
+    public Hero GetHero => _hero;
+
     SplineAnimate splineAnimate;
     Animator animator;
 
@@ -31,8 +36,15 @@ public class Horse : MonoBehaviour
 
         splineAnimate.onUpdated += OnSplineUpdate;
 
+       
+
         //splineAnimate.MaxSpeed = 0.2f;
       //  ChangeRankPosition(3);
+    }
+
+    public void PlayAction()
+    {
+        splineAnimate.Play();
     }
 
     private void OnSplineUpdate(Vector3 vector, Quaternion quaternion)
@@ -41,7 +53,7 @@ public class Horse : MonoBehaviour
        {
             Debug.Log("Stopped");
 
-            callback.ReachedAction(_horsName);
+            callback.ReachedAction(_hero);
             return;
        }
     }
