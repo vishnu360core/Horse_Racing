@@ -15,6 +15,7 @@ public class FinishLine : MonoBehaviour
     private void OnEnable()
     {
         Actions.RestartAction += RestartAction;
+        Actions.StartAction += RestartAction;
     }
 
     /// <summary>
