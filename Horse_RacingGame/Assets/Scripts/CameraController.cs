@@ -25,6 +25,8 @@ public class CameraController : MonoBehaviour
 
     private void StartAction()
     {
+        ResetAction();
+
         _targetCamera.Play();
     }
 
@@ -33,7 +35,8 @@ public class CameraController : MonoBehaviour
         _targetCamera.ElapsedTime = 0;
 
         _targetCamera.Play();
-        _cameraTransform.localPosition = _resetCameraTransform.localPosition;
+
+        //_cameraTransform.localPosition = _resetCameraTransform.localPosition;
     }
 }
 

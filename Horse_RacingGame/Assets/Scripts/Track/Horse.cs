@@ -84,7 +84,6 @@ public class Horse : MonoBehaviour
     public void ResetAction()
     {
         splineAnimate.Restart(false);
-        splineAnimate.MaxSpeed = 0.2f;
 
         SubscribeAnimateEvent(true);
     }

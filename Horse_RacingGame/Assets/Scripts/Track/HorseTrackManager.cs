@@ -17,18 +17,16 @@ public class HorseTrackManager : MonoBehaviour
 
     private void Start()
     {
-       
         Actions.StartAction += PlayAction;
         Actions.ReachedDestinmation += ReachedAction;
-    }
 
-    public void PlannedTrackAction()
-    {
-
+        Actions.RestartAction += RestartAction;
     }
 
     public void PlayAction()
     {
+        RestartAction();
+
          for(int i=0; i < _horses.Count;i++)
             _horses[i].PlayAction();
     }
@@ -48,15 +46,13 @@ public class HorseTrackManager : MonoBehaviour
        // ResetAction();
     }
 
-    void ResetAction()
+    void RestartAction()
     {
         for (int i = 0; i < _horses.Count; i++)
             _horses[i].ResetAction();
 
-        for (int i = 0; i < _horses.Count; i++)
-            _horses[i].Play(true);
-
-        Actions.RestartAction();
+        //for (int i = 0; i < _horses.Count; i++)
+        //    _horses[i].Play(true);
     }
 
 }

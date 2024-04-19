@@ -49,6 +49,17 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
         _loseAmount -= amount;  
     }
 
+    public void ResetAction()
+    {
+        winPanel.Empty();
+        placePanel.Empty();
+        showPanel.Empty();
+
+        _setAmount  =0.0f;
+        _loseAmount=0.0f;
+    }
+
+
     string DisplayName()
     {
         switch (heroType) 

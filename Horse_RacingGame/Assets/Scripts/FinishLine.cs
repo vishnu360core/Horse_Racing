@@ -27,6 +27,8 @@ public class FinishLine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        boxCollider.enabled = false;
+
         Debug.LogWarning("Reached >>>" + other.GetComponent<Horse>().GetHero);
 
         Actions.ReachedDestinmation(other.GetComponent<Horse>().GetHero);

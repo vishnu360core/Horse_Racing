@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     [Header("UI Settings:")]
     [SerializeField] TMP_Text amount_Text;
     [SerializeField] GameObject _betPanel;
+    [SerializeField] GameObject _reachedPanel;
 
     [Header("Bet_Blocks:")]
     [SerializeField] List<HorseBetBlock> betBlocks = new List<HorseBetBlock>();
@@ -27,7 +28,6 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     private void Start()
     {
-        Actions.RestartAction += RestartAction;
         Actions.WalletAmount += UpdateWalletAction;
 
         horseTrackManager.callback = this;
@@ -37,8 +37,10 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     private void UpdateWalletAction(float obj)
     {
+        Debug.Log("Fetched wallet balance... ");
+
         amount = obj;
-        amount_Text.text = "Amount: " + amount.ToString();
+        amount_Text.text = "Amount: " + amount.ToString("F2");
     }
 
     /// <summary>
@@ -47,43 +49,71 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     /// <param name="hero"></param>
     public void RaceFinished(Horse.Hero hero)
     {
+        _reachedPanel.SetActive(true);
+
+        setAmount = 0;
+        loseAmount = 0;
+
         foreach (HorseBetBlock bet in betBlocks)
         {
             if(bet.HeroType == hero)
             {
-                amount += bet.SetAmount;
+                setAmount += bet.SetAmount;
             }
             else
             {
-                amount -= bet.LoseAmount;
+                setAmount -= bet.LoseAmount;
+                loseAmount += bet.LoseAmount;
             }
         }
+
+
+        Debug.Log("Set>>> " + setAmount);
+        Debug.Log("lose >>" + loseAmount);
+
+        float tempAmount = amount + setAmount - loseAmount;
+
+        Debug.Log("TempAmount >>>" + tempAmount);
+        amount_Text.text = "Amount: " + tempAmount.ToString("F2");
+
+        if (tempAmount > amount)
+            WalletConnector.Instance.CreditAmount(setAmount);
+        else
+            WalletConnector.Instance.DeductAmount(loseAmount);
     }
 
     public void PlayAction()
     {
+        _reachedPanel.SetActive(false);
         _betPanel.SetActive(false);
 
-        for(int i = 0; i < betBlocks.Count; i++)
-        {
-            setAmount += betBlocks[i].SetAmount;
-            loseAmount += betBlocks[i].LoseAmount;
-        } 
-
-       Actions.StartAction();
+         Actions.StartAction();
     }
 
     public void ResetAction()
     {
+        for (int i = 0; i < betBlocks.Count; i++)
+            betBlocks[i].ResetAction();
 
     }
 
     /// <summary>
     /// Action implemented on restart game
     /// </summary>
-    private void RestartAction()
+    public void RestartAction()
     {
-        
+        _reachedPanel.SetActive(false);
+        _betPanel.SetActive(true);
+
+        setAmount = 0;
+        loseAmount = 0;
+
+        for (int i = 0; i < betBlocks.Count; i++)
+            betBlocks[i].ResetAction();
+
+        Actions.RestartAction();
+
+        WalletConnector.Instance.RequestBalance();
     }
 }
  
