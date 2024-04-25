@@ -23,6 +23,11 @@ public class Horse : MonoBehaviour
     [SerializeField] string _horsName;
     string HorseName => _horsName;
 
+    float transitionDuration = 2.0f;
+
+    float currentMaxSpeed;
+    float targetMaxSpeed;
+
     private void OnEnable()
     {
         splineAnimate = this.GetComponent<SplineAnimate>();
@@ -66,6 +71,8 @@ public class Horse : MonoBehaviour
             splineAnimate.onUpdated -= OnSplineUpdate;
     }
 
+
+
     /// <summary>
     /// Play the spline animate
     /// </summary>
@@ -75,6 +82,42 @@ public class Horse : MonoBehaviour
             splineAnimate.Play();
         else
             splineAnimate.Pause();  
+    }
+
+
+    public void ChangeSpeed(float speed)
+    {
+        targetMaxSpeed = speed;
+
+        currentMaxSpeed = splineAnimate.MaxSpeed;
+        splineAnimate.MaxSpeed = speed;
+
+        StartCoroutine(ChangeMaxSpeedSmoothly());
+    }
+
+    IEnumerator ChangeMaxSpeedSmoothly()
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < transitionDuration)
+        {
+            // Calculate the interpolation factor (0 to 1)
+            float t = elapsedTime / transitionDuration;
+
+            // Interpolate the current max speed towards the target max speed
+            float interpolatedSpeed = Mathf.Lerp(currentMaxSpeed, targetMaxSpeed, t);
+
+            // Update the max speed of the spline animator
+            splineAnimate.MaxSpeed = interpolatedSpeed;
+
+            // Increment the elapsed time
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+
+        // Set the max speed to the target max speed once the transition is complete
+        splineAnimate.MaxSpeed = targetMaxSpeed;
     }
 
 

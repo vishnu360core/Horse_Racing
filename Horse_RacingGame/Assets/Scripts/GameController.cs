@@ -62,11 +62,15 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
             }
             else
             {
-                setAmount -= bet.LoseAmount;
+                if(setAmount >0)
+                 setAmount -= bet.LoseAmount;
+
                 loseAmount += bet.LoseAmount;
             }
         }
 
+        if(setAmount < 0)
+            setAmount = 0;
 
         Debug.Log("Set>>> " + setAmount);
         Debug.Log("lose >>" + loseAmount);

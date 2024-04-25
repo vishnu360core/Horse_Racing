@@ -50,5 +50,6 @@ mergeInto(LibraryManager.library, {
         console.error('nethereumUnityInstance is not defined');
       }
     }
- },
+ }
+ 
 });

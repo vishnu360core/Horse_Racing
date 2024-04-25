@@ -21,6 +21,14 @@ public class WalletConnector : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void ConnectWalletAndRetrieveAddress();
 
+    [DllImport("__Internal")]
+    private static extern void Deduct(string amountInEther);
+
+    [DllImport("__Internal")]
+    private static extern void Credit(string amountInEther);
+
+
+
     WebSocket websocket;
 
     WebSocket webSocket_Credit;
@@ -37,10 +45,10 @@ public class WalletConnector : MonoBehaviour
     private void Awake()
     { 
         if(instance == null)
-            instance = this;    
-
-
+            instance = this;
     }
+
+
 
     async void Start()
     {
@@ -59,6 +67,25 @@ public class WalletConnector : MonoBehaviour
         webSocket_Credit.OnError += (e) =>
         {
             Debug.Log("Credit Error! " + e);
+        };
+
+        webSocket_Deduct.OnMessage += (bytes) =>
+        {
+            string str = Encoding.UTF8.GetString(bytes);
+
+            Debug.Log("MATICS >>" + str);
+
+
+            Deduct(str);
+        };
+
+        webSocket_Credit.OnMessage += (bytes) =>
+        {
+            string str = Encoding.UTF8.GetString(bytes);
+
+            Debug.Log("Credit MATICS >>" + str);
+
+            Credit(str);
         };
 
         webSocket_Credit.OnClose += (e) =>
@@ -94,6 +121,8 @@ public class WalletConnector : MonoBehaviour
             _balanceDollar = float.Parse(str);
 
             Debug.Log("Balance >>" + _balanceDollar);
+
+           
 
             Actions.WalletAmount(_balanceDollar);
         };
@@ -147,6 +176,7 @@ public class WalletConnector : MonoBehaviour
         _currentAddress = address;
 
         Debug.Log("Wallet Address: " + address);
+        //ContractConnect();
 
         RequestBalance();
     }
@@ -183,6 +213,21 @@ public class WalletConnector : MonoBehaviour
     }
 
     #region TRANSACTION
+
+    // This method will be called by JavaScript to handle transaction success
+    public void OnTransactionSent(string txHash)
+    {
+        Debug.Log("Transaction sent! Hash: " + txHash);
+        // Handle the transaction success here
+    }
+
+    // This method will be called by JavaScript to handle transaction errors
+    public void OnTransactionError(string errorMessage)
+    {
+        Debug.LogError("Failed to send transaction: " + errorMessage);
+        // Handle the transaction error here
+    }
+
     public void CreditAmount(float amount)
     {
        webSocket_Credit.SendText(amount.ToString());
