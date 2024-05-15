@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - APIHandler
+    - AudioData
+    - AudioManager
     - CameraController
     - ControlPanel
     - FinishLine
@@ -65,8 +67,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -86,6 +90,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
+    Assembly-CSharp:
+    - AudioClipData
     Cinemachine:
     - Cinemachine.CinemachineBlendDefinition
     - Cinemachine.CinemachineBrain/BrainEvent
@@ -473,6 +479,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -500,63 +510,67 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18232}
     - Class: 114
-      Script: {instanceID: 19230}
+      Script: {instanceID: 19232}
     - Class: 114
-      Script: {instanceID: 19890}
+      Script: {instanceID: 19892}
     - Class: 114
-      Script: {instanceID: 20208}
+      Script: {instanceID: 20210}
     - Class: 114
-      Script: {instanceID: 20978}
+      Script: {instanceID: 20980}
     - Class: 114
-      Script: {instanceID: 21148}
+      Script: {instanceID: 21056}
     - Class: 114
-      Script: {instanceID: 21618}
+      Script: {instanceID: 21152}
     - Class: 114
-      Script: {instanceID: 21748}
+      Script: {instanceID: 21622}
     - Class: 114
-      Script: {instanceID: 22198}
+      Script: {instanceID: 21752}
     - Class: 114
-      Script: {instanceID: 23746}
+      Script: {instanceID: 22202}
     - Class: 114
-      Script: {instanceID: 24044}
+      Script: {instanceID: 23750}
     - Class: 114
-      Script: {instanceID: 24188}
+      Script: {instanceID: 24048}
     - Class: 114
-      Script: {instanceID: 24274}
+      Script: {instanceID: 24192}
     - Class: 114
-      Script: {instanceID: 24408}
+      Script: {instanceID: 24278}
     - Class: 114
-      Script: {instanceID: 24522}
+      Script: {instanceID: 24412}
     - Class: 114
-      Script: {instanceID: 25524}
+      Script: {instanceID: 24526}
     - Class: 114
-      Script: {instanceID: 25632}
+      Script: {instanceID: 25528}
     - Class: 114
-      Script: {instanceID: 25980}
+      Script: {instanceID: 25636}
     - Class: 114
-      Script: {instanceID: 26732}
+      Script: {instanceID: 25984}
     - Class: 114
-      Script: {instanceID: 27248}
+      Script: {instanceID: 26736}
     - Class: 114
-      Script: {instanceID: 27488}
+      Script: {instanceID: 27058}
     - Class: 114
-      Script: {instanceID: 27690}
+      Script: {instanceID: 27254}
     - Class: 114
-      Script: {instanceID: 27766}
+      Script: {instanceID: 27494}
     - Class: 114
-      Script: {instanceID: 27770}
+      Script: {instanceID: 27696}
     - Class: 114
-      Script: {instanceID: 28408}
+      Script: {instanceID: 27772}
     - Class: 114
-      Script: {instanceID: 28570}
+      Script: {instanceID: 27776}
     - Class: 114
-      Script: {instanceID: 28630}
+      Script: {instanceID: 28414}
     - Class: 114
-      Script: {instanceID: 28804}
+      Script: {instanceID: 28576}
     - Class: 114
-      Script: {instanceID: 29518}
+      Script: {instanceID: 28636}
     - Class: 114
-      Script: {instanceID: 29622}
+      Script: {instanceID: 28810}
+    - Class: 114
+      Script: {instanceID: 29524}
+    - Class: 114
+      Script: {instanceID: 29628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -656,7 +670,7 @@ ScriptsOnlyBuild:
     className: UnityOnDropMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9e0df521346ce1305434bf6e5b24b5a7
+      Hash: d87eb76da1e8c65963a7dc8667f4fbdc
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: HorseTrackManager
@@ -1152,6 +1166,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: d68853ab029ded5c43fcea6b787f949d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioData
   - hash:
       serializedVersion: 2
       Hash: 0b6f516fe61e6c5667018e4c2e2a0d9d
@@ -1902,6 +1922,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: ea6282621983f9ec5efd3c21e3c964c1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: 1ce63d97d1ca25cba2d91d5f32fd5f79

@@ -7,9 +7,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-using NativeWebSocket;
 using System.Security.Cryptography;
 using System.Text;
+using Best.HTTP.SecureProtocol.Org.BouncyCastle.Utilities;
+using UnityEditor.VersionControl;
 
 public class WalletConnector : MonoBehaviour
 {
@@ -19,25 +20,85 @@ public class WalletConnector : MonoBehaviour
 
 
     [DllImport("__Internal")]
-    private static extern void ConnectWalletAndRetrieveAddress();
+    private static extern void WebSocketInit(string url);
 
     [DllImport("__Internal")]
-    private static extern void Deduct(string amountInEther);
-
-    [DllImport("__Internal")]
-    private static extern void Credit(string amountInEther);
-
-
-
-    WebSocket websocket;
-
-    WebSocket webSocket_Credit;
-    WebSocket webSocket_Deduct;
+    private static extern void Send(int index, string message);
 
     float _balanceDollar;
     string _currentAddress;
 
     [SerializeField] GameObject walletConnectPanel;
+
+    void ConnectCallBack(int index)
+    {
+        switch(index) 
+        {
+            case 0:
+
+                Debug.Log("Game Connection open!");
+                break;
+
+            case 1:
+
+                Debug.Log("Wallet Connection open!");
+                break;
+
+            case 2:
+
+                Debug.Log("Credit Connection open!");
+                break;
+
+
+            case 3:
+
+                Debug.Log("Deduct Connection open!");
+                break;
+        }
+    }
+
+    void ReceiveMessage(string data)
+    {
+        string[] parts;
+        string message;
+        string index;
+
+        parts = data.Split('@');
+        message = parts[0];
+        index = parts[1];
+
+        Debug.Log("Index :" + index + " " + message);
+
+        if (message == "Ping")
+            return;
+
+        switch (int.Parse(index))
+        {
+            case 0:
+
+                break;
+
+            case 1:
+                _balanceDollar = float.Parse(message);
+
+                Debug.Log("Balance >>" + _balanceDollar);
+
+                Actions.WalletAmount(_balanceDollar);
+                break;
+
+            case 2:
+
+                Debug.Log("Credit MATICS >>" + message);
+                break;
+
+
+            case 3:
+
+                Debug.Log("DEDUCT MATICS >>" + message);
+                break;
+        }
+    }
+
 
     /// <summary>
     /// Action implemented on awake
@@ -48,119 +109,125 @@ public class WalletConnector : MonoBehaviour
             instance = this;
     }
 
-
-
-    async void Start()
+     void Start()
     {
-        websocket = new WebSocket("ws://localhost:9010");
+        WebSocketInit("ws://localhost:6060"); // 0 Game 
+        WebSocketInit("ws://localhost:6050");// 1 Wallet
+        WebSocketInit("ws://localhost:6040");// 2 Credit
+        WebSocketInit("ws://localhost:6030");// 3 Deduct
 
-        webSocket_Credit = new WebSocket("ws://localhost:9020");
-        webSocket_Deduct = new WebSocket("ws://localhost:9030");
+        //ConnectWalletAndRetrieveAddress();
 
-        ConnectWalletAndRetrieveAddress();
+        //#region WEB_CREDIT
 
-        webSocket_Credit.OnOpen += () =>
-        {
-            Debug.Log("Credit Connection open!");
-        };
+        //webSocket_Credit.OnOpen += () =>
+        //{
+        //    Debug.Log("Credit Connection open!");
+        //};
 
-        webSocket_Credit.OnError += (e) =>
-        {
-            Debug.Log("Credit Error! " + e);
-        };
+        //webSocket_Credit.OnClose += (e) =>
+        //{
+        //    Debug.Log("Credit Connection closed!");
 
-        webSocket_Deduct.OnMessage += (bytes) =>
-        {
-            string str = Encoding.UTF8.GetString(bytes);
+        //    Console.WriteLine("closed");
+        //};
 
-            Debug.Log("MATICS >>" + str);
+        //webSocket_Credit.OnError += (e) =>
+        //{
+        //    Debug.Log("Credit Error! " + e);
+        //};
 
+        //webSocket_Credit.OnMessage += (bytes) =>
+        //{
+        //    string str = Encoding.UTF8.GetString(bytes);
 
-            Deduct(str);
-        };
+        //    Debug.Log("Credit MATICS >>" + str);
 
-        webSocket_Credit.OnMessage += (bytes) =>
-        {
-            string str = Encoding.UTF8.GetString(bytes);
+        //    Credit(_currentAddress, str);
+        //};
 
-            Debug.Log("Credit MATICS >>" + str);
+        //#endregion
 
-            Credit(str);
-        };
+        //#region WEB_DEDUCT
 
-        webSocket_Credit.OnClose += (e) =>
-        {
-            Debug.Log("Credit Connection closed!");
+        //webSocket_Deduct.OnMessage += (bytes) =>
+        //{
+        //    string str = Encoding.UTF8.GetString(bytes);
 
-            Console.WriteLine("closed");
-        };
-
-
-        webSocket_Deduct.OnOpen += () =>
-        {
-            Debug.Log("deduct Connection open!");
-        };
-
-        webSocket_Deduct.OnError += (e) =>
-        {
-            Debug.Log("Deduct Error! " + e);
-        };
-
-        webSocket_Deduct.OnClose += (e) =>
-        {
-            Debug.Log("Deduct Connection closed!");
-
-            Console.WriteLine("closed");
-        };
+        //    Debug.Log("MATICS >>" + str);
 
 
-        websocket.OnMessage += (bytes) =>
-        {
-            string str = Encoding.UTF8.GetString(bytes);
+        //    Deduct(_currentAddress,str);
+        //};
 
-            _balanceDollar = float.Parse(str);
+        //webSocket_Deduct.OnOpen += () =>
+        //{
+        //    Debug.Log("deduct Connection open!");
+        //};
 
-            Debug.Log("Balance >>" + _balanceDollar);
+        //webSocket_Deduct.OnError += (e) =>
+        //{
+        //    Debug.Log("Deduct Error! " + e);
+        //};
+
+        //webSocket_Deduct.OnClose += (e) =>
+        //{
+        //    Debug.Log("Deduct Connection closed!");
+
+        //    Console.WriteLine("closed");
+        //};
+
+        //#endregion
+
+        //#region WEB_WALLET
+
+        //websocket_Wallet.OnMessage += (bytes) =>
+        //{
+        //    string str = Encoding.UTF8.GetString(bytes);
+
+        //    _balanceDollar = float.Parse(str);
+
+        //    Debug.Log("Balance >>" + _balanceDollar);
 
            
 
-            Actions.WalletAmount(_balanceDollar);
-        };
+        //    Actions.WalletAmount(_balanceDollar);
+        //};
 
 
-        websocket.OnOpen += () =>
-        {
-            Debug.Log("Connection open!");
-        };
+        //websocket_Wallet.OnOpen += () =>
+        //{
+        //    Debug.Log("Connection open!");
+        //};
 
-        websocket.OnError += (e) =>
-        {
-            Debug.Log("Error! " + e);
-        };
+        //websocket_Wallet.OnError += (e) =>
+        //{
+        //    Debug.Log("Error! " + e);
+        //};
 
-        websocket.OnClose += (e) =>
-        {
-            Debug.Log("Connection closed!");
+        //websocket_Wallet.OnClose += (e) =>
+        //{
+        //    Debug.Log("Connection closed!");
 
-            Console.WriteLine("closed");
-        };
+        //    Console.WriteLine("closed");
+        //};
 
-        websocket.OnMessage += (bytes) =>
-        {
-            string str = Encoding.UTF8.GetString(bytes);
+        //websocket_Wallet.OnMessage += (bytes) =>
+        //{
+        //    string str = Encoding.UTF8.GetString(bytes);
 
-           _balanceDollar = float.Parse(str);
+        //   _balanceDollar = float.Parse(str);
 
-            Debug.Log("Balance >>" + _balanceDollar);
+        //    Debug.Log("Balance >>" + _balanceDollar);
 
-            Actions.WalletAmount(_balanceDollar);         
-        };
+        //    Actions.WalletAmount(_balanceDollar);         
+        //};
 
-         await websocket.Connect();
-         await webSocket_Credit.Connect();
-         await webSocket_Deduct.Connect();
+        //#endregion
 
-        // Call the JavaScript function to connect the wallet and retrieve the address
+        //await websocket_Wallet.Connect();
+        //await webSocket_Credit.Connect();
+        //await webSocket_Deduct.Connect();
     }
 
     #region WALLET
@@ -201,15 +268,18 @@ public class WalletConnector : MonoBehaviour
     /// <param name="jsonString"></param>
     public IEnumerator SaveToNet(string message)
     {
-        Debug.Log("WebSocket State >>>> " + websocket.State);
+        yield return null;
+        //Debug.Log("WebSocket State >>>> " + websocket_Wallet.State);
 
-        if (websocket.State == WebSocketState.Closed || websocket.State == WebSocketState.Closing)
-            yield return null;
-        else
-        {
-            yield return new WaitUntil(() => websocket.State == WebSocketState.Open);
-            websocket.SendText(message);
-        }
+        //if (websocket_Wallet.State == WebSocketState.Closed || websocket_Wallet.State == WebSocketState.Closing)
+        //    yield return null;
+        //else
+        //{
+        //    yield return new WaitUntil(() => websocket_Wallet.State == WebSocketState.Open);
+        //    websocket_Wallet.SendText(message);
+        //}
+
+        Send(1, message);
     }
 
     #region TRANSACTION
@@ -228,14 +298,29 @@ public class WalletConnector : MonoBehaviour
         // Handle the transaction error here
     }
 
+
+    public void Deduct_Rejected()
+    {
+        Debug.Log("Deduction rejected !!!");
+    }
+
+    public void Deduct_GetHash(string hashString)
+    {
+        Debug.LogWarning("Hash >>" + hashString);
+    }
+
     public void CreditAmount(float amount)
     {
-       webSocket_Credit.SendText(amount.ToString());
+        // webSocket_Credit.SendText(amount.ToString());
+
+        Send(2, amount.ToString());
     }
 
     public void DeductAmount(float amount) 
     {
-        webSocket_Deduct.SendText(amount.ToString());
+       // webSocket_Deduct.SendText(amount.ToString());
+
+        Send(3, amount.ToString());
     }
 
     #endregion

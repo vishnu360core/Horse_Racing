@@ -60,30 +60,25 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
             {
                 setAmount += bet.SetAmount;
             }
-            else
-            {
-                if(setAmount >0)
-                 setAmount -= bet.LoseAmount;
-
-                loseAmount += bet.LoseAmount;
-            }
         }
-
-        if(setAmount < 0)
-            setAmount = 0;
 
         Debug.Log("Set>>> " + setAmount);
         Debug.Log("lose >>" + loseAmount);
+
+
+        if (setAmount <= 0)
+        {
+            setAmount = 0;
+            return;
+        }
+
 
         float tempAmount = amount + setAmount - loseAmount;
 
         Debug.Log("TempAmount >>>" + tempAmount);
         amount_Text.text = "Amount: " + tempAmount.ToString("F2");
 
-        if (tempAmount > amount)
-            WalletConnector.Instance.CreditAmount(setAmount);
-        else
-            WalletConnector.Instance.DeductAmount(loseAmount);
+        WalletConnector.Instance.CreditAmount(setAmount);
     }
 
     public void PlayAction()
@@ -91,14 +86,23 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         _reachedPanel.SetActive(false);
         _betPanel.SetActive(false);
 
-         Actions.StartAction();
+        foreach (HorseBetBlock bet in betBlocks)
+        {
+            loseAmount += bet.LoseAmount;
+        }
+
+        float tempAmount = amount - loseAmount;
+        amount_Text.text = "Amount: " + tempAmount.ToString("F2");
+
+        WalletConnector.Instance.DeductAmount(loseAmount);
+
+        Actions.StartAction();
     }
 
     public void ResetAction()
     {
         for (int i = 0; i < betBlocks.Count; i++)
             betBlocks[i].ResetAction();
-
     }
 
     /// <summary>
