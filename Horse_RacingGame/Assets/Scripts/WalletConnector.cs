@@ -7,10 +7,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-using System.Security.Cryptography;
-using System.Text;
-using Best.HTTP.SecureProtocol.Org.BouncyCastle.Utilities;
-using UnityEditor.VersionControl;
+using Thirdweb;
+using Thirdweb.Examples;
+
 
 public class WalletConnector : MonoBehaviour
 {
@@ -30,75 +29,71 @@ public class WalletConnector : MonoBehaviour
 
     [SerializeField] GameObject walletConnectPanel;
 
-    void ConnectCallBack(int index)
-    {
-        switch(index) 
-        {
-            case 0:
+    [Header("WalletConnect:")]
+    [SerializeField] Prefab_ConnectWallet connectWallet;
 
-                Debug.Log("Game Connection open!");
-                break;
+    #region CONTRACT
+    string abi = @" [
+	{
+		""inputs"": [],
+		""name"": ""placebid"",
+		""outputs"": [],
+		""stateMutability"": ""payable"",
+		""type"": ""function""
+	},
+	{
+		""inputs"": [
+			{
+				""internalType"": ""address payable"",
+				""name"": ""_to"",
+				""type"": ""address""
+			},
+			{
+				""internalType"": ""uint256"",
+				""name"": ""_amount"",
+				""type"": ""uint256""
+			}
+		],
+		""name"": ""rewardFunc"",
+		""outputs"": [],
+		""stateMutability"": ""nonpayable"",
+		""type"": ""function""
+	},
+	{
+		""inputs"": [
+			{
+				""internalType"": ""address payable"",
+				""name"": ""_to"",
+				""type"": ""address""
+			},
+			{
+				""internalType"": ""uint256"",
+				""name"": ""_amount"",
+				""type"": ""uint256""
+			}
+		],
+		""name"": ""withdrawFunc"",
+		""outputs"": [],
+		""stateMutability"": ""nonpayable"",
+		""type"": ""function""
+	},
+	{
+		""inputs"": [],
+		""name"": ""checkBalance"",
+		""outputs"": [
+			{
+				""internalType"": ""uint256"",
+				""name"": """",
+				""type"": ""uint256""
+			}
+		],
+		""stateMutability"": ""view"",
+		""type"": ""function""
+	}
+]";
 
-            case 1:
-
-                Debug.Log("Wallet Connection open!");
-                break;
-
-            case 2:
-
-                Debug.Log("Credit Connection open!");
-                break;
-
-
-            case 3:
-
-                Debug.Log("Deduct Connection open!");
-                break;
-        }
-    }
-
-    void ReceiveMessage(string data)
-    {
-        string[] parts;
-        string message;
-        string index;
-
-        parts = data.Split('@');
-        message = parts[0];
-        index = parts[1];
-
-        Debug.Log("Index :" + index + " " + message);
-
-        if (message == "Ping")
-            return;
-
-        switch (int.Parse(index))
-        {
-            case 0:
-
-                break;
-
-            case 1:
-                _balanceDollar = float.Parse(message);
-
-                Debug.Log("Balance >>" + _balanceDollar);
-
-                Actions.WalletAmount(_balanceDollar);
-                break;
-
-            case 2:
-
-                Debug.Log("Credit MATICS >>" + message);
-                break;
-
-
-            case 3:
-
-                Debug.Log("DEDUCT MATICS >>" + message);
-                break;
-        }
-    }
-
+    Contract contract;
+    #endregion
 
     /// <summary>
     /// Action implemented on awake
@@ -107,14 +102,19 @@ public class WalletConnector : MonoBehaviour
     { 
         if(instance == null)
             instance = this;
+
+        Actions.Credit_Wei += Credit;
+        Actions.Deduct_Wei += Deduct;
+
+        connectWallet.onConnected.AddListener(ReceiveWalletAddressAndBalance);
+
+        var sdk = ThirdwebManager.Instance.SDK;
+        contract = sdk.GetContract("0xd7059957411ad31a0453bba8de7371D0b9f096d5", abi);
     }
 
      void Start()
     {
-        WebSocketInit("ws://localhost:6060"); // 0 Game 
-        WebSocketInit("ws://localhost:6050");// 1 Wallet
-        WebSocketInit("ws://localhost:6040");// 2 Credit
-        WebSocketInit("ws://localhost:6030");// 3 Deduct
+      
 
         //ConnectWalletAndRetrieveAddress();
 
@@ -232,13 +232,16 @@ public class WalletConnector : MonoBehaviour
 
     #region WALLET
 
-    public void ReceiveWalletAddressAndBalance(string addressAndBalance)
+    public void ReceiveWalletAddressAndBalance(string address)
     {
-        string[] parts = addressAndBalance.Split(',');
-        string address = parts[0];
-        string balance = parts[1];
-
         walletConnectPanel.SetActive(false);
+
+        string addressFirst = address.Substring(0, 4);
+        string addressLast = address.Substring(address.Length - 4, 4);
+
+        string addressPrint = addressFirst + "....." + addressLast;
+
+        Actions.SetID(addressPrint);
 
         _currentAddress = address;
 
@@ -250,7 +253,7 @@ public class WalletConnector : MonoBehaviour
 
     public void RequestBalance() 
     {
-        StartCoroutine(SaveToNet(_currentAddress));
+         StartCoroutine(Network.Instance.BalanceOf(_currentAddress));
     }
 
 
@@ -262,25 +265,6 @@ public class WalletConnector : MonoBehaviour
 
     #endregion
 
-    /// <summary>
-    /// Sending the data 
-    /// </summary>
-    /// <param name="jsonString"></param>
-    public IEnumerator SaveToNet(string message)
-    {
-        yield return null;
-        //Debug.Log("WebSocket State >>>> " + websocket_Wallet.State);
-
-        //if (websocket_Wallet.State == WebSocketState.Closed || websocket_Wallet.State == WebSocketState.Closing)
-        //    yield return null;
-        //else
-        //{
-        //    yield return new WaitUntil(() => websocket_Wallet.State == WebSocketState.Open);
-        //    websocket_Wallet.SendText(message);
-        //}
-
-        Send(1, message);
-    }
 
     #region TRANSACTION
 
@@ -309,18 +293,15 @@ public class WalletConnector : MonoBehaviour
         Debug.LogWarning("Hash >>" + hashString);
     }
 
-    public void CreditAmount(float amount)
-    {
-        // webSocket_Credit.SendText(amount.ToString());
 
-        Send(2, amount.ToString());
+    public async void Credit(string wei)
+    {
+        TransactionResult result = await contract.Write("rewardFunc", _currentAddress, wei);
     }
 
-    public void DeductAmount(float amount) 
+    public async  void Deduct(string wei) 
     {
-       // webSocket_Deduct.SendText(amount.ToString());
-
-        Send(3, amount.ToString());
+        TransactionResult result = await contract.Write("placebid", new TransactionRequest() { value = wei, gasLimit = "100000" });
     }
 
     #endregion

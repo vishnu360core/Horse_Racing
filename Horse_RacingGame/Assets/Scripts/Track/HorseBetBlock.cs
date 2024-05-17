@@ -41,12 +41,19 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
     {
         _setAmount += amount * modifier;
         _loseAmount += amount;
+
+        Actions.EnableGame(_setAmount > 0);
     }
 
     public void SubstractAmount(int amount, float modifier)
     {
+        if(_setAmount > amount * modifier) 
         _setAmount -= amount*modifier;
-        _loseAmount -= amount;  
+
+        if(_loseAmount > amount)
+        _loseAmount -= amount;
+
+        Actions.EnableGame(_setAmount > 0);
     }
 
     public void ResetAction()
@@ -57,6 +64,8 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
 
         _setAmount  =0.0f;
         _loseAmount=0.0f;
+
+        Actions.EnableGame(false);
     }
 
 

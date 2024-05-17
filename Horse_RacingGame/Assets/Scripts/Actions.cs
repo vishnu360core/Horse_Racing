@@ -14,4 +14,12 @@ public static class Actions
     public static Action<float,float> UpdateAmount;
 
     public static Action<float> WalletAmount;
+
+    public static Action<bool> EnableGame;
+
+    public static Action<string> Credit_Wei;
+
+    public static Action<string> Deduct_Wei;
+
+    public static Action<string> SetID;
 }
