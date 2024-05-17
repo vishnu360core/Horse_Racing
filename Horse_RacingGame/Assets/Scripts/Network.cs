@@ -16,10 +16,7 @@ public class Network : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void Send(int index, string message);
 
-    string _id;
-
-    public string Id => _id;
-
+    public string id;
 
     void ConnectCallBack(int index)
     {
@@ -67,6 +64,24 @@ public class Network : MonoBehaviour
         {
             case 0:
 
+                string id = GetSubstringBetween(message, "<id>", "</id>");
+
+                string loss = null;
+                string win = null;
+
+                if (message.Contains("<L>"))
+                {
+                    loss = GetSubstringBetween(message, "<L>", "</L>");
+
+                    NotificationManager.Instance.SetNotication(Notification.Result.Loss, loss, id);
+                }
+                else if (message.Contains("<W>"))
+                {
+                    win = GetSubstringBetween(message, "<W>", "</W>");
+
+                    NotificationManager.Instance.SetNotication(Notification.Result.Win, win, id);
+                }
+
                 break;
 
             case 1:
@@ -107,21 +122,42 @@ public class Network : MonoBehaviour
         WebSocketInit("ws://localhost:6030");// 3 Deduct
     }
 
+    public string GetSubstringBetween(string fullText, string startString, string endString)
+    {
+        int startPos = fullText.IndexOf(startString) + startString.Length;
+        int endPos = fullText.IndexOf(endString, startPos);
+        if (startPos >= endPos || startPos == -1 || endPos == -1)
+        {
+            return "";
+        }
+        return fullText.Substring(startPos, endPos - startPos);
+    }
+
     private void SetID(string obj)
     {
-        _id = obj;
+        id = obj;
     }
 
     #region GAME
-    public IEnumerator SendResult(string message)
+    public void SendResult(string amount ,string id, Notification.Result result)
     {
-        yield return null;
+        string resultMessage = null;
 
-        string resultMessage = _id + message;
+        switch (result)
+        {
+            case Notification.Result.Win:
+                resultMessage = "<id>"+ id+ "</id>" + "<W>" + amount + "</W>";
+                break;
 
+            case Notification.Result.Loss:
+                resultMessage = "<id>" + id + "</id>" + "<L>" + amount + "</L>";
+                break;
+        }
+
+        Debug.LogWarning("Sending result >>" + resultMessage);
         Send(0, resultMessage);
     }
-        #endregion
+       #endregion
 
 
        #region WALLET
@@ -134,6 +170,7 @@ public class Network : MonoBehaviour
     {
         yield return null;
 
+        //Debug.LogWarning("id message " + idMessage);
         Send(1, message);
     }
 
@@ -144,6 +181,7 @@ public class Network : MonoBehaviour
     {
         // webSocket_Credit.SendText(amount.ToString());
 
+        //Debug.LogWarning("id message " + idMessage);
         Send(2, amount.ToString());
     }
 
@@ -151,6 +189,7 @@ public class Network : MonoBehaviour
     {
         // webSocket_Deduct.SendText(amount.ToString());
 
+       // Debug.LogWarning("id message " + idMessage);
         Send(3, amount.ToString());
     }
 

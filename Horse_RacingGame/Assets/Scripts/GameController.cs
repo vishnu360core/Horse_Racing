@@ -30,6 +30,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     [SerializeField] float setAmount;
     [SerializeField] float loseAmount;
 
+    string idText;
+
 
     private void Start()
     {
@@ -47,6 +49,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     private void SetIDAction(string obj)
     {
+        idText = obj;
        id_Text.text = "Wallet Address:" + obj;
     }
 
@@ -77,7 +80,6 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         _reachedPanel.SetActive(true);
 
         setAmount = 0;
-        loseAmount = 0;
 
         foreach (HorseBetBlock bet in betBlocks)
         {
@@ -87,7 +89,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
             }
         }
 
-        Debug.Log("Set>>> " + setAmount);
+        Debug.Log("Win Set>>> " + setAmount);
         Debug.Log("lose >>" + loseAmount);
 
 
@@ -96,12 +98,12 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
             setAmount = 0;
            
             if(loseAmount>0)
-             Network.Instance.SendResult("loss :" + loseAmount);
+             Network.Instance.SendResult(loseAmount.ToString(), idText, Notification.Result.Loss);
 
             return;
         }
 
-        Network.Instance.SendResult("Win :" + setAmount);
+        Network.Instance.SendResult(setAmount.ToString(), idText, Notification.Result.Win);
 
         float tempAmount = amount + setAmount - loseAmount;
 
@@ -124,7 +126,22 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         float tempAmount = amount - loseAmount;
         amount_Text.text = "Amount: " + tempAmount.ToString("F2");
 
-        bet_Text.text = "Total Bets" + loseAmount;
+        bet_Text.text = "Total Bets: " + loseAmount;
+
+        Network.Instance.DeductAmount(loseAmount);
+
+        Actions.StartAction();
+    }
+
+    public void PlayAgainAction()
+    {
+        _reachedPanel.SetActive(false);
+        _betPanel.SetActive(false);
+
+        float tempAmount = amount - loseAmount;
+        amount_Text.text = "Amount: " + tempAmount.ToString("F2");
+
+        bet_Text.text = "Total Bets: " + loseAmount;
 
         Network.Instance.DeductAmount(loseAmount);
 
@@ -148,7 +165,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         setAmount = 0;
         loseAmount = 0;
 
-        bet_Text.text = "Total Bets" + loseAmount;
+        bet_Text.text = "Total Bets: " + loseAmount;
 
         for (int i = 0; i < betBlocks.Count; i++)
             betBlocks[i].ResetAction();

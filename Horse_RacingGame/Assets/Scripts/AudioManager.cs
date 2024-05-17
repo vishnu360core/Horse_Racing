@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     AudioSource _audioSource;
 
 
-    public enum SFXType { button }
+    public enum SFXType { button,pop}
 
     private void Awake()
     {
@@ -31,6 +31,10 @@ public class AudioManager : MonoBehaviour
         {
             case SFXType.button:
                 _audioSource.PlayOneShot(_audioData.GetClip(AudioType.SFX, "Click"), 1.0f);
+                break;
+
+            case SFXType.pop:
+                _audioSource.PlayOneShot(_audioData.GetClip(AudioType.SFX, "Pop"), 1.0f);
                 break;
         }
     }

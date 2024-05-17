@@ -55,7 +55,7 @@ public class HorseTrackManager : MonoBehaviour
             for (int i = 0; i < _horses.Count; i++)
             {
                 float speed = Random.Range(0.21f, 0.219f);
-                Debug.Log("Speed >>>" + speed);
+                //Debug.Log("Speed >>>" + speed);
 
                 _horses[i].ChangeSpeed(speed);
             }

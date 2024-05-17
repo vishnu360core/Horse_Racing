@@ -17,13 +17,6 @@ public class WalletConnector : MonoBehaviour
 
     public static WalletConnector Instance {  get { return instance; } }
 
-
-    [DllImport("__Internal")]
-    private static extern void WebSocketInit(string url);
-
-    [DllImport("__Internal")]
-    private static extern void Send(int index, string message);
-
     float _balanceDollar;
     string _currentAddress;
 
@@ -113,122 +106,9 @@ public class WalletConnector : MonoBehaviour
     }
 
      void Start()
-    {
+     {
       
-
-        //ConnectWalletAndRetrieveAddress();
-
-        //#region WEB_CREDIT
-
-        //webSocket_Credit.OnOpen += () =>
-        //{
-        //    Debug.Log("Credit Connection open!");
-        //};
-
-        //webSocket_Credit.OnClose += (e) =>
-        //{
-        //    Debug.Log("Credit Connection closed!");
-
-        //    Console.WriteLine("closed");
-        //};
-
-        //webSocket_Credit.OnError += (e) =>
-        //{
-        //    Debug.Log("Credit Error! " + e);
-        //};
-
-        //webSocket_Credit.OnMessage += (bytes) =>
-        //{
-        //    string str = Encoding.UTF8.GetString(bytes);
-
-        //    Debug.Log("Credit MATICS >>" + str);
-
-        //    Credit(_currentAddress, str);
-        //};
-
-        //#endregion
-
-        //#region WEB_DEDUCT
-
-        //webSocket_Deduct.OnMessage += (bytes) =>
-        //{
-        //    string str = Encoding.UTF8.GetString(bytes);
-
-        //    Debug.Log("MATICS >>" + str);
-
-
-        //    Deduct(_currentAddress,str);
-        //};
-
-        //webSocket_Deduct.OnOpen += () =>
-        //{
-        //    Debug.Log("deduct Connection open!");
-        //};
-
-        //webSocket_Deduct.OnError += (e) =>
-        //{
-        //    Debug.Log("Deduct Error! " + e);
-        //};
-
-        //webSocket_Deduct.OnClose += (e) =>
-        //{
-        //    Debug.Log("Deduct Connection closed!");
-
-        //    Console.WriteLine("closed");
-        //};
-
-        //#endregion
-
-        //#region WEB_WALLET
-
-        //websocket_Wallet.OnMessage += (bytes) =>
-        //{
-        //    string str = Encoding.UTF8.GetString(bytes);
-
-        //    _balanceDollar = float.Parse(str);
-
-        //    Debug.Log("Balance >>" + _balanceDollar);
-
-           
-
-        //    Actions.WalletAmount(_balanceDollar);
-        //};
-
-
-        //websocket_Wallet.OnOpen += () =>
-        //{
-        //    Debug.Log("Connection open!");
-        //};
-
-        //websocket_Wallet.OnError += (e) =>
-        //{
-        //    Debug.Log("Error! " + e);
-        //};
-
-        //websocket_Wallet.OnClose += (e) =>
-        //{
-        //    Debug.Log("Connection closed!");
-
-        //    Console.WriteLine("closed");
-        //};
-
-        //websocket_Wallet.OnMessage += (bytes) =>
-        //{
-        //    string str = Encoding.UTF8.GetString(bytes);
-
-        //   _balanceDollar = float.Parse(str);
-
-        //    Debug.Log("Balance >>" + _balanceDollar);
-
-        //    Actions.WalletAmount(_balanceDollar);         
-        //};
-
-        //#endregion
-
-        //await websocket_Wallet.Connect();
-        //await webSocket_Credit.Connect();
-        //await webSocket_Deduct.Connect();
-    }
+     }
 
     #region WALLET
 
@@ -253,9 +133,8 @@ public class WalletConnector : MonoBehaviour
 
     public void RequestBalance() 
     {
-         StartCoroutine(Network.Instance.BalanceOf(_currentAddress));
+       StartCoroutine(Network.Instance.BalanceOf(_currentAddress));
     }
-
 
     public void OnConnectError(string error) 
     { 
@@ -282,7 +161,6 @@ public class WalletConnector : MonoBehaviour
         // Handle the transaction error here
     }
 
-
     public void Deduct_Rejected()
     {
         Debug.Log("Deduction rejected !!!");
@@ -293,15 +171,18 @@ public class WalletConnector : MonoBehaviour
         Debug.LogWarning("Hash >>" + hashString);
     }
 
-
     public async void Credit(string wei)
     {
         TransactionResult result = await contract.Write("rewardFunc", _currentAddress, wei);
+
+        Debug.LogWarning("Result_Credit >>>" + result);
     }
 
     public async  void Deduct(string wei) 
     {
-        TransactionResult result = await contract.Write("placebid", new TransactionRequest() { value = wei, gasLimit = "100000" });
+        TransactionResult result = await contract.Write("placebid", new TransactionRequest() { value = wei, gasLimit = "100000"});
+
+        Debug.LogWarning("Result_Deduct >>>" + result);
     }
 
     #endregion
