@@ -27,7 +27,7 @@
       "DisplayName": "Writing 6097564273297756792.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 13412,
+      "PayloadLength": 13513,
       "PayloadDebugContentSnippet": "-a=\"D:\\Work\\Horse_Racing\\Horse",
       "Inputs": [],
       "Outputs": [
@@ -113,6 +113,7 @@
         "Library/ScriptAssemblies/Unity.Collections.dll",
         "Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll",
         "Library/ScriptAssemblies/Unity.Mathematics.dll",
+        "Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll",
         "Library/ScriptAssemblies/Unity.Profiling.Core.dll",
         "Library/ScriptAssemblies/Unity.Splines.dll",
         "Library/ScriptAssemblies/Unity.TextMeshPro.dll",
@@ -515,6 +516,9 @@
     },
     {
       "File": "Library/ScriptAssemblies/Unity.Mathematics.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll"
     },
     {
       "File": "Library/ScriptAssemblies/Unity.Profiling.Core.dll"

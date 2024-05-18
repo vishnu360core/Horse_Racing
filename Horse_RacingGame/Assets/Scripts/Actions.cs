@@ -22,4 +22,6 @@ public static class Actions
     public static Action<string> Deduct_Wei;
 
     public static Action<string> SetID;
+
+    public static Action<List<RiderStat>> SortedRiders;
 }

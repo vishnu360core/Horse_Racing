@@ -37,14 +37,14 @@ static const int32_t s_InvokerIndices[10] =
 {
 	0,
 	0,
-	7435,
-	7475,
-	9188,
-	13798,
-	9188,
-	5479,
-	7475,
-	13834,
+	7536,
+	7577,
+	9305,
+	13948,
+	9305,
+	5563,
+	7577,
+	13985,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_IdentityModel_Abstractions_CodeGenModule;
 const Il2CppCodeGenModule g_Microsoft_IdentityModel_Abstractions_CodeGenModule = 

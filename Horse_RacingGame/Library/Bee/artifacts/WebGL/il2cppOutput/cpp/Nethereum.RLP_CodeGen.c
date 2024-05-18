@@ -39,17 +39,17 @@ static Il2CppMethodPointer s_methodPointers[11] =
 };
 static const int32_t s_InvokerIndices[11] = 
 {
-	12970,
-	13252,
-	13278,
-	13284,
-	13284,
-	13284,
-	12304,
-	13284,
-	12997,
-	12997,
-	13834,
+	13114,
+	13399,
+	13425,
+	13431,
+	13431,
+	13431,
+	12444,
+	13431,
+	13141,
+	13141,
+	13985,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Nethereum_RLP_CodeGenModule;
 const Il2CppCodeGenModule g_Nethereum_RLP_CodeGenModule = 

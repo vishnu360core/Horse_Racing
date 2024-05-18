@@ -19,6 +19,8 @@ public class HorseTrackManager : MonoBehaviour
 
     int time = 0;
 
+    List<RiderStat> riderStats = new List<RiderStat>();
+
     private void Start()
     {
         Actions.StartAction += PlayAction;
@@ -44,13 +46,17 @@ public class HorseTrackManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        if(time >6)
+        if (time > 6)
         {
             time = 0;
-            _horses.Find(x => x.GetHero  == WinningHero).ChangeSpeed(0.22f);
+            _horses.Find(x => x.GetHero == WinningHero).ChangeSpeed(0.22f);
+
+            riderStats.Find(x => x.hero == WinningHero).speed = 0.22f;
+            RiderStatAction();
         }
         else
         {
+            riderStats.Clear();
 
             for (int i = 0; i < _horses.Count; i++)
             {
@@ -58,12 +64,29 @@ public class HorseTrackManager : MonoBehaviour
                 //Debug.Log("Speed >>>" + speed);
 
                 _horses[i].ChangeSpeed(speed);
+
+                RiderStat rider = new RiderStat()
+                {
+                    hero = _horses[i].GetHero,
+                    speed = speed
+                };
+
+                riderStats.Add(rider);
             }
 
-             StartCoroutine(ChangeSpeed());
+            RiderStatAction();
+
+            StartCoroutine(ChangeSpeed());
         }
 
         time++;
+    }
+
+    void RiderStatAction()
+    {
+        riderStats.Sort((r2, r1) => r1.speed.CompareTo(r2.speed));
+
+        Actions.SortedRiders(riderStats);
     }
 
     public void ReachedAction(Horse.Hero hero)

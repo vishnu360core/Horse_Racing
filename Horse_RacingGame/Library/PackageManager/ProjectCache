@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638508514422860095
-    m_Hash: 2890762738
+      ticks: 638516108503028027
+    m_Hash: 3572942683
   m_LockFileStatus:
     m_FilePath: D:/Work/Horse_Racing/Horse_RacingGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638508514422860095
-    m_Hash: 3634917566
+      ticks: 638516108503122921
+    m_Hash: 2282091901
 m_EmbeddedPackageManifests:
   m_ManifestsStatus:
     D:/Work/Horse_Racing/Horse_RacingGame/Packages/com.tivadar.best.http/package.json:
@@ -346,6 +346,66 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+- packageId: com.unity.device-simulator.devices@1.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0
+  source: 1
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.device-simulator.devices@1.0.0
+  assetPath: Packages/com.unity.device-simulator.devices
+  name: com.unity.device-simulator.devices
+  displayName: Device Simulator Devices
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: This package contains additional devices for the Device Simulator.
+    Each device has a complete device definition and includes a device overlay. After
+    you install this package, the additional devices are immediately available in
+    the Device Simulator.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.1
+    - 1.0.0-pre.2
+    - 1.0.0-pre.4
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    recommended: 1.0.0
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637810555200000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.device-simulator.devices.git
+    revision: 2e1ffaaea0624daf91ee6c76906fd119dbd584c6
+    path: 
+  unityLifecycle:
+    version: 1.0.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.feature.2d@2.0.0
   testable: 0
   isDirectDependency: 1
@@ -551,6 +611,103 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.0.1
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.unity.postprocessing@3.4.0
+  testable: 0
+  isDirectDependency: 1
+  version: 3.4.0
+  source: 1
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.postprocessing@3.4.0
+  assetPath: Packages/com.unity.postprocessing
+  name: com.unity.postprocessing
+  displayName: Post Processing
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: The post-processing stack (v2) comes with a collection of effects
+    and image filters you can apply to your cameras to improve the visuals of your
+    games.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.7
+    - 0.1.8
+    - 2.0.0-beta
+    - 2.0.1-beta
+    - 2.0.2-preview
+    - 2.0.3-preview
+    - 2.0.5-preview
+    - 2.0.7-preview
+    - 2.0.8-preview
+    - 2.0.9-preview
+    - 2.0.10-preview
+    - 2.0.11-preview
+    - 2.0.12-preview
+    - 2.0.13-preview
+    - 2.0.14-preview
+    - 2.0.15-preview
+    - 2.0.16-preview
+    - 2.0.17-preview
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.1.6
+    - 2.1.7
+    - 2.2.1
+    - 2.2.2
+    - 2.3.0
+    - 3.0.1
+    - 3.0.3
+    - 3.1.0
+    - 3.1.1
+    - 3.2.0
+    - 3.2.1
+    - 3.2.2
+    - 3.3.0
+    - 3.4.0
+    compatible:
+    - 3.4.0
+    recommended: 3.4.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638384897060000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.postprocessing@3.4/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/Graphics.git
+    revision: 54427d2529ad1a9e8f31c693d751c6371f914e40
+    path: 
+  unityLifecycle:
+    version: 3.4.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -770,6 +927,7 @@ m_ResolvedPackages:
     - 3.0.6
     - 3.0.7
     - 3.0.8
+    - 3.0.9
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
@@ -785,6 +943,7 @@ m_ResolvedPackages:
     - 3.0.6
     - 3.0.7
     - 3.0.8
+    - 3.0.9
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
@@ -796,7 +955,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.9
     - 4.0.0-pre.1
     - 4.0.0-pre.2
-    recommended: 3.0.8
+    recommended: 3.0.9
     deprecated: []
   dependencies:
   - name: com.unity.ugui
@@ -3248,11 +3407,13 @@ m_ResolvedPackages:
     - 1.8.12
     - 1.8.13
     - 1.8.14
+    - 1.8.15
     compatible:
     - 1.8.12
     - 1.8.13
     - 1.8.14
-    recommended: 1.8.14
+    - 1.8.15
+    recommended: 1.8.15
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -4323,6 +4484,7 @@ m_ResolvedPackages:
     - 9.0.3
     - 9.0.4
     - 9.1.0
+    - 9.1.1
     - 10.0.0-pre.1
     - 10.0.0-pre.2
     - 10.0.0
@@ -4333,7 +4495,8 @@ m_ResolvedPackages:
     - 10.1.1
     compatible:
     - 9.1.0
-    recommended: 9.1.0
+    - 9.1.1
+    recommended: 9.1.1
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -4577,6 +4740,7 @@ m_ResolvedPackages:
     - 8.0.2
     - 8.0.3
     - 8.0.4
+    - 8.0.5
     - 9.0.0-pre.1
     - 9.0.0-pre.2
     - 9.0.0
@@ -4585,7 +4749,8 @@ m_ResolvedPackages:
     - 9.0.3
     compatible:
     - 8.0.4
-    recommended: 8.0.4
+    - 8.0.5
+    recommended: 8.0.5
     deprecated: []
   dependencies:
   - name: com.unity.2d.animation
@@ -4808,6 +4973,7 @@ m_ResolvedPackages:
     - 9.0.0
     - 9.0.1
     - 9.0.2
+    - 9.0.3
     - 10.0.0-pre.1
     - 10.0.0-pre.2
     - 10.0.0
@@ -4817,7 +4983,8 @@ m_ResolvedPackages:
     - 10.0.4
     compatible:
     - 9.0.2
-    recommended: 9.0.2
+    - 9.0.3
+    recommended: 9.0.3
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -5112,11 +5279,13 @@ m_ResolvedPackages:
     - 1.1.1
     - 1.1.2
     - 1.1.3
+    - 1.1.4
     compatible:
     - 1.1.1
     - 1.1.2
     - 1.1.3
-    recommended: 1.1.3
+    - 1.1.4
+    recommended: 1.1.4
     deprecated: []
   dependencies:
   - name: com.unity.2d.sprite

@@ -39,6 +39,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayHorseRace(bool enable)
+    {
+        _audioSource.loop = enable;
+
+        if (!enable)
+        {
+            _audioSource.Stop();
+            return;
+        }
+
+        _audioSource.clip = _audioData.GetClip(AudioType.CLIP, "Horse_Race");
+        _audioSource.Play();
+    }
+
     public void ButtonClick()
     {
         PlayAudio(SFXType.button);

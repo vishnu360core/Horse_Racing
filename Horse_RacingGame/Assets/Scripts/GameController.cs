@@ -77,6 +77,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     /// <param name="hero"></param>
     public void RaceFinished(Horse.Hero hero)
     {
+        AudioManager.Instance.PlayHorseRace(false);
+
         _reachedPanel.SetActive(true);
 
         setAmount = 0;
@@ -115,6 +117,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     public void PlayAction()
     {
+        AudioManager.Instance.PlayHorseRace(true);
+
         _reachedPanel.SetActive(false);
         _betPanel.SetActive(false);
 
@@ -135,6 +139,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     public void PlayAgainAction()
     {
+        AudioManager.Instance.PlayHorseRace(true);
+
         _reachedPanel.SetActive(false);
         _betPanel.SetActive(false);
 

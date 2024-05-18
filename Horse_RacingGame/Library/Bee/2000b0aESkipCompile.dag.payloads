@@ -71,6 +71,7 @@ Payload for "WriteResponseFile Library/Bee/artifacts/rsp/6097564273297756792.rsp
 -a="D:\Work\Horse_Racing\Horse_RacingGame\Library\ScriptAssemblies\Unity.Collections.dll"
 -a="D:\Work\Horse_Racing\Horse_RacingGame\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll"
 -a="D:\Work\Horse_Racing\Horse_RacingGame\Library\ScriptAssemblies\Unity.Mathematics.dll"
+-a="D:\Work\Horse_Racing\Horse_RacingGame\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll"
 -a="D:\Work\Horse_Racing\Horse_RacingGame\Library\ScriptAssemblies\Unity.Profiling.Core.dll"
 -a="D:\Work\Horse_Racing\Horse_RacingGame\Library\ScriptAssemblies\Unity.Splines.dll"
 -a="D:\Work\Horse_Racing\Horse_RacingGame\Library\ScriptAssemblies\Unity.TextMeshPro.dll"

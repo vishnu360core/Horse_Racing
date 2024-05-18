@@ -60,22 +60,22 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] =
 };
 static const int32_t s_InvokerIndices[16] = 
 {
-	13284,
-	13790,
-	881,
-	13798,
-	6690,
-	3475,
-	9039,
-	9039,
-	9188,
-	9039,
-	7475,
-	13834,
-	9188,
-	7475,
-	9188,
-	7475,
+	13431,
+	13940,
+	912,
+	13948,
+	6785,
+	3539,
+	9155,
+	9155,
+	9305,
+	9155,
+	7577,
+	13985,
+	9305,
+	7577,
+	9305,
+	7577,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Nethereum_JsonRpc_RpcClient_CodeGenModule;
 const Il2CppCodeGenModule g_Nethereum_JsonRpc_RpcClient_CodeGenModule = 
