@@ -114,7 +114,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     /// Action implemented on race finished
     /// </summary>
     /// <param name="hero"></param>
-    public void RaceFinished(Horse.Hero hero)
+    public void RaceFinished(Horse.Hero[] heros)
     {
         AudioManager.Instance.PlayHorseRace(false);
 
@@ -124,15 +124,20 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
         foreach (HorseBetBlock bet in betBlocks)
         {
-            if(bet.HeroType == hero)
-            {
-                setAmount += bet.SetAmount;
-            }
+            if (bet.HeroType == heros[0])
+                setAmount += bet.horseBets.Find(x => x.betType == ControlPanel.BetType.Win).betAmount;
+
+
+            if (bet.HeroType == heros[1])
+                setAmount += bet.horseBets.Find(x => x.betType == ControlPanel.BetType.Place).betAmount;
+
+
+            if (bet.HeroType == heros[2])
+                setAmount += bet.horseBets.Find(x => x.betType == ControlPanel.BetType.Show).betAmount;
         }
 
         Debug.Log("Win Set>>> " + setAmount);
         Debug.Log("lose >>" + loseAmount);
-
 
         if (setAmount <= 0)
         {

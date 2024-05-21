@@ -25,6 +25,9 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
     [Header("UI Settings:")]
     [SerializeField] TMP_Text horseName;
 
+
+    public List<HorseBet> horseBets = new List<HorseBet>();
+
     private void OnEnable()
     {
         winPanel.callback = this;
@@ -37,15 +40,53 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
         horseName.text = DisplayName();
     }
 
-    public void AddAmount(int amount, float modifier)
+    public void AddAmount(int amount, float modifier,ControlPanel.BetType betType)
     {
         _setAmount += amount * modifier;
         _loseAmount += amount;
 
+        if (horseBets.Count > 0)
+        {
+            bool isBetPresent = false;
+
+
+            foreach(HorseBet horseBet in horseBets)
+            {
+                if(horseBet.betType == betType)
+                {
+                    horseBet.betAmount += amount * modifier;
+                    isBetPresent = true;
+                    break;
+                }
+            }
+
+
+            if(!isBetPresent) 
+            {
+                HorseBet horseBet = new HorseBet()
+                {
+                    betAmount = amount * modifier,
+                    betType = betType
+                };
+
+                horseBets.Add(horseBet);
+            }
+        }
+        else
+        {
+            HorseBet horseBet = new HorseBet()
+            {
+                betAmount = amount * modifier,
+                betType = betType
+            };
+
+            horseBets.Add(horseBet);
+        }
+
         Actions.EnableGame(_setAmount > 0);
     }
 
-    public void SubstractAmount(int amount, float modifier)
+    public void SubstractAmount(int amount, float modifier, ControlPanel.BetType betType)
     {
         if(_setAmount > amount * modifier) 
         _setAmount -= amount*modifier;
@@ -53,11 +94,29 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
         if(_loseAmount > amount)
         _loseAmount -= amount;
 
+        if (horseBets.Count > 0)
+        {
+            foreach (HorseBet horseBet in horseBets)
+            {
+                if (horseBet.betType == betType)
+                {
+                    if(horseBet.betAmount > amount * modifier)
+                        horseBet.betAmount -= amount * modifier;
+                    else
+                        horseBets.Remove(horseBet);
+
+                    break;
+                }
+            }
+        }
+
         Actions.EnableGame(_setAmount > 0);
     }
 
     public void ResetAction()
     {
+        horseBets.Clear();
+
         winPanel.Empty();
         placePanel.Empty();
         showPanel.Empty();
@@ -109,4 +168,11 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
         }
     }
 
+}
+
+[System.Serializable]
+public class HorseBet
+{
+   public ControlPanel.BetType betType;
+   public float betAmount;
 }

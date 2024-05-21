@@ -106,10 +106,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -258,6 +256,78 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ControlPanel
     methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -357,78 +427,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: AudioManager
     methodName: ButtonClick
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
   - assembly: Assembly-CSharp
     fullTypeName: ControlPanel
     methodName: Minus
@@ -1905,7 +1903,7 @@ ScriptsOnlyBuild:
     className: CFXR_EmissionBySurface
   - hash:
       serializedVersion: 2
-      Hash: 61979503aebdd59791bc8b749e139e65
+      Hash: b9633d8d1241aa6ef882ac24e496150a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: HorseBetBlock

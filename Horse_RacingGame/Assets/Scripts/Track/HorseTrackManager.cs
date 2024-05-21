@@ -5,7 +5,7 @@ using UnityEngine;
 
 public interface HorseTrackDelegate
 {
-    void RaceFinished(Horse.Hero hero);
+    void RaceFinished(Horse.Hero[] hero);
 }
 
 
@@ -144,7 +144,10 @@ public class HorseTrackManager : MonoBehaviour
             _horses[i].SubscribeAnimateEvent(false);
         }
 
-        callback.RaceFinished(hero);
+
+        Horse.Hero[] winHorses = { riderStats[0].hero, riderStats[1].hero, riderStats[2].hero };
+
+        callback.RaceFinished(winHorses);
        
        // ResetAction();
     }

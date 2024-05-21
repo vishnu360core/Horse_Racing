@@ -7,8 +7,8 @@ using TMPro;
 
 public interface ControlPanelDelegate
 {
-   public void AddAmount(int amount,float modifier);
-   public void SubstractAmount(int amount,float modifier);
+   public void AddAmount(int amount,float modifier,ControlPanel.BetType betType);
+   public void SubstractAmount(int amount,float modifier, ControlPanel.BetType betType);
 }
 
 public class ControlPanel : MonoBehaviour
@@ -35,7 +35,7 @@ public class ControlPanel : MonoBehaviour
         betAmount = 50;
         BetDisplay(betAmount);
 
-        callback.AddAmount(betAmount, modifier);
+        callback.AddAmount(betAmount, modifier,_type);
     }
 
     public void Empty()
@@ -43,12 +43,12 @@ public class ControlPanel : MonoBehaviour
         betAmount = 0;
         BetDisplay(betAmount);
 
-        callback.SubstractAmount(50, modifier);
+        callback.SubstractAmount(50, modifier,_type);
     }
 
     public void Plus()
     {
-        callback.AddAmount(1, modifier);
+        callback.AddAmount(1, modifier, _type);
 
         betAmount += 1;
         BetDisplay(betAmount);
@@ -60,7 +60,7 @@ public class ControlPanel : MonoBehaviour
         if (betAmount <= 0)
             return;
 
-        callback.SubstractAmount(1, modifier);
+        callback.SubstractAmount(1, modifier, _type);
 
         betAmount -= 1;
         BetDisplay(betAmount);
