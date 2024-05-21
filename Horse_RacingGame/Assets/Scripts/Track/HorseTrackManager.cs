@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,13 +22,23 @@ public class HorseTrackManager : MonoBehaviour
 
     List<RiderStat> riderStats = new List<RiderStat>();
 
+    public Dictionary<string, int> raceModel = new Dictionary<string, int>();   
+
     private void Start()
     {
         Actions.StartAction += PlayAction;
         Actions.ReachedDestinmation += ReachedAction;
 
         Actions.RestartAction += RestartAction;
+
+        Actions.SetRaceModel += RaceModelAction;
     }
+
+    public void RaceModelAction(Dictionary<string, int> model)
+    {
+        raceModel = model;
+    }
+
 
     public void PlayAction()
     {
@@ -49,9 +60,38 @@ public class HorseTrackManager : MonoBehaviour
         if (time > 6)
         {
             time = 0;
-            _horses.Find(x => x.GetHero == WinningHero).ChangeSpeed(0.22f);
 
-            riderStats.Find(x => x.hero == WinningHero).speed = 0.22f;
+
+            riderStats.Clear();
+
+            foreach (KeyValuePair<string, int> rider in raceModel)
+            {
+                Horse.Hero hero = Enum.Parse<Horse.Hero>(rider.Key);
+
+                float speed = 0.0f;
+
+                if (rider.Value != 1)
+                    speed = 0.21f +  (0.01f - rider.Value *0.001f);
+                else
+                    speed = 0.22f;
+
+                Debug.Log($"Key: {rider.Key},Value: {rider.Value}, Hero: {hero}, speed: {speed} ");
+
+                _horses.Find(x => x.GetHero == hero).ChangeSpeed(speed);
+
+
+                RiderStat riderStat = new RiderStat()
+                {
+                    hero = hero,
+                    speed = speed
+                };
+
+                riderStats.Add(riderStat);
+            }
+
+            //_horses.Find(x => x.GetHero == WinningHero).ChangeSpeed(0.22f);
+
+            //riderStats.Find(x => x.hero == WinningHero).speed = 0.22f;
             RiderStatAction();
         }
         else
@@ -60,7 +100,7 @@ public class HorseTrackManager : MonoBehaviour
 
             for (int i = 0; i < _horses.Count; i++)
             {
-                float speed = Random.Range(0.21f, 0.219f);
+                float speed = UnityEngine.Random.Range(0.21f, 0.219f);
                 //Debug.Log("Speed >>>" + speed);
 
                 _horses[i].ChangeSpeed(speed);
@@ -85,6 +125,11 @@ public class HorseTrackManager : MonoBehaviour
     void RiderStatAction()
     {
         riderStats.Sort((r2, r1) => r1.speed.CompareTo(r2.speed));
+
+        for(int i = 0;i < riderStats.Count;i++)
+        {
+            Debug.Log("Stat >>>" + riderStats[i].hero + " >>>" + riderStats[i].speed);
+        }
 
         Actions.SortedRiders(riderStats);
     }

@@ -48,9 +48,9 @@ public class ControlPanel : MonoBehaviour
 
     public void Plus()
     {
-        callback.AddAmount(10, modifier);
+        callback.AddAmount(1, modifier);
 
-        betAmount += 10;
+        betAmount += 1;
         BetDisplay(betAmount);
 
     }
@@ -60,9 +60,9 @@ public class ControlPanel : MonoBehaviour
         if (betAmount <= 0)
             return;
 
-        callback.SubstractAmount(10, modifier);
+        callback.SubstractAmount(1, modifier);
 
-        betAmount -= 10;
+        betAmount -= 1;
         BetDisplay(betAmount);
     }
 

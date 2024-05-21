@@ -172,17 +172,40 @@ public class WalletConnector : MonoBehaviour
     }
 
     public async void Credit(string wei)
-    {
-        TransactionResult result = await contract.Write("rewardFunc", _currentAddress, wei);
+    { try
+        {
+            TransactionResult result = await contract.Write("rewardFunc", _currentAddress, wei);
 
-        Debug.LogWarning("Result_Credit >>>" + result);
+            Debug.LogWarning("Result_Credit >>> " + result);
+        }
+        catch
+        {
+            RequestBalance();
+        }
     }
 
-    public async  void Deduct(string wei) 
+    public async void Deduct(string wei)
     {
-        TransactionResult result = await contract.Write("placebid", new TransactionRequest() { value = wei, gasLimit = "100000"});
+        TransactionResult result = null;
+        try 
+        {
+             result = await contract.Write("placebid", new TransactionRequest() { value = wei, gasLimit = "100000" });
 
-        Debug.LogWarning("Result_Deduct >>>" + result);
+            Debug.LogWarning("Result_Deduct >>>" + result);
+
+            Actions.Deduct(true);
+        }
+        catch (Exception ex) 
+        {
+            if(result != null)
+                Actions.Deduct(true);
+
+            Debug.LogWarning("Transaction failed" );
+
+            RequestBalance();
+
+            Actions.Deduct(false);
+        }
     }
 
     #endregion

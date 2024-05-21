@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using DataCollector;
+
 public static class Actions
 {
     public static Action RestartAction;
 
     public static Action StartAction;
+
 
     public static Action<Horse.Hero> ReachedDestinmation;
 
@@ -24,4 +27,10 @@ public static class Actions
     public static Action<string> SetID;
 
     public static Action<List<RiderStat>> SortedRiders;
+
+    public static Action<bool> Deduct;
+
+    public static Action<ResultStat, string> SetTheResult;
+
+    public static Action<Dictionary<string, int>> SetRaceModel;
 }

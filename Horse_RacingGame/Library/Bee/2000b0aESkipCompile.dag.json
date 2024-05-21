@@ -27,7 +27,7 @@
       "DisplayName": "Writing 6097564273297756792.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 13513,
+      "PayloadLength": 13768,
       "PayloadDebugContentSnippet": "-a=\"D:\\Work\\Horse_Racing\\Horse",
       "Inputs": [],
       "Outputs": [
@@ -99,8 +99,11 @@
         "Assets/Thirdweb/Core/Plugins/WalletConnectUnity/com.walletconnect.core/Runtime/WalletConnectSharp/WalletConnectSharp.Storage.dll",
         "Assets/Thirdweb/Core/Plugins/zxing/zxing.unity.dll",
         "Library/ScriptAssemblies/Assembly-CSharp.dll",
+        "Library/ScriptAssemblies/CFXRDemo.dll",
+        "Library/ScriptAssemblies/CFXRRuntime.dll",
         "Library/ScriptAssemblies/Cinemachine.dll",
         "Library/ScriptAssemblies/com.Tivadar.Best.HTTP.dll",
+        "Library/ScriptAssemblies/KinoBloom.Runtime.dll",
         "Library/ScriptAssemblies/Thirdweb.Core.dll",
         "Library/ScriptAssemblies/Thirdweb.Examples.dll",
         "Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll",
@@ -476,10 +479,19 @@
       "File": "Library/ScriptAssemblies/Assembly-CSharp.dll"
     },
     {
+      "File": "Library/ScriptAssemblies/CFXRDemo.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/CFXRRuntime.dll"
+    },
+    {
       "File": "Library/ScriptAssemblies/Cinemachine.dll"
     },
     {
       "File": "Library/ScriptAssemblies/com.Tivadar.Best.HTTP.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/KinoBloom.Runtime.dll"
     },
     {
       "File": "Library/ScriptAssemblies/Thirdweb.Core.dll"

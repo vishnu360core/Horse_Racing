@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+using DataCollector;
+
 public class GameController : MonoBehaviour,HorseTrackDelegate
 {
     [Header("Managers:")]
@@ -14,11 +16,13 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     [Header("UI Settings:")]
     [SerializeField] TMP_Text amount_Text;
     [SerializeField] GameObject _betPanel;
-    [SerializeField] GameObject _reachedPanel;
+    [SerializeField] RestartPanel _reachedPanel;
     [SerializeField] Button _resetButton;
     [SerializeField] Button _playButton;
     [SerializeField] TMP_Text id_Text;
     [SerializeField] TMP_Text bet_Text;
+    [SerializeField] GameObject _playAgainButton;
+
  
 
     [Header("Bet_Blocks:")]
@@ -40,11 +44,46 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
         Actions.SetID += SetIDAction;
 
+        Actions.Deduct += DeductAction;
+
         horseTrackManager.callback = this;
 
         EnableGameControl(false);
 
+        //Actions.StartAction();
+
         //Actions.UpdateAmount += UpdateAmount;
+    }
+
+
+    public void SaveGameStatus(GameStatus _status)
+    {
+        string jsonString = JsonUtility.ToJson(new GameData { status = _status });
+
+        Debug.Log("Game status saved >>>" + jsonString);
+
+        //StartCoroutine(Network.Instance.SaveToNet(jsonString));
+    }
+
+    private void DeductAction(bool enable)
+    {
+        if (enable)
+        {
+            StartGameAction();
+            SaveGameStatus(GameStatus.locked);
+        }
+        else
+        {
+            setAmount = 0;
+            loseAmount = 0;
+
+            bet_Text.text = "Total Bets: " + loseAmount;
+
+            for (int i = 0; i < betBlocks.Count; i++)
+                betBlocks[i].ResetAction();
+
+            _playAgainButton.SetActive(false);
+        }
     }
 
     private void SetIDAction(string obj)
@@ -68,7 +107,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         Debug.Log("Fetched wallet balance... ");
 
         amount = obj;
-        amount_Text.text = "Amount: " + amount.ToString("F2");
+        amount_Text.text = "Amount: $" + amount.ToString("F2");
     }
 
     /// <summary>
@@ -79,7 +118,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     {
         AudioManager.Instance.PlayHorseRace(false);
 
-        _reachedPanel.SetActive(true);
+        _reachedPanel.EnablePanel(true);
 
         setAmount = 0;
 
@@ -98,29 +137,35 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         if (setAmount <= 0)
         {
             setAmount = 0;
-           
-            if(loseAmount>0)
-             Network.Instance.SendResult(loseAmount.ToString(), idText, Notification.Result.Loss);
 
+            if (loseAmount > 0)
+            {
+                Network.Instance.SendResult(loseAmount.ToString(), idText, Notification.Result.Loss);
+                Actions.SetTheResult(ResultStat.fail, loseAmount.ToString());
+            }
             return;
         }
 
         Network.Instance.SendResult(setAmount.ToString(), idText, Notification.Result.Win);
+        Actions.SetTheResult(ResultStat.success, setAmount.ToString());
 
         float tempAmount = amount + setAmount - loseAmount;
 
         Debug.Log("TempAmount >>>" + tempAmount);
-        amount_Text.text = "Amount: " + tempAmount.ToString("F2");
+        amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
         Network.Instance.CreditAmount(setAmount);
     }
 
+    public void PlayButtonAction()
+    {
+        _playButton.interactable = false;
+
+        PlayAction();
+    }
+
     public void PlayAction()
     {
-        AudioManager.Instance.PlayHorseRace(true);
-
-        _reachedPanel.SetActive(false);
-        _betPanel.SetActive(false);
 
         foreach (HorseBetBlock bet in betBlocks)
         {
@@ -128,30 +173,31 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         }
 
         float tempAmount = amount - loseAmount;
-        amount_Text.text = "Amount: " + tempAmount.ToString("F2");
+        amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
         bet_Text.text = "Total Bets: " + loseAmount;
 
         Network.Instance.DeductAmount(loseAmount);
+    }
+
+    public void StartGameAction()
+    {
+        AudioManager.Instance.PlayHorseRace(true);
+
+        _reachedPanel.EnablePanel(false);
+        _betPanel.SetActive(false);
 
         Actions.StartAction();
     }
 
     public void PlayAgainAction()
     {
-        AudioManager.Instance.PlayHorseRace(true);
-
-        _reachedPanel.SetActive(false);
-        _betPanel.SetActive(false);
-
         float tempAmount = amount - loseAmount;
-        amount_Text.text = "Amount: " + tempAmount.ToString("F2");
+        amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
         bet_Text.text = "Total Bets: " + loseAmount;
 
         Network.Instance.DeductAmount(loseAmount);
-
-        Actions.StartAction();
     }
 
     public void ResetAction()
@@ -165,8 +211,13 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     /// </summary>
     public void RestartAction()
     {
-        _reachedPanel.SetActive(false);
+        _playButton.interactable = true;
+        _resetButton.interactable = true;
+
+        _reachedPanel.EnablePanel(false);
         _betPanel.SetActive(true);
+
+        _playAgainButton.SetActive(true);
 
         setAmount = 0;
         loseAmount = 0;

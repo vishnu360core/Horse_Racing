@@ -81,8 +81,8 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
                 return "Wrangler";
                 break;
 
-            case Horse.Hero.Tennessee:
-                return "Tennessee";
+            case Horse.Hero.Tennesse:
+                return "Tennesse";
                 break;
 
             case Horse.Hero.Kentucky:

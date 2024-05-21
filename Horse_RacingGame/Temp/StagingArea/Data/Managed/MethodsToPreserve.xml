@@ -1,0 +1,196 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="AudioManager">
+			<method name="ButtonClick"/>
+			<method name="ButtonClick"/>
+			<method name="ButtonClick"/>
+			<method name="ButtonClick"/>
+			<method name="ButtonClick"/>
+		</type>
+		<type fullname="ControlPanel">
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Empty"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Full"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Minus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+			<method name="Plus"/>
+		</type>
+		<type fullname="GameController">
+			<method name="PlayAgainAction"/>
+			<method name="PlayButtonAction"/>
+			<method name="ResetAction"/>
+			<method name="RestartAction"/>
+		</type>
+	</assembly>
+	<assembly fullname="Thirdweb.Core" ignoreIfMissing="1">
+		<type fullname="MetaMask.Transports.Unity.UI.MetaMaskOTPPanel">
+			<method name="OnDisconnect"/>
+			<method name="OnDisconnect"/>
+			<method name="OnDisconnect"/>
+			<method name="OnDisconnect"/>
+		</type>
+		<type fullname="Thirdweb.Wallets.EmbeddedWalletUI">
+			<method name="Cancel"/>
+		</type>
+		<type fullname="Thirdweb.Wallets.MetamaskUI">
+			<method name="Cancel"/>
+		</type>
+		<type fullname="Thirdweb.Wallets.WalletConnectUI">
+			<method name="Cancel"/>
+		</type>
+	</assembly>
+	<assembly fullname="Thirdweb.Examples" ignoreIfMissing="1">
+		<type fullname="Thirdweb.Examples.Prefab_ConnectWallet">
+			<method name="ConnectEmail"/>
+			<method name="ConnectExternal"/>
+			<method name="ConnectExternal"/>
+			<method name="ConnectExternal"/>
+			<method name="ConnectExternal"/>
+			<method name="ConnectExternal"/>
+			<method name="ConnectGuest"/>
+			<method name="ConnectOauth"/>
+			<method name="ConnectOauth"/>
+			<method name="ConnectOauth"/>
+			<method name="CopyAddress"/>
+			<method name="Disconnect"/>
+			<method name="ExportWallet"/>
+			<method name="ToggleSwitchNetworkPanel"/>
+		</type>
+		<type fullname="Thirdweb.Examples.SpriteSwap">
+			<method name="Swap"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+</linker>

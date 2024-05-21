@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -42,6 +43,11 @@ public class Network : MonoBehaviour
 
                 Debug.Log("Deduct Connection open!");
                 break;
+
+            case 4:
+
+                Debug.Log("Data Connection open!");
+                break;
         }
     }
 
@@ -55,7 +61,6 @@ public class Network : MonoBehaviour
         message = parts[0];
         index = parts[1];
 
-        Debug.Log("Index :" + index + " " + message);
 
         if (message == "Ping")
             return;
@@ -109,6 +114,13 @@ public class Network : MonoBehaviour
                 Actions.Deduct_Wei(message);
 
                 break;
+
+                case 4:
+                Debug.Log("Race data >>" + message);
+                Dictionary<string, int> raceModel = JsonConvert.DeserializeObject<Dictionary<string, int>>(message);
+
+                Actions.SetRaceModel(raceModel);
+                break;
         }
     }
 
@@ -120,6 +132,7 @@ public class Network : MonoBehaviour
         WebSocketInit("ws://localhost:6050");// 1 Wallet
         WebSocketInit("ws://localhost:6040");// 2 Credit
         WebSocketInit("ws://localhost:6030");// 3 Deduct
+        WebSocketInit("ws://localhost:6020");// 4 Data
     }
 
     public string GetSubstringBetween(string fullText, string startString, string endString)

@@ -10,7 +10,7 @@ using DG.Tweening;
 [RequireComponent (typeof(Animator))]
 public class Horse : MonoBehaviour
 {
-    public enum Hero { Blazer,Wrangler,Sheriff,Kentucky,Diesel,Tennessee,LadyBird,Sassy}
+    public enum Hero { Blazer,Wrangler,Sheriff,Kentucky,Diesel,Tennesse,LadyBird,Sassy}
 
     [SerializeField] Hero _hero;
     public Hero GetHero => _hero;

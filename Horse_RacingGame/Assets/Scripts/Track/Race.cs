@@ -31,10 +31,12 @@ public class Race : MonoBehaviour
           Transform riderTransform = riderInfo.transform;
            Vector3 newPos = layoutGroup.transform.GetChild(i).localPosition;
 
+            riderInfo.SetRank(i + 1);
 
             riderTransform.DOLocalMove(newPos, 1.0f).OnComplete(() =>
             {
                 riderTransform.SetSiblingIndex(i);
+              
                // layoutGroup.enabled = true;
             });
            

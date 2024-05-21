@@ -28,11 +28,14 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_AWSSDK_SecurityToken_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Amazon_Extensions_CognitoAuthentication_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_BouncyCastle_Crypto_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_CFXRDemo_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_CFXRRuntime_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Cinemachine_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_DOTween_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Dynamitey_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_EventEmitter_NET_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_ImpromptuInterface_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_KinoBloom_Runtime_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_MetaMask_SDK_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Microsoft_Bcl_AsyncInterfaces_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Microsoft_CSharp_CodeGenModule;
@@ -87,6 +90,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_GridModule_CodeGenModule
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_IMGUIModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_InputModule_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_JSONSerializeModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_ParticleSystemModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Physics2DModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule;
@@ -133,7 +137,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_evm_net_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_zxing_unity_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[112] = 
+const Il2CppCodeGenModule* g_CodeGenModules[116] = 
 {
 	(&g_AWSSDK_CognitoIdentityProvider_CodeGenModule),
 	(&g_AWSSDK_CognitoIdentity_CodeGenModule),
@@ -143,11 +147,14 @@ const Il2CppCodeGenModule* g_CodeGenModules[112] =
 	(&g_Amazon_Extensions_CognitoAuthentication_CodeGenModule),
 	(&g_AssemblyU2DCSharp_CodeGenModule),
 	(&g_BouncyCastle_Crypto_CodeGenModule),
+	(&g_CFXRDemo_CodeGenModule),
+	(&g_CFXRRuntime_CodeGenModule),
 	(&g_Cinemachine_CodeGenModule),
 	(&g_DOTween_CodeGenModule),
 	(&g_Dynamitey_CodeGenModule),
 	(&g_EventEmitter_NET_CodeGenModule),
 	(&g_ImpromptuInterface_CodeGenModule),
+	(&g_KinoBloom_Runtime_CodeGenModule),
 	(&g_MetaMask_SDK_CodeGenModule),
 	(&g_Microsoft_Bcl_AsyncInterfaces_CodeGenModule),
 	(&g_Microsoft_CSharp_CodeGenModule),
@@ -202,6 +209,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[112] =
 	(&g_UnityEngine_IMGUIModule_CodeGenModule),
 	(&g_UnityEngine_InputLegacyModule_CodeGenModule),
 	(&g_UnityEngine_InputModule_CodeGenModule),
+	(&g_UnityEngine_JSONSerializeModule_CodeGenModule),
 	(&g_UnityEngine_ParticleSystemModule_CodeGenModule),
 	(&g_UnityEngine_Physics2DModule_CodeGenModule),
 	(&g_UnityEngine_PhysicsModule_CodeGenModule),
@@ -253,20 +261,20 @@ const Il2CppCodeRegistration g_CodeRegistration =
 {
 	35,
 	g_ReversePInvokeWrapperPointers,
-	77418,
+	77573,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	14007,
+	14041,
 	g_Il2CppInvokerPointers,
-	3017,
+	3019,
 	g_UnresolvedVirtualMethodPointers,
 	g_UnresolvedInstanceMethodPointers,
 	g_UnresolvedStaticMethodPointers,
-	714,
+	721,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	112,
+	116,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;
