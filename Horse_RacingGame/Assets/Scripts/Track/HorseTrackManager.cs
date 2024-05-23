@@ -57,10 +57,13 @@ public class HorseTrackManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        if (time > 6)
+        if (time > 4)
         {
+            Debug.Log("Final change speed running !!!!!!!!!");
+
             time = 0;
 
+            //StopCoroutine(ChangeSpeed());
 
             riderStats.Clear();
 
@@ -71,9 +74,9 @@ public class HorseTrackManager : MonoBehaviour
                 float speed = 0.0f;
 
                 if (rider.Value != 1)
-                    speed = 0.21f +  (0.01f - rider.Value *0.001f);
+                    speed = 40f + (1.875f *(8.0f - rider.Value))   /*0.21f +  (0.01f - rider.Value *0.001f)*/;
                 else
-                    speed = 0.22f;
+                    speed = 55f;
 
                 Debug.Log($"Key: {rider.Key},Value: {rider.Value}, Hero: {hero}, speed: {speed} ");
 
@@ -89,6 +92,8 @@ public class HorseTrackManager : MonoBehaviour
                 riderStats.Add(riderStat);
             }
 
+
+            StopCoroutine(ChangeSpeed());
             //_horses.Find(x => x.GetHero == WinningHero).ChangeSpeed(0.22f);
 
             //riderStats.Find(x => x.hero == WinningHero).speed = 0.22f;
@@ -96,11 +101,13 @@ public class HorseTrackManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("Random change speed running !!!!!!!!!");
+
             riderStats.Clear();
 
             for (int i = 0; i < _horses.Count; i++)
             {
-                float speed = UnityEngine.Random.Range(0.21f, 0.219f);
+                float speed = UnityEngine.Random.Range(40f,50f);
                 //Debug.Log("Speed >>>" + speed);
 
                 _horses[i].ChangeSpeed(speed);
@@ -126,9 +133,11 @@ public class HorseTrackManager : MonoBehaviour
     {
         riderStats.Sort((r2, r1) => r1.speed.CompareTo(r2.speed));
 
+        Debug.Log("\n");
+
         for(int i = 0;i < riderStats.Count;i++)
         {
-            Debug.Log("Stat >>>" + riderStats[i].hero + " >>>" + riderStats[i].speed);
+            Debug.Log("Stat >>> " + " "  + i + " " + riderStats[i].hero + " >>>" + riderStats[i].speed);
         }
 
         Actions.SortedRiders(riderStats);
@@ -138,12 +147,17 @@ public class HorseTrackManager : MonoBehaviour
     {
         Debug.Log("Won >>>" + hero);
 
+        Actions.AnimateCamera(false);
+
         for (int i = 0; i < _horses.Count; i++)
         {
             _horses[i].Play(false);
             _horses[i].SubscribeAnimateEvent(false);
         }
 
+        Debug.Log("Count >>" + riderStats.Count);
+
+        Debug.Log("O" + riderStats[0].hero + "\n" + riderStats[1].hero + "\n" + riderStats[2].hero + "\n");
 
         Horse.Hero[] winHorses = { riderStats[0].hero, riderStats[1].hero, riderStats[2].hero };
 

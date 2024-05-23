@@ -33,4 +33,7 @@ public static class Actions
     public static Action<ResultStat, string> SetTheResult;
 
     public static Action<Dictionary<string, int>> SetRaceModel;
+
+
+    public static Action<bool> AnimateCamera; 
 }

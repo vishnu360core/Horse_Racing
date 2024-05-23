@@ -197,6 +197,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     public void PlayAgainAction()
     {
+        Network.Instance.StartData();
+
         float tempAmount = amount - loseAmount;
         amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
@@ -216,6 +218,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     /// </summary>
     public void RestartAction()
     {
+        Network.Instance.StartData();
+
         _playButton.interactable = true;
         _resetButton.interactable = true;
 

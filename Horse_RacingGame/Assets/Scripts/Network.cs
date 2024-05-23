@@ -47,6 +47,8 @@ public class Network : MonoBehaviour
             case 4:
 
                 Debug.Log("Data Connection open!");
+
+                StartData();
                 break;
         }
     }
@@ -133,6 +135,7 @@ public class Network : MonoBehaviour
         WebSocketInit("ws://localhost:6040");// 2 Credit
         WebSocketInit("ws://localhost:6030");// 3 Deduct
         WebSocketInit("ws://localhost:6020");// 4 Data
+
     }
 
     public string GetSubstringBetween(string fullText, string startString, string endString)
@@ -156,24 +159,30 @@ public class Network : MonoBehaviour
     {
         string resultMessage = null;
 
-        switch (result)
-        {
-            case Notification.Result.Win:
-                resultMessage = "<id>"+ id+ "</id>" + "<W>" + amount + "</W>";
-                break;
+        //switch (result)
+        //{
+        //    case Notification.Result.Win:
+        //        resultMessage = "<id>"+ id+ "</id>" + "<W>" + amount + "</W>";
+        //        break;
 
-            case Notification.Result.Loss:
-                resultMessage = "<id>" + id + "</id>" + "<L>" + amount + "</L>";
-                break;
-        }
+        //    case Notification.Result.Loss:
+        //        resultMessage = "<id>" + id + "</id>" + "<L>" + amount + "</L>";
+        //        break;
+        //}
 
-        Debug.LogWarning("Sending result >>" + resultMessage);
-        Send(0, resultMessage);
+        //Debug.LogWarning("Sending result >>" + resultMessage);
+        //Send(0, resultMessage);
     }
-       #endregion
+
+    public void StartData()
+    {
+        Send(4, "Start");
+    }
+
+    #endregion
 
 
-       #region WALLET
+    #region WALLET
 
         /// <summary>
         /// Sending the data 

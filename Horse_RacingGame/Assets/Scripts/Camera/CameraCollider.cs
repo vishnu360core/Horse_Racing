@@ -1,4 +1,4 @@
-using Nethereum.BlockchainProcessing.BlockStorage.Repositories;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +19,7 @@ public class CameraCollider : MonoBehaviour
     {
        if(other.CompareTag("CameraTarget"))
         {
+            Debug.LogWarning("Index >>>" + cameraIndex);
             calback.CameraSwitch(cameraIndex);
         }
     }

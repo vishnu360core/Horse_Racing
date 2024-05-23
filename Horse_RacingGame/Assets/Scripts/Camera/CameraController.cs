@@ -24,17 +24,27 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
     {
         Actions.RestartAction += ResetAction;
         Actions.StartAction += StartAction;
+        Actions.AnimateCamera += EnablePlayCamera;
 
         for (int i = 0; i < cameraColliders.Count; ++i)
             cameraColliders[i].calback = this;
+
     }
 
     private void StartAction()
     {
         ResetAction();
 
-        _targetCamera.Play();
+        EnablePlayCamera(true);
     }
+    
+    void EnablePlayCamera(bool enable)
+    {
+        if (enable)
+          _targetCamera.Play();
+        else
+          _targetCamera.Pause();
+    } 
 
     public void CameraSwitch(int index)
     {

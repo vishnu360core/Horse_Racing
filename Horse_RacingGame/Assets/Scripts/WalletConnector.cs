@@ -189,7 +189,8 @@ public class WalletConnector : MonoBehaviour
         TransactionResult result = null;
         try 
         {
-             result = await contract.Write("placebid", new TransactionRequest() { value = wei, gasLimit = "100000" });
+
+            result = await contract.Write("placebid", new TransactionRequest() { value = wei, gasLimit = "100000" });
 
             Debug.LogWarning("Result_Deduct >>>" + result);
 
