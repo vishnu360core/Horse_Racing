@@ -795,11 +795,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnRenderImage_m2FA867D44BD6651C972
 		L_0 = Application_get_isMobilePlatform_mE0BBFDE72BBFE5877581FA67DDBBFC397608AFCA(NULL);
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_1 = ___0_source;
 		int32_t L_2;
-		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(4, L_1);
+		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_1);
 		V_0 = L_2;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_3 = ___0_source;
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_3);
+		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_3);
 		V_1 = L_4;
 		bool L_5 = __this->____highQuality;
 		if (L_5)
@@ -966,10 +966,10 @@ IL_0149:
 		int32_t L_46 = V_13;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_47 = V_12;
 		int32_t L_48;
-		L_48 = VirtualFuncInvoker0< int32_t >::Invoke(4, L_47);
+		L_48 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_47);
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_49 = V_12;
 		int32_t L_50;
-		L_50 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_49);
+		L_50 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_49);
 		int32_t L_51 = V_2;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_52;
 		L_52 = RenderTexture_GetTemporary_mDAD0D2A673F07BEC3B1A9555863E24A479E9BB11(((int32_t)(L_48/2)), ((int32_t)(L_50/2)), 0, L_51, NULL);
@@ -1054,10 +1054,10 @@ IL_01b7:
 		int32_t L_77 = V_14;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_78 = V_15;
 		int32_t L_79;
-		L_79 = VirtualFuncInvoker0< int32_t >::Invoke(4, L_78);
+		L_79 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_78);
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_80 = V_15;
 		int32_t L_81;
-		L_81 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_80);
+		L_81 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_80);
 		int32_t L_82 = V_2;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_83;
 		L_83 = RenderTexture_GetTemporary_mDAD0D2A673F07BEC3B1A9555863E24A479E9BB11(L_79, L_81, 0, L_82, NULL);

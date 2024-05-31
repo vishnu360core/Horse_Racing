@@ -23344,7 +23344,7 @@ IL_0039:
 	{
 		Type_t* L_16 = V_0;
 		Type_t* L_17;
-		L_17 = VirtualFuncInvoker0< Type_t* >::Invoke(127, L_16);
+		L_17 = VirtualFuncInvoker0< Type_t* >::Invoke(128, L_16);
 		V_0 = L_17;
 	}
 
@@ -23430,7 +23430,7 @@ IL_001c:
 	{
 		Type_t* L_9 = ___0_type;
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_10;
-		L_10 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(131, L_9);
+		L_10 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(132, L_9);
 		V_1 = L_10;
 		V_2 = 0;
 		goto IL_004b;

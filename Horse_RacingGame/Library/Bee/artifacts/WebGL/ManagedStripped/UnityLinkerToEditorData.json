@@ -138,6 +138,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.director"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           }
         ]
       },
@@ -172,7 +178,9 @@
           },
           {
             "name": "ComputeShader",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -384,7 +392,9 @@
           },
           {
             "name": "ReflectionProbe",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -439,6 +449,12 @@
             "scenes": [
               "Assets/Scenes/SampleScene.unity"
             ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Skybox",
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -619,6 +635,12 @@
             "icon": "package/com.unity.modules.tls"
           },
           {
+            "name": "Required by Terrain Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.terrain"
+          },
+          {
             "name": "Required by TextCoreFontEngine Module",
             "scenes": [],
             "dependencyType": 2,
@@ -661,10 +683,22 @@
             "icon": "package/com.unity.modules.unitywebrequesttexture"
           },
           {
+            "name": "Required by VFX Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.vfx"
+          },
+          {
             "name": "Required by VR Module",
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.vr"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           },
           {
             "name": "Required by WebGL Module",
@@ -840,7 +874,9 @@
           },
           {
             "name": "MeshCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -1034,6 +1070,12 @@
             "icon": "package/com.unity.modules.tls"
           },
           {
+            "name": "Required by Terrain Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.terrain"
+          },
+          {
             "name": "Required by TextCoreFontEngine Module",
             "scenes": [],
             "dependencyType": 2,
@@ -1076,10 +1118,22 @@
             "icon": "package/com.unity.modules.unitywebrequesttexture"
           },
           {
+            "name": "Required by VFX Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.vfx"
+          },
+          {
             "name": "Required by VR Module",
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.vr"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           },
           {
             "name": "Required by WebGL Module",
@@ -1114,6 +1168,23 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.unitywebrequest"
+          }
+        ]
+      },
+      {
+        "name": "Terrain",
+        "dependencies": [
+          {
+            "name": "Terrain",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "TerrainData",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
           }
         ]
       },
@@ -1232,6 +1303,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.uielements"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           }
         ]
       },
@@ -1247,6 +1324,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.unitywebrequesttexture"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           }
         ]
       },
@@ -1255,8 +1338,48 @@
         "dependencies": []
       },
       {
+        "name": "VFX",
+        "dependencies": [
+          {
+            "name": "VFXManager",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "VisualEffect",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "VisualEffectAsset",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "VisualEffectObject",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          }
+        ]
+      },
+      {
         "name": "VR",
         "dependencies": []
+      },
+      {
+        "name": "Video",
+        "dependencies": [
+          {
+            "name": "VideoPlayer",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          }
+        ]
       },
       {
         "name": "WebGL",

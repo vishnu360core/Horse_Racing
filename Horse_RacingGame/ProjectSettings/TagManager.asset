@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Camera
   - CameraTarget
+  - Track
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Camera
   - Water
   - UI
-  - 
+  - PostProcessing
   - 
   - 
   - 

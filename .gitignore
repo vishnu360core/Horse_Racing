@@ -8,9 +8,7 @@
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
-src/*/[Ll]ogs/*
 /[Uu]ser[Ss]ettings/
-logs/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -40,22 +38,14 @@ ExportedObj/
 *.suo
 *.tmp
 *.user
-*.meta
 *.userprefs
 *.pidb
-*.rsp
 *.booproj
 *.svd
 *.pdb
 *.mdb
-*.o
-*.dylib
-*.mvfrm
 *.opendb
 *.VC.db
-*.log
-*.a
-*.data
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -80,3 +70,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+*.meta
+/Horse_RacingGame/Library
+Horse_RacingGame/Library/ArtifactDB
+Horse_RacingGame/Library/ArtifactDB
+Horse_RacingGame/Library/ArtifactDB

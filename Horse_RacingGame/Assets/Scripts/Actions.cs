@@ -35,5 +35,7 @@ public static class Actions
     public static Action<Dictionary<string, int>> SetRaceModel;
 
 
-    public static Action<bool> AnimateCamera; 
+    public static Action<bool> AnimateCamera;
+
+    public static Action<Vector3> GroundHit;
 }
