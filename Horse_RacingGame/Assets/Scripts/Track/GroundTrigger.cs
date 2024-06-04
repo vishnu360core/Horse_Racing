@@ -7,6 +7,12 @@ public class GroundTrigger : MonoBehaviour
 {
     public Collider collider;
 
+    int _dustIndex = 0;
+
+    public void SetDustParticle(int dustIndex)
+    {  _dustIndex = dustIndex; }
+
+
     private void OnEnable()
     {
         collider = GetComponent<Collider>();
@@ -18,8 +24,7 @@ public class GroundTrigger : MonoBehaviour
         {
             Vector3 closestPoint = collider.ClosestPoint(other.transform.position);
 
-            Debug.LogWarning("Track >>> " + closestPoint);  
-            Actions.GroundHit(closestPoint);
+            Actions.GroundHit(closestPoint,_dustIndex);
         }
     }
 }

@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 {
     [Header("Managers:")]
     [SerializeField] HorseTrackManager horseTrackManager;
+    [SerializeField] CameraController  cameraController;
 
     [Header("UI Settings:")]
     [SerializeField] TMP_Text amount_Text;
@@ -22,6 +23,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     [SerializeField] TMP_Text id_Text;
     [SerializeField] TMP_Text bet_Text;
     [SerializeField] GameObject _playAgainButton;
+    [SerializeField] GameObject _camPanel;
+    [SerializeField] GameObject _loadPanel;
 
  
 
@@ -45,6 +48,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         Actions.SetID += SetIDAction;
 
         Actions.Deduct += DeductAction;
+        Actions.Credit += CreditAction;
 
         horseTrackManager.callback = this;
 
@@ -54,7 +58,6 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
         //Actions.UpdateAmount += UpdateAmount;
     }
-
 
     public void SaveGameStatus(GameStatus _status)
     {
@@ -67,6 +70,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     private void DeductAction(bool enable)
     {
+        _loadPanel.SetActive(false);
+
         if (enable)
         {
             StartGameAction();
@@ -74,6 +79,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         }
         else
         {
+
             setAmount = 0;
             loseAmount = 0;
 
@@ -84,6 +90,11 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
             _playAgainButton.SetActive(false);
         }
+    }
+
+    private void CreditAction(bool enable)
+    {
+        _loadPanel.SetActive(false);
     }
 
     private void SetIDAction(string obj)
@@ -116,6 +127,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     /// <param name="hero"></param>
     public void RaceFinished(Horse.Hero[] heros)
     {
+        cameraController.EnableSlowMotion(false);  
+
         AudioManager.Instance.PlayHorseRace(false);
 
         _reachedPanel.EnablePanel(true);
@@ -159,6 +172,9 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         Debug.Log("TempAmount >>>" + tempAmount);
         amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
+        _loadPanel.SetActive(true);
+        _loadPanel.GetComponent<Loader>().SetLoadMessage("\n Credit in progress");
+
         Network.Instance.CreditAmount(setAmount);
     }
 
@@ -172,15 +188,28 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     public void PlayAction()
     {
 
+        List<Horse.Hero> betedHorses = new List<Horse.Hero>();
+
         foreach (HorseBetBlock bet in betBlocks)
         {
             loseAmount += bet.LoseAmount;
+
+            if(bet.LoseAmount >0)
+            {
+                Horse.Hero horse = bet.HeroType;
+                betedHorses.Add(horse);
+            }
         }
+
+        Actions.BetHorses(betedHorses);
 
         float tempAmount = amount - loseAmount;
         amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
         bet_Text.text = "Total Bets: " + loseAmount;
+
+        _loadPanel.SetActive(true);
+        _loadPanel.GetComponent<Loader>().SetLoadMessage("\n Deduct in progress");
 
         Network.Instance.DeductAmount(loseAmount);
     }
@@ -189,8 +218,12 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     {
         AudioManager.Instance.PlayHorseRace(true);
 
+        _camPanel.SetActive(true);
+
         _reachedPanel.EnablePanel(false);
         _betPanel.SetActive(false);
+
+        _loadPanel.SetActive(false);
 
         Actions.StartAction();
     }
@@ -199,10 +232,32 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     {
         Network.Instance.StartData();
 
+        Actions.RestartAction();
+
+        List<Horse.Hero> betedHorses = new List<Horse.Hero>();
+
+        foreach (HorseBetBlock bet in betBlocks)
+        {
+            loseAmount += bet.LoseAmount;
+
+            if (bet.LoseAmount > 0)
+            {
+                Horse.Hero horse = bet.HeroType;
+                betedHorses.Add(horse);
+            }
+        }
+
         float tempAmount = amount - loseAmount;
         amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
         bet_Text.text = "Total Bets: " + loseAmount;
+
+        Actions.BetHorses(betedHorses);
+
+        _loadPanel.SetActive(true);
+        _loadPanel.GetComponent<Loader>().SetLoadMessage("\n Deduct in progress");
+
+        _reachedPanel.EnablePanel(false);
 
         Network.Instance.DeductAmount(loseAmount);
     }
@@ -211,6 +266,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     {
         for (int i = 0; i < betBlocks.Count; i++)
             betBlocks[i].ResetAction();
+
+        _camPanel.SetActive(false);
     }
 
     /// <summary>
@@ -219,6 +276,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     public void RestartAction()
     {
         Network.Instance.StartData();
+
+        _camPanel.SetActive(false);
 
         _playButton.interactable = true;
         _resetButton.interactable = true;

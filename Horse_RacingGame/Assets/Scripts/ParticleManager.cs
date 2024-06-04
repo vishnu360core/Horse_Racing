@@ -17,9 +17,9 @@ public class ParticleManager : MonoBehaviour
         Actions.GroundHit += GroundHitAction;
     }
 
-    private void GroundHitAction(Vector3 vector)
+    private void GroundHitAction(Vector3 vector ,int dustIndex)
     {
-        GameObject dust = Instantiate(particleData.GetParticle("Dust"));
+        GameObject dust = Instantiate(particleData.DustParticle(dustIndex));
 
         dust.transform.position = vector;
         dust.transform.SetParent(_dustContainer);

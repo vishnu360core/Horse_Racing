@@ -29,13 +29,15 @@ public static class Actions
     public static Action<List<RiderStat>> SortedRiders;
 
     public static Action<bool> Deduct;
+    public static Action<bool> Credit;
 
     public static Action<ResultStat, string> SetTheResult;
 
     public static Action<Dictionary<string, int>> SetRaceModel;
 
+    public static Action<Vector3,int> GroundHit;
 
-    public static Action<bool> AnimateCamera;
+    public static Action<Horse.Hero>  GetWinner;
 
-    public static Action<Vector3> GroundHit;
+    public static Action<List<Horse.Hero>> BetHorses; 
 }

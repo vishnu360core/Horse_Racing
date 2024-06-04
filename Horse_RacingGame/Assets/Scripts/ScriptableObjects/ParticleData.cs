@@ -17,9 +17,9 @@ public class ParticleData : ScriptableObject
 
   
 
-    public GameObject GetParticle(string  particleName)
+    public GameObject DustParticle(int index)
     {
-        return particles.Find(x => x.name == particleName);
+        return particles[index];
     }
 
 }

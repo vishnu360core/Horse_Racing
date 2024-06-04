@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
 using DG.Tweening;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(SplineAnimate))]
@@ -15,7 +16,7 @@ public class Horse : MonoBehaviour
     [SerializeField] Hero _hero;
     public Hero GetHero => _hero;
 
-    SplineAnimate splineAnimate;
+   [SerializeField]SplineAnimate splineAnimate;
     Animator animator;
 
     Vector3 _currentPos = Vector3.zero;
@@ -23,22 +24,45 @@ public class Horse : MonoBehaviour
     [SerializeField] string _horsName;
     string HorseName => _horsName;
 
-    float transitionDuration = 2.0f;
+    float transitionDuration = 10.0f;
 
     float currentMaxSpeed;
     float targetMaxSpeed;
 
+    [Header("Particle System :")]
+    [SerializeField] List<GroundTrigger> groundTriggers = new List<GroundTrigger>();
+    [SerializeField] int particleIndex = 0;
+
+    [Header("Arrow Header :")]
+    [SerializeField] Color arrowcolor;
+    [SerializeField] Image arrowImage;
+
+
+    private void Awake()
+    {
+        for (int i = 0; i < groundTriggers.Count; ++i)
+        {
+            groundTriggers[i].SetDustParticle(particleIndex);
+        }
+    }
+
     private void OnEnable()
     {
-        splineAnimate = this.GetComponent<SplineAnimate>();
+       // splineAnimate = this.GetComponent<SplineAnimate>();
         animator = this.GetComponent<Animator>();
 
-        splineAnimate.onUpdated += OnSplineUpdate;
+        arrowImage.color = arrowcolor;
+    }
 
-       
+    private void Start()
+    {
+    }
 
-        //splineAnimate.MaxSpeed = 0.2f;
-      //  ChangeRankPosition(3);
+
+    private void Update()
+    {
+        if (arrowImage != null) 
+            arrowImage.transform.LookAt(Camera.main.transform,Vector3.up);
     }
 
     public void PlayAction()
@@ -46,42 +70,17 @@ public class Horse : MonoBehaviour
         splineAnimate.Play();
     }
 
-    private void OnSplineUpdate(Vector3 vector, Quaternion quaternion)
-    {
-        float time = Mathf.Round(splineAnimate.ElapsedTime * 10f) / 10f;
-        float duration = Mathf.Round(splineAnimate.duration * 10f) / 10f;
-
-       // if (time == duration)
-       //{
-       //     Debug.Log("Stopped");
-
-       //     callback.ReachedAction(_hero);
-       //     return;
-       //}
-    }
-
-    public void SubscribeAnimateEvent(bool enable)
-    {
-        if (splineAnimate == null)
-            return;
-
-        if(enable)
-            splineAnimate.onUpdated += OnSplineUpdate;
-        else
-            splineAnimate.onUpdated -= OnSplineUpdate;
-    }
-
-
-
     /// <summary>
     /// Play the spline animate
     /// </summary>
     public void Play(bool enable)
     {
+        Debug.LogWarning("Horse play >>>>" +  enable + " " + GetHero);  
+
         if(enable)
             splineAnimate.Play();
         else
-            splineAnimate.Pause();  
+            splineAnimate.Pause();
     }
 
 
@@ -128,6 +127,6 @@ public class Horse : MonoBehaviour
     {
         splineAnimate.Restart(false);
 
-        SubscribeAnimateEvent(true);
+       // SubscribeAnimateEvent(true);
     }
 }

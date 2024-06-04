@@ -183,6 +183,7 @@ class BoxCollider; template <> void RegisterUnityClass<BoxCollider>(const char*)
 class CharacterController; template <> void RegisterUnityClass<CharacterController>(const char*);
 class Collider; template <> void RegisterUnityClass<Collider>(const char*);
 class MeshCollider; template <> void RegisterUnityClass<MeshCollider>(const char*);
+class PhysicMaterial; template <> void RegisterUnityClass<PhysicMaterial>(const char*);
 class PhysicsManager; template <> void RegisterUnityClass<PhysicsManager>(const char*);
 class Rigidbody; template <> void RegisterUnityClass<Rigidbody>(const char*);
 class SphereCollider; template <> void RegisterUnityClass<SphereCollider>(const char*);
@@ -208,7 +209,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 100 non stripped classes
+	//Total: 101 non stripped classes
 	//0. Animation
 	RegisterUnityClass<Animation>("Animation");
 	//1. AnimationClip
@@ -369,45 +370,47 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<Collider>("Physics");
 	//79. MeshCollider
 	RegisterUnityClass<MeshCollider>("Physics");
-	//80. PhysicsManager
+	//80. PhysicMaterial
+	RegisterUnityClass<PhysicMaterial>("Physics");
+	//81. PhysicsManager
 	RegisterUnityClass<PhysicsManager>("Physics");
-	//81. Rigidbody
+	//82. Rigidbody
 	RegisterUnityClass<Rigidbody>("Physics");
-	//82. SphereCollider
+	//83. SphereCollider
 	RegisterUnityClass<SphereCollider>("Physics");
-	//83. Collider2D
+	//84. Collider2D
 	RegisterUnityClass<Collider2D>("Physics2D");
-	//84. CompositeCollider2D
+	//85. CompositeCollider2D
 	RegisterUnityClass<CompositeCollider2D>("Physics2D");
-	//85. Physics2DSettings
+	//86. Physics2DSettings
 	RegisterUnityClass<Physics2DSettings>("Physics2D");
-	//86. PolygonCollider2D
+	//87. PolygonCollider2D
 	RegisterUnityClass<PolygonCollider2D>("Physics2D");
-	//87. Rigidbody2D
+	//88. Rigidbody2D
 	RegisterUnityClass<Rigidbody2D>("Physics2D");
-	//88. Terrain
+	//89. Terrain
 	RegisterUnityClass<Terrain>("Terrain");
-	//89. TerrainData
+	//90. TerrainData
 	RegisterUnityClass<TerrainData>("Terrain");
-	//90. Font
+	//91. Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//91. TextMesh
+	//92. TextMesh
 	RegisterUnityClass<TextRenderingPrivate::TextMesh>("TextRendering");
-	//92. Canvas
+	//93. Canvas
 	RegisterUnityClass<UI::Canvas>("UI");
-	//93. CanvasGroup
+	//94. CanvasGroup
 	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//94. CanvasRenderer
+	//95. CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
-	//95. VFXManager
+	//96. VFXManager
 	RegisterUnityClass<VFXManager>("VFX");
-	//96. VisualEffect
+	//97. VisualEffect
 	RegisterUnityClass<VisualEffect>("VFX");
-	//97. VisualEffectAsset
+	//98. VisualEffectAsset
 	RegisterUnityClass<VisualEffectAsset>("VFX");
-	//98. VisualEffectObject
+	//99. VisualEffectObject
 	RegisterUnityClass<VisualEffectObject>("VFX");
-	//99. VideoPlayer
+	//100. VideoPlayer
 	RegisterUnityClass<VideoPlayer>("Video");
 
 }

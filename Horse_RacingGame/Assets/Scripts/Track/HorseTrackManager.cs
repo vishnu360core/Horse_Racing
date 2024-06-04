@@ -32,6 +32,8 @@ public class HorseTrackManager : MonoBehaviour
         Actions.RestartAction += RestartAction;
 
         Actions.SetRaceModel += RaceModelAction;
+
+        //PlayAction();
     }
 
     public void RaceModelAction(Dictionary<string, int> model)
@@ -42,13 +44,13 @@ public class HorseTrackManager : MonoBehaviour
 
     public void PlayAction()
     {
-        RestartAction();
+       RestartAction();
 
 
-         for(int i=0; i < _horses.Count;i++)
-            _horses[i].PlayAction();
+         for(int i=0; i < _horses.Count; i++)
+            _horses[i].Play(true);
 
-        StartCoroutine(ChangeSpeed());
+       StartCoroutine(ChangeSpeed());
     }
 
    
@@ -57,7 +59,7 @@ public class HorseTrackManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        if (time > 4)
+        if (time > 5)
         {
             Debug.Log("Final change speed running !!!!!!!!!");
 
@@ -74,13 +76,18 @@ public class HorseTrackManager : MonoBehaviour
                 float speed = 0.0f;
 
                 if (rider.Value != 1)
-                    speed = 40f + (1.875f *(8.0f - rider.Value))   /*0.21f +  (0.01f - rider.Value *0.001f)*/;
+                    speed = 24f + (8 - rider.Value)    /*0.21f +  (0.01f - rider.Value *0.001f)*/;
                 else
-                    speed = 55f;
+                    speed = 32f;
 
                 Debug.Log($"Key: {rider.Key},Value: {rider.Value}, Hero: {hero}, speed: {speed} ");
 
                 _horses.Find(x => x.GetHero == hero).ChangeSpeed(speed);
+
+                if (rider.Value == 1)
+                {
+                    Actions.GetWinner(Enum.Parse<Horse.Hero>(rider.Key));
+                }
 
 
                 RiderStat riderStat = new RiderStat()
@@ -107,9 +114,10 @@ public class HorseTrackManager : MonoBehaviour
 
             for (int i = 0; i < _horses.Count; i++)
             {
-                float speed = UnityEngine.Random.Range(40f,50f);
+                float speed = UnityEngine.Random.Range(24f,32f);
                 //Debug.Log("Speed >>>" + speed);
 
+           
                 _horses[i].ChangeSpeed(speed);
 
                 RiderStat rider = new RiderStat()
@@ -147,12 +155,12 @@ public class HorseTrackManager : MonoBehaviour
     {
         Debug.Log("Won >>>" + hero);
 
-        Actions.AnimateCamera(false);
+        //Actions.AnimateCamera(false);
 
         for (int i = 0; i < _horses.Count; i++)
         {
             _horses[i].Play(false);
-            _horses[i].SubscribeAnimateEvent(false);
+            //_horses[i].SubscribeAnimateEvent(false);
         }
 
         Debug.Log("Count >>" + riderStats.Count);

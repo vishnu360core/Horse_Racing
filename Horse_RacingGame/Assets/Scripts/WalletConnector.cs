@@ -177,9 +177,12 @@ public class WalletConnector : MonoBehaviour
             TransactionResult result = await contract.Write("rewardFunc", _currentAddress, wei);
 
             Debug.LogWarning("Result_Credit >>> " + result);
+
+            Actions.Credit(true);
         }
         catch
         {
+            Actions.Credit(false);
             RequestBalance();
         }
     }
