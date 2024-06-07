@@ -40,10 +40,10 @@ public class ControlPanel : MonoBehaviour
 
     public void Empty()
     {
+        callback.SubstractAmount(betAmount, modifier,_type);
+
         betAmount = 0;
         BetDisplay(betAmount);
-
-        callback.SubstractAmount(50, modifier,_type);
     }
 
     public void Plus()

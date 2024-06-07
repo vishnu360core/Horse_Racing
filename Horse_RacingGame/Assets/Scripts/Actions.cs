@@ -20,6 +20,8 @@ public static class Actions
 
     public static Action<bool> EnableGame;
 
+    public static Action CheckBetBalance;
+
     public static Action<string> Credit_Wei;
 
     public static Action<string> Deduct_Wei;

@@ -45,6 +45,8 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
         _setAmount += amount * modifier;
         _loseAmount += amount;
 
+        Debug.Log("Add amount bet block >>>>>>" + _loseAmount + " " + _setAmount);
+
         if (horseBets.Count > 0)
         {
             bool isBetPresent = false;
@@ -83,16 +85,19 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
             horseBets.Add(horseBet);
         }
 
-        Actions.EnableGame(_setAmount > 0);
+        //Actions.EnableGame(_setAmount > 0);
+        Actions.CheckBetBalance();
     }
 
     public void SubstractAmount(int amount, float modifier, ControlPanel.BetType betType)
     {
-        if(_setAmount > amount * modifier) 
+       if(_setAmount >= amount * modifier) 
         _setAmount -= amount*modifier;
 
-        if(_loseAmount > amount)
-        _loseAmount -= amount;
+        if(_loseAmount >= amount)
+          _loseAmount -= amount;
+
+        Debug.Log("Subtract amount bet block >>>>>>" + _loseAmount + " " + _setAmount);
 
         if (horseBets.Count > 0)
         {
@@ -110,7 +115,7 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
             }
         }
 
-        Actions.EnableGame(_setAmount > 0);
+        Actions.CheckBetBalance();
     }
 
     public void ResetAction()

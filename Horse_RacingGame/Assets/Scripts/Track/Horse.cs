@@ -37,6 +37,9 @@ public class Horse : MonoBehaviour
     [SerializeField] Color arrowcolor;
     [SerializeField] Image arrowImage;
 
+    public float pos;
+
+    public   int rank = -1;
 
     private void Awake()
     {
@@ -56,6 +59,7 @@ public class Horse : MonoBehaviour
 
     private void Start()
     {
+
     }
 
 
@@ -63,6 +67,11 @@ public class Horse : MonoBehaviour
     {
         if (arrowImage != null) 
             arrowImage.transform.LookAt(Camera.main.transform,Vector3.up);
+    }
+
+    public float GetElaspedTime() 
+    {
+        return splineAnimate.elapsedTime;
     }
 
     public void PlayAction()
@@ -75,8 +84,6 @@ public class Horse : MonoBehaviour
     /// </summary>
     public void Play(bool enable)
     {
-        Debug.LogWarning("Horse play >>>>" +  enable + " " + GetHero);  
-
         if(enable)
             splineAnimate.Play();
         else
@@ -119,6 +126,10 @@ public class Horse : MonoBehaviour
         splineAnimate.MaxSpeed = targetMaxSpeed;
     }
 
+    public void SetRank(int value)
+    {
+        rank = value;
+    }
 
     /// <summary>
     /// Reset the horse
@@ -126,6 +137,8 @@ public class Horse : MonoBehaviour
     public void ResetAction()
     {
         splineAnimate.Restart(false);
+
+        rank = -1;
 
        // SubscribeAnimateEvent(true);
     }

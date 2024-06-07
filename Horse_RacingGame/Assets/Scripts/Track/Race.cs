@@ -22,25 +22,24 @@ public class Race : MonoBehaviour
 
     private void SortRidersAction(List<RiderStat> riders)
     {
-       for(int i = 0; i < riders.Count; i++) 
-       {
-          RiderInfo riderInfo  =  riderInfos.Find(x => x.hero == riders[i].hero);
+        for (int i = 0; i < riders.Count; i++)
+        {
+            RiderInfo riderInfo = riderInfos.Find(x => x.hero == riders[i].hero);
 
-          //layoutGroup.enabled = false;
+            //layoutGroup.enabled = false;
 
-          Transform riderTransform = riderInfo.transform;
-           Vector3 newPos = layoutGroup.transform.GetChild(i).localPosition;
+            Transform riderTransform = riderInfo.transform;
+            Vector3 newPos = layoutGroup.transform.GetChild(i).localPosition;
 
             riderInfo.SetRank(i + 1);
 
-            riderTransform.DOLocalMove(newPos, 1.0f).OnComplete(() =>
+            riderTransform.DOLocalMove(newPos, 0.5f).OnComplete(() =>
             {
                 riderTransform.SetSiblingIndex(i);
-              
-               // layoutGroup.enabled = true;
+
+                // layoutGroup.enabled = true;
             });
-           
-       }
+        }
     }
 }
 
@@ -48,5 +47,6 @@ public class Race : MonoBehaviour
 public class RiderStat
 {
     public Horse.Hero hero;
-    public float speed;
+
+    public int rank;
 }

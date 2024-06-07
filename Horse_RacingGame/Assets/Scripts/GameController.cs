@@ -44,6 +44,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     {
         Actions.WalletAmount += UpdateWalletAction;
         Actions.EnableGame += EnableGameControl;
+        Actions.CheckBetBalance += CheckTotalBet;
 
         Actions.SetID += SetIDAction;
 
@@ -58,6 +59,25 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
         //Actions.UpdateAmount += UpdateAmount;
     }
+
+    /// <summary>
+    /// Check the total betAmount
+    /// </summary>
+    private void CheckTotalBet()
+    {
+        float totalCurrentBet = 0;
+
+        foreach (HorseBetBlock bet in betBlocks)
+        {
+            if(bet.LoseAmount >0)
+            {
+                totalCurrentBet += bet.LoseAmount;
+            }    
+        }
+
+        EnableGameControl(totalCurrentBet <= amount && totalCurrentBet > 0);
+    }
+
 
     public void SaveGameStatus(GameStatus _status)
     {

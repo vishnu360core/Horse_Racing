@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public interface HorseTrackDelegate
@@ -33,7 +34,16 @@ public class HorseTrackManager : MonoBehaviour
 
         Actions.SetRaceModel += RaceModelAction;
 
-        //PlayAction();
+        //raceModel.Add("Blazer", 1);
+        //raceModel.Add("LadyBird", 2);
+        //raceModel.Add("Wrangler", 3);
+        //raceModel.Add("Sheriff", 4);
+        //raceModel.Add("Diesel", 5);
+        //raceModel.Add("Sassy", 6);
+        //raceModel.Add("Tennesse", 7);
+        //raceModel.Add("Kentucky", 8);
+
+       // PlayAction();
     }
 
     public void RaceModelAction(Dictionary<string, int> model)
@@ -46,6 +56,7 @@ public class HorseTrackManager : MonoBehaviour
     {
        RestartAction();
 
+        StartCoroutine(CheckLeadAction()); 
 
          for(int i=0; i < _horses.Count; i++)
             _horses[i].Play(true);
@@ -53,6 +64,23 @@ public class HorseTrackManager : MonoBehaviour
        StartCoroutine(ChangeSpeed());
     }
 
+
+    IEnumerator CheckLeadAction()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        Debug.Log("Checking lead !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+        riderStats.Clear();
+
+        for (int i = 0; i < _horses.Count; i++)
+        {
+            CheckLead(_horses[i]);
+        }
+
+        RiderStatAction();
+        StartCoroutine(CheckLeadAction());
+    }
    
 
     IEnumerator ChangeSpeed()
@@ -78,33 +106,22 @@ public class HorseTrackManager : MonoBehaviour
                 if (rider.Value != 1)
                     speed = 24f + (8 - rider.Value)    /*0.21f +  (0.01f - rider.Value *0.001f)*/;
                 else
-                    speed = 32f;
+                    speed = 33f;
 
                 Debug.Log($"Key: {rider.Key},Value: {rider.Value}, Hero: {hero}, speed: {speed} ");
 
-                _horses.Find(x => x.GetHero == hero).ChangeSpeed(speed);
+
+                Horse horse = _horses.Find(x => x.GetHero == hero);
+
+                horse.ChangeSpeed(speed);
 
                 if (rider.Value == 1)
                 {
                     Actions.GetWinner(Enum.Parse<Horse.Hero>(rider.Key));
                 }
-
-
-                RiderStat riderStat = new RiderStat()
-                {
-                    hero = hero,
-                    speed = speed
-                };
-
-                riderStats.Add(riderStat);
             }
 
-
             StopCoroutine(ChangeSpeed());
-            //_horses.Find(x => x.GetHero == WinningHero).ChangeSpeed(0.22f);
-
-            //riderStats.Find(x => x.hero == WinningHero).speed = 0.22f;
-            RiderStatAction();
         }
         else
         {
@@ -114,22 +131,13 @@ public class HorseTrackManager : MonoBehaviour
 
             for (int i = 0; i < _horses.Count; i++)
             {
-                float speed = UnityEngine.Random.Range(24f,32f);
+                float speed = UnityEngine.Random.Range(24f, 32f);
                 //Debug.Log("Speed >>>" + speed);
 
-           
                 _horses[i].ChangeSpeed(speed);
-
-                RiderStat rider = new RiderStat()
-                {
-                    hero = _horses[i].GetHero,
-                    speed = speed
-                };
-
-                riderStats.Add(rider);
             }
 
-            RiderStatAction();
+           // RiderStatAction();
 
             StartCoroutine(ChangeSpeed());
         }
@@ -137,15 +145,67 @@ public class HorseTrackManager : MonoBehaviour
         time++;
     }
 
+    #region RANK_MANANGEMENT
+
+    void CheckLead(Horse horse)
+    {
+        int defeatedCount = 0;
+
+        Debug.LogWarning("Lead Checking >>>" + horse.GetHero);
+
+        for (int i = 0; i < _horses.Count; i++)
+        {
+            if(horse != _horses[i]) 
+            {
+                Vector3 forward = horse.gameObject.transform.TransformDirection(Vector3.forward);
+                Vector3 toOther = Vector3.Normalize(_horses[i].gameObject.transform.position - horse.gameObject.transform.position);
+
+                Debug.Log("Dot value >>>>" + " " + _horses[i] + ">>>>" + Vector3.Dot(forward, toOther));
+
+                if (Vector3.Dot(forward, toOther) < 0)
+                {
+                    // Current rider is leading
+                    if(defeatedCount +1 <= 7)
+                       defeatedCount++;
+                   
+                }
+               
+            }
+        }
+
+        Debug.Log(horse.GetHero + " has defeated " + defeatedCount + " other horses");
+
+        horse.rank = 8 - defeatedCount;
+
+        if (horse.rank != -1 && riderStats.Count < 9)
+        {
+            RiderStat rider = new RiderStat()
+            {
+                hero = horse.GetHero,
+                rank = horse.rank
+            };
+
+            riderStats.Add(rider);
+        }
+    }
+
+    #endregion
+
     void RiderStatAction()
     {
-        riderStats.Sort((r2, r1) => r1.speed.CompareTo(r2.speed));
+        if(riderStats.Count ==0)
+        {
+            Debug.LogError("Stats are empty !!!!!");
+            return;
+        }
+
+        riderStats.Sort((r1, r2) => r1.rank.CompareTo(r2.rank));
 
         Debug.Log("\n");
 
         for(int i = 0;i < riderStats.Count;i++)
         {
-            Debug.Log("Stat >>> " + " "  + i + " " + riderStats[i].hero + " >>>" + riderStats[i].speed);
+            Debug.Log("Stat >>> " + " "  + i + " " + riderStats[i].hero + " >>>" + riderStats[i].rank);
         }
 
         Actions.SortedRiders(riderStats);
@@ -153,6 +213,8 @@ public class HorseTrackManager : MonoBehaviour
 
     public void ReachedAction(Horse.Hero hero)
     {
+       StopCoroutine(CheckLeadAction());
+
         Debug.Log("Won >>>" + hero);
 
         //Actions.AnimateCamera(false);

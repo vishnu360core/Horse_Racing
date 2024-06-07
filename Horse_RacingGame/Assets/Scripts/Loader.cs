@@ -9,9 +9,8 @@ public class Loader : MonoBehaviour
 {
     [SerializeField] TMP_Text loadText;
 
-
     public void SetLoadMessage(string message)
     {
-        loadText.text = "LOADING..." + message;
+        loadText.text = message;
     }
 }
