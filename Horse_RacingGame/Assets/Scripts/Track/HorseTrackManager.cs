@@ -103,10 +103,19 @@ public class HorseTrackManager : MonoBehaviour
 
                 float speed = 0.0f;
 
-                if (rider.Value != 1)
-                    speed = 24f + (8 - rider.Value)    /*0.21f +  (0.01f - rider.Value *0.001f)*/;
-                else
-                    speed = 33f;
+                switch(rider.Value)
+                {
+                    case 1: speed = 33f; break;
+                    case 2: speed = 30f; break;
+                    case 3: speed = 27f; break;
+                    case 4: speed = 24f; break;
+                    case 5: speed = 23f; break;
+                    case 6: speed = 22f; break;
+                    case 7: speed = 21f; break;
+                    case 8: speed = 20f; break;
+                }
+
+               
 
                 Debug.Log($"Key: {rider.Key},Value: {rider.Value}, Hero: {hero}, speed: {speed} ");
 
@@ -213,7 +222,9 @@ public class HorseTrackManager : MonoBehaviour
 
     public void ReachedAction(Horse.Hero hero)
     {
-       StopCoroutine(CheckLeadAction());
+        StopAllCoroutines();          
+
+        StopCoroutine(CheckLeadAction());
 
         Debug.Log("Won >>>" + hero);
 

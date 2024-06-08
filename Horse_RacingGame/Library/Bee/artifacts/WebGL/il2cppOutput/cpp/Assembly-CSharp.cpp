@@ -19493,7 +19493,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Horse__ctor_mB4B0E5A56C4DF22C6EE10F585B2
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
 		L_0 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		__this->____currentPos = L_0;
-		__this->___transitionDuration = (10.0f);
+		__this->___transitionDuration = (5.0f);
 		List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* L_1 = (List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0*)il2cpp_codegen_object_new(List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0_il2cpp_TypeInfo_var);
 		List_1__ctor_m7FADC33126AF264761574B2FC95BC8BFA3B01C6D(L_1, List_1__ctor_m7FADC33126AF264761574B2FC95BC8BFA3B01C6D_RuntimeMethod_var);
 		__this->___groundTriggers = L_1;
@@ -20725,6 +20725,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HorseTrackManager_ReachedAction_m908EF98
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	{
+		MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318(__this, NULL);
 		RuntimeObject* L_0;
 		L_0 = HorseTrackManager_CheckLeadAction_mA24FCF25C506FE0712C425DC9A9FA00D89193649(__this, NULL);
 		MonoBehaviour_StopCoroutine_mF9E93B82091E804595BE13AA29F9AB7517F7E04A(__this, L_0, NULL);
@@ -20736,10 +20737,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HorseTrackManager_ReachedAction_m908EF98
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
 		V_1 = 0;
-		goto IL_0042;
+		goto IL_0048;
 	}
 
-IL_002c:
+IL_0032:
 	{
 		List_1_t195AD8A3FBC80E49BC3AE8FE0EF9B92B0C1A026A* L_4 = __this->____horses;
 		int32_t L_5 = V_1;
@@ -20750,7 +20751,7 @@ IL_002c:
 		V_1 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 	}
 
-IL_0042:
+IL_0048:
 	{
 		int32_t L_8 = V_1;
 		List_1_t195AD8A3FBC80E49BC3AE8FE0EF9B92B0C1A026A* L_9 = __this->____horses;
@@ -20758,7 +20759,7 @@ IL_0042:
 		L_10 = List_1_get_Count_mA09EFB7FEACCE519B1C028D2A97AABC7C490557B_inline(L_9, List_1_get_Count_mA09EFB7FEACCE519B1C028D2A97AABC7C490557B_RuntimeMethod_var);
 		if ((((int32_t)L_8) < ((int32_t)L_10)))
 		{
-			goto IL_002c;
+			goto IL_0032;
 		}
 	}
 	{
@@ -21041,7 +21042,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CChangeSpeedU3Ed__10_MoveNext_m50972F0
 	U3CU3Ec__DisplayClass10_0_t3FEBD6C47C54E4730E9747CB7F76F7DF28115133* V_4 = NULL;
 	float V_5 = 0.0f;
 	int32_t V_6 = 0;
-	float V_7 = 0.0f;
+	int32_t V_7 = 0;
+	float V_8 = 0.0f;
 	{
 		int32_t L_0 = __this->___U3CU3E1__state;
 		V_0 = L_0;
@@ -21082,7 +21084,7 @@ IL_0037:
 		int32_t L_6 = L_5->___time;
 		if ((((int32_t)L_6) <= ((int32_t)5)))
 		{
-			goto IL_0175;
+			goto IL_01ca;
 		}
 	}
 	{
@@ -21103,7 +21105,7 @@ IL_0037:
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0159:
+FINALLY_01ae:
 			{
 				Enumerator_Dispose_mEEE30D933563208EBCF7F651BDC442631A5C6D0B((&V_2), Enumerator_Dispose_mEEE30D933563208EBCF7F651BDC442631A5C6D0B_RuntimeMethod_var);
 				return;
@@ -21112,7 +21114,7 @@ FINALLY_0159:
 		try
 		{
 			{
-				goto IL_014b_1;
+				goto IL_01a0_1;
 			}
 
 IL_0077_1:
@@ -21133,24 +21135,96 @@ IL_0077_1:
 				V_5 = (0.0f);
 				int32_t L_18;
 				L_18 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_3), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
-				if ((((int32_t)L_18) == ((int32_t)1)))
+				V_6 = L_18;
+				int32_t L_19 = V_6;
+				switch (((int32_t)il2cpp_codegen_subtract(L_19, 1)))
 				{
-					goto IL_00be_1;
+					case 0:
+					{
+						goto IL_00d4_1;
+					}
+					case 1:
+					{
+						goto IL_00dd_1;
+					}
+					case 2:
+					{
+						goto IL_00e6_1;
+					}
+					case 3:
+					{
+						goto IL_00ef_1;
+					}
+					case 4:
+					{
+						goto IL_00f8_1;
+					}
+					case 5:
+					{
+						goto IL_0101_1;
+					}
+					case 6:
+					{
+						goto IL_010a_1;
+					}
+					case 7:
+					{
+						goto IL_0113_1;
+					}
 				}
 			}
 			{
-				int32_t L_19;
-				L_19 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_3), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
-				V_5 = ((float)il2cpp_codegen_add((24.0f), ((float)((int32_t)il2cpp_codegen_subtract(8, L_19)))));
-				goto IL_00c5_1;
+				goto IL_011a_1;
 			}
 
-IL_00be_1:
+IL_00d4_1:
 			{
 				V_5 = (33.0f);
+				goto IL_011a_1;
 			}
 
-IL_00c5_1:
+IL_00dd_1:
+			{
+				V_5 = (30.0f);
+				goto IL_011a_1;
+			}
+
+IL_00e6_1:
+			{
+				V_5 = (27.0f);
+				goto IL_011a_1;
+			}
+
+IL_00ef_1:
+			{
+				V_5 = (24.0f);
+				goto IL_011a_1;
+			}
+
+IL_00f8_1:
+			{
+				V_5 = (23.0f);
+				goto IL_011a_1;
+			}
+
+IL_0101_1:
+			{
+				V_5 = (22.0f);
+				goto IL_011a_1;
+			}
+
+IL_010a_1:
+			{
+				V_5 = (21.0f);
+				goto IL_011a_1;
+			}
+
+IL_0113_1:
+			{
+				V_5 = (20.0f);
+			}
+
+IL_011a_1:
 			{
 				ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_20 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
 				ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_21 = L_20;
@@ -21195,7 +21269,7 @@ IL_00c5_1:
 				L_43 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_3), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
 				if ((!(((uint32_t)L_43) == ((uint32_t)1))))
 				{
-					goto IL_014b_1;
+					goto IL_01a0_1;
 				}
 			}
 			{
@@ -21208,7 +21282,7 @@ IL_00c5_1:
 				Action_1_Invoke_mFDCDE62BB81895D6A8C430C40EDBCC5D49C08A2C_inline(L_44, L_46, NULL);
 			}
 
-IL_014b_1:
+IL_01a0_1:
 			{
 				bool L_47;
 				L_47 = Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33((&V_2), Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33_RuntimeMethod_var);
@@ -21218,7 +21292,7 @@ IL_014b_1:
 				}
 			}
 			{
-				goto IL_0167;
+				goto IL_01bc;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -21227,53 +21301,53 @@ IL_014b_1:
 		}
 	}
 
-IL_0167:
+IL_01bc:
 	{
 		HorseTrackManager_tF800F4CDF40EBC0722CDF611790E80D01B796822* L_48 = V_1;
 		HorseTrackManager_tF800F4CDF40EBC0722CDF611790E80D01B796822* L_49 = V_1;
 		RuntimeObject* L_50;
 		L_50 = HorseTrackManager_ChangeSpeed_mD501828812E16B246D0C9D6D12E90774AD95F20E(L_49, NULL);
 		MonoBehaviour_StopCoroutine_mF9E93B82091E804595BE13AA29F9AB7517F7E04A(L_48, L_50, NULL);
-		goto IL_01d6;
+		goto IL_022b;
 	}
 
-IL_0175:
+IL_01ca:
 	{
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA6117F43CBB6E5F77F6126E2740F0FCAB211EBE1, NULL);
 		HorseTrackManager_tF800F4CDF40EBC0722CDF611790E80D01B796822* L_51 = V_1;
 		List_1_tCAAA951E1CA56A1B6841E217019EC65C46499465* L_52 = L_51->___riderStats;
 		List_1_Clear_m230EFF13504EA5DBE280310EED77E649EFE88848_inline(L_52, List_1_Clear_m230EFF13504EA5DBE280310EED77E649EFE88848_RuntimeMethod_var);
-		V_6 = 0;
-		goto IL_01ba;
+		V_7 = 0;
+		goto IL_020f;
 	}
 
-IL_018f:
+IL_01e4:
 	{
 		float L_53;
 		L_53 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((24.0f), (32.0f), NULL);
-		V_7 = L_53;
+		V_8 = L_53;
 		HorseTrackManager_tF800F4CDF40EBC0722CDF611790E80D01B796822* L_54 = V_1;
 		List_1_t195AD8A3FBC80E49BC3AE8FE0EF9B92B0C1A026A* L_55 = L_54->____horses;
-		int32_t L_56 = V_6;
+		int32_t L_56 = V_7;
 		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_57;
 		L_57 = List_1_get_Item_mA737F6CE48A3CCFCA16294602BC6052E076EF055(L_55, L_56, List_1_get_Item_mA737F6CE48A3CCFCA16294602BC6052E076EF055_RuntimeMethod_var);
-		float L_58 = V_7;
+		float L_58 = V_8;
 		Horse_ChangeSpeed_m619D1B2EAF85780D3DCEA1951DDF0DAAA361098D(L_57, L_58, NULL);
-		int32_t L_59 = V_6;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_59, 1));
+		int32_t L_59 = V_7;
+		V_7 = ((int32_t)il2cpp_codegen_add(L_59, 1));
 	}
 
-IL_01ba:
+IL_020f:
 	{
-		int32_t L_60 = V_6;
+		int32_t L_60 = V_7;
 		HorseTrackManager_tF800F4CDF40EBC0722CDF611790E80D01B796822* L_61 = V_1;
 		List_1_t195AD8A3FBC80E49BC3AE8FE0EF9B92B0C1A026A* L_62 = L_61->____horses;
 		int32_t L_63;
 		L_63 = List_1_get_Count_mA09EFB7FEACCE519B1C028D2A97AABC7C490557B_inline(L_62, List_1_get_Count_mA09EFB7FEACCE519B1C028D2A97AABC7C490557B_RuntimeMethod_var);
 		if ((((int32_t)L_60) < ((int32_t)L_63)))
 		{
-			goto IL_018f;
+			goto IL_01e4;
 		}
 	}
 	{
@@ -21285,7 +21359,7 @@ IL_01ba:
 		L_67 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(L_64, L_66, NULL);
 	}
 
-IL_01d6:
+IL_022b:
 	{
 		HorseTrackManager_tF800F4CDF40EBC0722CDF611790E80D01B796822* L_68 = V_1;
 		HorseTrackManager_tF800F4CDF40EBC0722CDF611790E80D01B796822* L_69 = V_1;

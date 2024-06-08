@@ -24,7 +24,7 @@ public class Horse : MonoBehaviour
     [SerializeField] string _horsName;
     string HorseName => _horsName;
 
-    float transitionDuration = 10.0f;
+    float transitionDuration = 5.0f;
 
     float currentMaxSpeed;
     float targetMaxSpeed;
