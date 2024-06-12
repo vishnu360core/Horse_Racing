@@ -32,7 +32,7 @@ public class RestartPanel : MonoBehaviour
     private void RestartAction()
     {
         infoText.text = "";
-        celebration.SetActive(false);
+       // celebration.SetActive(false);
     }
 
 
@@ -42,7 +42,7 @@ public class RestartPanel : MonoBehaviour
         {
             case ResultStat.success:
 
-                celebration.SetActive(true);
+                //celebration.SetActive(true);
                 infoText.text = "You won $" + amount.ToString();
                 infoText.color = Color.green;
 
@@ -50,7 +50,7 @@ public class RestartPanel : MonoBehaviour
 
             case ResultStat.fail:
 
-                celebration.SetActive(false);
+               // celebration.SetActive(false);
                 infoText.text = "You lost $" + amount.ToString();
                 infoText.color = Color.red;
 

@@ -8526,6 +8526,18 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Video.VideoPlayer
 
+		//System.Boolean UnityEngine.Video.VideoPlayer::get_isPlaying()
+		void Register_UnityEngine_Video_VideoPlayer_get_isPlaying();
+		Register_UnityEngine_Video_VideoPlayer_get_isPlaying();
+
+		//System.Void UnityEngine.Video.VideoPlayer::Play()
+		void Register_UnityEngine_Video_VideoPlayer_Play();
+		Register_UnityEngine_Video_VideoPlayer_Play();
+
+		//System.Void UnityEngine.Video.VideoPlayer::Prepare()
+		void Register_UnityEngine_Video_VideoPlayer_Prepare();
+		Register_UnityEngine_Video_VideoPlayer_Prepare();
+
 		//System.Void UnityEngine.Video.VideoPlayer::set_renderMode(UnityEngine.Video.VideoRenderMode)
 		void Register_UnityEngine_Video_VideoPlayer_set_renderMode();
 		Register_UnityEngine_Video_VideoPlayer_set_renderMode();
@@ -8533,6 +8545,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Video.VideoPlayer::set_targetCamera(UnityEngine.Camera)
 		void Register_UnityEngine_Video_VideoPlayer_set_targetCamera();
 		Register_UnityEngine_Video_VideoPlayer_set_targetCamera();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_url(System.String)
+		void Register_UnityEngine_Video_VideoPlayer_set_url();
+		Register_UnityEngine_Video_VideoPlayer_set_url();
 
 	//End Registrations for type : UnityEngine.Video.VideoPlayer
 

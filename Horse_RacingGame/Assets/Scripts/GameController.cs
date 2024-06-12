@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         Actions.WalletAmount += UpdateWalletAction;
         Actions.EnableGame += EnableGameControl;
         Actions.CheckBetBalance += CheckTotalBet;
+        Actions.EndRaceAction += EndRaceAction;
 
         Actions.SetID += SetIDAction;
 
@@ -58,6 +59,16 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         //Actions.StartAction();
 
         //Actions.UpdateAmount += UpdateAmount;
+    }
+
+    private void EndRaceAction()
+    {
+        cameraController.EnableSlowMotion(false);
+
+        AudioManager.Instance.PlayHorseRace(false);
+
+        _loadPanel.SetActive(true);
+        _loadPanel.GetComponent<Loader>().SetLoadMessage("\n Finishing the race");
     }
 
     /// <summary>
@@ -147,6 +158,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     /// <param name="hero"></param>
     public void RaceFinished(Horse.Hero[] heros)
     {
+        _loadPanel.SetActive(false);
+
         cameraController.EnableSlowMotion(false);  
 
         AudioManager.Instance.PlayHorseRace(false);
@@ -157,6 +170,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
         foreach (HorseBetBlock bet in betBlocks)
         {
+            //Debug.Log("Bets >>" + bet.HeroType + " " + bet.horseBets[0].betAmount);
+
             if (bet.HeroType == heros[0])
                 setAmount += bet.horseBets.Find(x => x.betType == ControlPanel.BetType.Win).betAmount;
 
@@ -256,6 +271,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
         List<Horse.Hero> betedHorses = new List<Horse.Hero>();
 
+        loseAmount = 0;
+
         foreach (HorseBetBlock bet in betBlocks)
         {
             loseAmount += bet.LoseAmount;
@@ -284,7 +301,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     public void ResetAction()
     {
-        for (int i = 0; i < betBlocks.Count; i++)
+        for (int i = 0; i < betBlocks.Count; ++i)
             betBlocks[i].ResetAction();
 
         _camPanel.SetActive(false);

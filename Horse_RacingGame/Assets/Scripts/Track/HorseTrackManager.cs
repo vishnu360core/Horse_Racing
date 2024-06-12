@@ -23,7 +23,11 @@ public class HorseTrackManager : MonoBehaviour
 
     List<RiderStat> riderStats = new List<RiderStat>();
 
-    public Dictionary<string, int> raceModel = new Dictionary<string, int>();   
+    public Dictionary<string, int> raceModel = new Dictionary<string, int>();
+
+    Horse.Hero[] winHorses;
+
+    bool isRaceEnd = false;
 
     private void Start()
     {
@@ -33,6 +37,7 @@ public class HorseTrackManager : MonoBehaviour
         Actions.RestartAction += RestartAction;
 
         Actions.SetRaceModel += RaceModelAction;
+        Actions.EndRaceAction += RaceEndAction;
 
         //raceModel.Add("Blazer", 1);
         //raceModel.Add("LadyBird", 2);
@@ -43,7 +48,16 @@ public class HorseTrackManager : MonoBehaviour
         //raceModel.Add("Tennesse", 7);
         //raceModel.Add("Kentucky", 8);
 
-       // PlayAction();
+        //PlayAction();
+    }
+
+    private void RaceEndAction()
+    {
+        StopCoroutine(ChangeSpeed());
+        isRaceEnd = true;
+        //StopCoroutine(CheckLeadAction());
+
+        //Horse.Hero[] winHorses = { riderStats[0].hero, riderStats[1].hero, riderStats[2].hero };
     }
 
     public void RaceModelAction(Dictionary<string, int> model)
@@ -112,12 +126,10 @@ public class HorseTrackManager : MonoBehaviour
                     case 5: speed = 23f; break;
                     case 6: speed = 22f; break;
                     case 7: speed = 21f; break;
-                    case 8: speed = 20f; break;
+                    case 8: speed = 20.5f; break;
                 }
 
-               
-
-                Debug.Log($"Key: {rider.Key},Value: {rider.Value}, Hero: {hero}, speed: {speed} ");
+                //Debug.Log($"Key: {rider.Key},Value: {rider.Value}, Hero: {hero}, speed: {speed} ");
 
 
                 Horse horse = _horses.Find(x => x.GetHero == hero);
@@ -160,7 +172,7 @@ public class HorseTrackManager : MonoBehaviour
     {
         int defeatedCount = 0;
 
-        Debug.LogWarning("Lead Checking >>>" + horse.GetHero);
+       // Debug.LogWarning("Lead Checking >>>" + horse.GetHero);
 
         for (int i = 0; i < _horses.Count; i++)
         {
@@ -169,7 +181,7 @@ public class HorseTrackManager : MonoBehaviour
                 Vector3 forward = horse.gameObject.transform.TransformDirection(Vector3.forward);
                 Vector3 toOther = Vector3.Normalize(_horses[i].gameObject.transform.position - horse.gameObject.transform.position);
 
-                Debug.Log("Dot value >>>>" + " " + _horses[i] + ">>>>" + Vector3.Dot(forward, toOther));
+               // Debug.Log("Dot value >>>>" + " " + _horses[i] + ">>>>" + Vector3.Dot(forward, toOther));
 
                 if (Vector3.Dot(forward, toOther) < 0)
                 {
@@ -182,16 +194,18 @@ public class HorseTrackManager : MonoBehaviour
             }
         }
 
-        Debug.Log(horse.GetHero + " has defeated " + defeatedCount + " other horses");
+       // Debug.Log(horse.GetHero + " has defeated " + defeatedCount + " other horses");
 
-        horse.rank = 8 - defeatedCount;
+        if(!isRaceEnd)
+          horse.rank = 8 - defeatedCount;
 
         if (horse.rank != -1 && riderStats.Count < 9)
         {
             RiderStat rider = new RiderStat()
             {
                 hero = horse.GetHero,
-                rank = horse.rank
+                rank = horse.rank,
+                time = horse.GetElaspedTime()
             };
 
             riderStats.Add(rider);
@@ -210,29 +224,27 @@ public class HorseTrackManager : MonoBehaviour
 
         riderStats.Sort((r1, r2) => r1.rank.CompareTo(r2.rank));
 
-        Debug.Log("\n");
+        //Debug.Log("\n");
 
-        for(int i = 0;i < riderStats.Count;i++)
-        {
-            Debug.Log("Stat >>> " + " "  + i + " " + riderStats[i].hero + " >>>" + riderStats[i].rank);
-        }
+        //for(int i = 0;i < riderStats.Count;i++)
+        //{
+        //    Debug.Log("Stat >>> " + " "  + i + " " + riderStats[i].hero + " >>>" + riderStats[i].rank + ">>>" + riderStats[i].time);
+        //}
 
         Actions.SortedRiders(riderStats);
     }
 
-    public void ReachedAction(Horse.Hero hero)
+    public void ReachedAction()
     {
         StopAllCoroutines();          
 
         StopCoroutine(CheckLeadAction());
 
-        Debug.Log("Won >>>" + hero);
-
         //Actions.AnimateCamera(false);
 
         for (int i = 0; i < _horses.Count; i++)
         {
-            _horses[i].Play(false);
+             _horses[i].Play(false);
             //_horses[i].SubscribeAnimateEvent(false);
         }
 
@@ -253,6 +265,8 @@ public class HorseTrackManager : MonoBehaviour
             _horses[i].ResetAction();
 
         time = 0;
+
+        isRaceEnd = false;
 
         //for (int i = 0; i < _horses.Count; i++)
         //    _horses[i].Play(true);

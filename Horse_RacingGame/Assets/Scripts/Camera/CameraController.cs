@@ -32,6 +32,7 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
     [Header("Cam Events")]
     [SerializeField] UnityEvent _onBetsCamIntialised;
     [SerializeField] UnityEvent _onBetsCleared;
+    [SerializeField] UnityEvent _onBetCamNav;
 
 
     float startTimeScale;
@@ -41,7 +42,10 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
 
     private void Start()
     {
+        ResetCams();
+
         Actions.RestartAction += ResetAction;
+        Actions.RestartAction += ResetCams;
         Actions.StartAction += StartAction;
 
         Actions.GetWinner += GetWinnerAction;
@@ -54,11 +58,19 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
             cameraColliders[i].calback = this;
     }
 
+    private void ResetCams()
+    {
+        _onBetsCleared?.Invoke();
+    }
+
     private void GetBetHorseCams(List<Horse.Hero> betHorses)
     {
         betCams.Clear();
 
         _onBetsCamIntialised.Invoke();
+
+        if(betHorses.Count > 1)
+            _onBetCamNav.Invoke();  
 
         Debug.LogWarning("BET HORSESE CAM >>>" +  betHorses.Count);
 
@@ -243,8 +255,6 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
         ClearCameraPriorityAction();
 
         _brain.m_DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.EaseInOut, 1.0f);
-
-        _onBetsCleared?.Invoke();
 
         //_cameraTransform.localPosition = _resetCameraTransform.localPosition;
     }

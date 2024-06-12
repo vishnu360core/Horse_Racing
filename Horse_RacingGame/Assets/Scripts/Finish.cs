@@ -6,6 +6,8 @@ public class Finish : MonoBehaviour
 {
     BoxCollider boxCollider;
 
+    int riderCount = 0;
+
     private void Awake()
     {
         boxCollider = GetComponent<BoxCollider>();
@@ -22,6 +24,7 @@ public class Finish : MonoBehaviour
     /// </summary>
     void RestartAction()
     {
+        riderCount = 0;
         boxCollider.enabled = true;
     }
 
@@ -29,11 +32,18 @@ public class Finish : MonoBehaviour
     {
         if (other.CompareTag("Horse"))
         {
-            boxCollider.enabled = false;
+            if (riderCount == 0)
+                Actions.EndRaceAction();
 
-            Debug.LogWarning("Reached >>>" + other.GetComponent<Horse>().GetHero);
+            riderCount++;
 
-            Actions.ReachedDestinmation(other.GetComponent<Horse>().GetHero);
+            Debug.LogWarning("Reached >>>" + other.GetComponent<Horse>().GetHero + " left: " + (8- riderCount) );
+
+            if(8- riderCount  == 0)
+            {
+                boxCollider.enabled = false;
+                Actions.ReachedDestinmation();
+            }
         }
     }
 }

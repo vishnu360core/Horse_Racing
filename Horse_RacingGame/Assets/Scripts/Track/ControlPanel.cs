@@ -70,7 +70,7 @@ public class ControlPanel : MonoBehaviour
 
     void BetDisplay(int amount)
     {
-       betAmount_Text.text = BetShow() + "\n" + amount;
+       betAmount_Text.text =  amount.ToString();
     }
 
     string BetShow()

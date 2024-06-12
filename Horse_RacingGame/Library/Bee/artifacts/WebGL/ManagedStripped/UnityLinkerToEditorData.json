@@ -408,7 +408,9 @@
           },
           {
             "name": "RenderTexture",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -1381,7 +1383,9 @@
         "dependencies": [
           {
             "name": "VideoPlayer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           }

@@ -32,6 +32,7 @@ public class Race : MonoBehaviour
             Vector3 newPos = layoutGroup.transform.GetChild(i).localPosition;
 
             riderInfo.SetRank(i + 1);
+            riderInfo.SetTime(riders[i].time);
 
             riderTransform.DOLocalMove(newPos, 0.5f).OnComplete(() =>
             {
@@ -47,6 +48,6 @@ public class Race : MonoBehaviour
 public class RiderStat
 {
     public Horse.Hero hero;
-
     public int rank;
+    public float time;
 }

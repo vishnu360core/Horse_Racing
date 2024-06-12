@@ -12,7 +12,7 @@ public static class Actions
     public static Action StartAction;
 
 
-    public static Action<Horse.Hero> ReachedDestinmation;
+    public static Action ReachedDestinmation;
 
     public static Action<float,float> UpdateAmount;
 
@@ -41,5 +41,7 @@ public static class Actions
 
     public static Action<Horse.Hero>  GetWinner;
 
-    public static Action<List<Horse.Hero>> BetHorses; 
+    public static Action<List<Horse.Hero>> BetHorses;
+
+    public static Action EndRaceAction;
 }
