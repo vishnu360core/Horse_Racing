@@ -139,35 +139,27 @@ public class HorseBetBlock : MonoBehaviour,ControlPanelDelegate
         {
             case Horse.Hero.Blazer:
                 return "Blazer";
-                break;
 
             case Horse.Hero.Wrangler:
                 return "Wrangler";
-                break;
 
             case Horse.Hero.Tennesse:
                 return "Tennesse";
-                break;
 
             case Horse.Hero.Kentucky:
                 return "Kentucky";
-                break;
 
             case Horse.Hero.Sheriff:
                 return "Sheriff";
-                break;
 
             case Horse.Hero.Diesel:
                 return "Diesel";
-                break;
 
             case Horse.Hero.LadyBird:
                 return "LadyBird";
-                break;
 
             case Horse.Hero.Sassy:
                 return "Sassy";
-                break;
 
             default: return "Blazer";
         }

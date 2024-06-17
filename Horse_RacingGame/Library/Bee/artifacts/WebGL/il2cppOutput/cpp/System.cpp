@@ -2499,6 +2499,7 @@ struct SslClientAuthenticationOptions_tA5277DAACAFB33887D2513D9399C5154B0D5CBC9 
 	int32_t ____enabledSslProtocols;
 	bool ____allowRenegotiation;
 	LocalCertificateSelectionCallback_t71A03329606A5610ECC62BFBE6327C1EF9195859* ___U3CLocalCertificateSelectionCallbackU3Ek__BackingField;
+	RemoteCertificateValidationCallback_t2F4C5801F96B2C2BF934511796C5BFEAEBF01955* ___U3CRemoteCertificateValidationCallbackU3Ek__BackingField;
 	String_t* ___U3CTargetHostU3Ek__BackingField;
 	X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* ___U3CClientCertificatesU3Ek__BackingField;
 };
@@ -4488,6 +4489,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityTlsProvider__ctor_m0C11027324407A76
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* MonoTlsProviderFactory_LookupProvider_m72662526AA767E110127E8426944AD09CFFC259D (String_t* ___0_name, bool ___1_throwOnError, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Guid__ctor_mAE66BA1C43B4194F4F7991E2E30370E36CBBF830 (Guid_t* __this, String_t* ___0_g, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0* HttpWebRequest_get_TlsSettings_mE4E8C9107E0930061977FA03EE87DECE51C503D9_inline (HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RemoteCertificateValidationCallback_t2F4C5801F96B2C2BF934511796C5BFEAEBF01955* HttpWebRequest_get_ServerCertificateValidationCallback_mDB534320814D3BB3A455C156B3B2E88EB15A09D7 (HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoRemoteCertificateValidationCallback_t1A389B61998873F6B9A2EE7A11C36333A8AECCA0* CallbackHelpers_PublicToMono_m6404DAFAD159E4D91FB5822B4855B6A8F05777EE (RemoteCertificateValidationCallback_t2F4C5801F96B2C2BF934511796C5BFEAEBF01955* ___0_callback, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void MonoTlsSettings_set_RemoteCertificateValidationCallback_m6CEA8A6E38C85A96C2D26613407C13DD4F965C87_inline (MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0* __this, MonoRemoteCertificateValidationCallback_t1A389B61998873F6B9A2EE7A11C36333A8AECCA0* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* HttpWebRequest_get_TlsProvider_mF4A43E69AE84D8AEEAE9FDCEE296DB7C83301123_inline (HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ChainValidationHelper_t5BAFD168AF916EAD45963A656515931724328755* ChainValidationHelper_Create_m66445F9419CDC86549E6E7CF94DF2ADCC3F1B097 (MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* ___0_provider, MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0** ___1_settings, MonoTlsStream_t1CE91597F244093A040334DE449975971E4BD206* ___2_stream, const RuntimeMethod* method) ;
 inline AsyncTaskMethodBuilder_1_t923DC16ADFF754593B125800F38ED37C920B14C1 AsyncTaskMethodBuilder_1_Create_m050DB8DF08A9C0321211C4472EDF2425D263C40C (const RuntimeMethod* method)
@@ -21764,10 +21768,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoTlsStream__ctor_mAED0E21D701587D3C11
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RuntimeObject_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* G_B2_0 = NULL;
-	MonoTlsStream_t1CE91597F244093A040334DE449975971E4BD206* G_B2_1 = NULL;
-	MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* G_B1_0 = NULL;
-	MonoTlsStream_t1CE91597F244093A040334DE449975971E4BD206* G_B1_1 = NULL;
+	MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* G_B6_0 = NULL;
+	MonoTlsStream_t1CE91597F244093A040334DE449975971E4BD206* G_B6_1 = NULL;
+	MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* G_B5_0 = NULL;
+	MonoTlsStream_t1CE91597F244093A040334DE449975971E4BD206* G_B5_1 = NULL;
 	{
 		RuntimeObject* L_0 = (RuntimeObject*)il2cpp_codegen_object_new(RuntimeObject_il2cpp_TypeInfo_var);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(L_0, NULL);
@@ -21785,36 +21789,71 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoTlsStream__ctor_mAED0E21D701587D3C11
 		L_4 = HttpWebRequest_get_TlsSettings_mE4E8C9107E0930061977FA03EE87DECE51C503D9_inline(L_3, NULL);
 		__this->___settings = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___settings), (void*)L_4);
-		HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* L_5 = ___0_request;
-		MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* L_6;
-		L_6 = HttpWebRequest_get_TlsProvider_mF4A43E69AE84D8AEEAE9FDCEE296DB7C83301123_inline(L_5, NULL);
-		MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* L_7 = L_6;
-		if (L_7)
+		MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0* L_5 = __this->___settings;
+		if (L_5)
 		{
-			G_B2_0 = L_7;
-			G_B2_1 = __this;
-			goto IL_003b;
+			goto IL_003e;
 		}
-		G_B1_0 = L_7;
-		G_B1_1 = __this;
+	}
+	{
+		MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0* L_6;
+		L_6 = MonoTlsSettings_CopyDefaultSettings_m4B0A3E8B7D106FA7F0D243FB2A0A4B115CD21942(NULL);
+		__this->___settings = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___settings), (void*)L_6);
+	}
+
+IL_003e:
+	{
+		MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0* L_7 = __this->___settings;
+		MonoRemoteCertificateValidationCallback_t1A389B61998873F6B9A2EE7A11C36333A8AECCA0* L_8;
+		L_8 = MonoTlsSettings_get_RemoteCertificateValidationCallback_mE07825B4A75DAE2A4BB5037D504A36311814446C_inline(L_7, NULL);
+		if (L_8)
+		{
+			goto IL_0061;
+		}
+	}
+	{
+		MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0* L_9 = __this->___settings;
+		HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* L_10 = ___0_request;
+		RemoteCertificateValidationCallback_t2F4C5801F96B2C2BF934511796C5BFEAEBF01955* L_11;
+		L_11 = HttpWebRequest_get_ServerCertificateValidationCallback_mDB534320814D3BB3A455C156B3B2E88EB15A09D7(L_10, NULL);
+		MonoRemoteCertificateValidationCallback_t1A389B61998873F6B9A2EE7A11C36333A8AECCA0* L_12;
+		L_12 = CallbackHelpers_PublicToMono_m6404DAFAD159E4D91FB5822B4855B6A8F05777EE(L_11, NULL);
+		MonoTlsSettings_set_RemoteCertificateValidationCallback_m6CEA8A6E38C85A96C2D26613407C13DD4F965C87_inline(L_9, L_12, NULL);
+	}
+
+IL_0061:
+	{
+		HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* L_13 = ___0_request;
+		MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* L_14;
+		L_14 = HttpWebRequest_get_TlsProvider_mF4A43E69AE84D8AEEAE9FDCEE296DB7C83301123_inline(L_13, NULL);
+		MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* L_15 = L_14;
+		if (L_15)
+		{
+			G_B6_0 = L_15;
+			G_B6_1 = __this;
+			goto IL_0071;
+		}
+		G_B5_0 = L_15;
+		G_B5_1 = __this;
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(MonoTlsProviderFactory_t32E6F98531762CDF275BEC085D1B07BDE4235624_il2cpp_TypeInfo_var);
-		MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* L_8;
-		L_8 = MonoTlsProviderFactory_GetProviderInternal_m08BDCDD3919FBAEDFB32CB5F0876D10E32C147A7(NULL);
-		G_B2_0 = L_8;
-		G_B2_1 = G_B1_1;
+		MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* L_16;
+		L_16 = MonoTlsProviderFactory_GetProviderInternal_m08BDCDD3919FBAEDFB32CB5F0876D10E32C147A7(NULL);
+		G_B6_0 = L_16;
+		G_B6_1 = G_B5_1;
 	}
 
-IL_003b:
+IL_0071:
 	{
-		G_B2_1->___provider = G_B2_0;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B2_1->___provider), (void*)G_B2_0);
+		G_B6_1->___provider = G_B6_0;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B6_1->___provider), (void*)G_B6_0);
 		__this->___status = ((int32_t)10);
-		MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* L_9 = __this->___provider;
-		MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0** L_10 = (MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0**)(&__this->___settings);
-		ChainValidationHelper_t5BAFD168AF916EAD45963A656515931724328755* L_11;
-		L_11 = ChainValidationHelper_Create_m66445F9419CDC86549E6E7CF94DF2ADCC3F1B097(L_9, L_10, __this, NULL);
+		MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* L_17 = __this->___provider;
+		MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0** L_18 = (MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0**)(&__this->___settings);
+		ChainValidationHelper_t5BAFD168AF916EAD45963A656515931724328755* L_19;
+		L_19 = ChainValidationHelper_Create_m66445F9419CDC86549E6E7CF94DF2ADCC3F1B097(L_17, L_18, __this, NULL);
 		return;
 	}
 }
@@ -28590,6 +28629,15 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MonoTlsSettings_tD79AF4AE5C2CD533
 	{
 		MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0* L_0 = __this->___tlsSettings;
 		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void MonoTlsSettings_set_RemoteCertificateValidationCallback_m6CEA8A6E38C85A96C2D26613407C13DD4F965C87_inline (MonoTlsSettings_tD79AF4AE5C2CD533A3D7A08FED479B1EC1A031B0* __this, MonoRemoteCertificateValidationCallback_t1A389B61998873F6B9A2EE7A11C36333A8AECCA0* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		MonoRemoteCertificateValidationCallback_t1A389B61998873F6B9A2EE7A11C36333A8AECCA0* L_0 = ___0_value;
+		__this->___U3CRemoteCertificateValidationCallbackU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CRemoteCertificateValidationCallbackU3Ek__BackingField), (void*)L_0);
+		return;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017* HttpWebRequest_get_TlsProvider_mF4A43E69AE84D8AEEAE9FDCEE296DB7C83301123_inline (HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* __this, const RuntimeMethod* method) 

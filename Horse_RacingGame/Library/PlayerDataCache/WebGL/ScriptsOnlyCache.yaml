@@ -10,7 +10,6 @@ ScriptsOnlyBuild:
     - ControlPanel
     - Finish
     - GameController
-    - GroundTrigger
     - Horse
     - HorseBetBlock
     - HorseCam
@@ -19,13 +18,13 @@ ScriptsOnlyBuild:
     - Network
     - Notification
     - NotificationManager
+    - OptimizeMesh
     - ParticleData
     - ParticleManager
     - Race
     - RestartPanel
     - RiderInfo
     - WalletConnector
-    - WebGLVideo
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
@@ -171,9 +170,18 @@ ScriptsOnlyBuild:
     Unity.Timeline.Editor.dll:
     - TimelinePreferences
     - UnityEditor.Timeline.SequenceHierarchy
+    - UnityEditor.Timeline.TimelineAssetViewModel
     - UnityEditor.Timeline.TimelineWindow
     Unity.VisualEffectGraph.Runtime.dll:
     - UnityEngine.VFX.VFXRuntimeResources
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -339,6 +347,186 @@ ScriptsOnlyBuild:
     - WalletConnectSharp.Core.Metadata
     - WalletConnectSharp.Core.Models.RedirectData
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -546,186 +734,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ControlPanel
     methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
   - assembly: Thirdweb.Core
     fullTypeName: Thirdweb.Wallets.WalletConnectUI
     methodName: Cancel
@@ -773,7 +781,7 @@ ScriptsOnlyBuild:
     methodName: ButtonClick
   - assembly: Assembly-CSharp
     fullTypeName: GameController
-    methodName: PlayButtonAction
+    methodName: PlayAgainAction
   - assembly: Assembly-CSharp
     fullTypeName: AudioManager
     methodName: ButtonClick
@@ -792,6 +800,27 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: AudioManager
+    methodName: PlayHorseRace
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -874,6 +903,9 @@ ScriptsOnlyBuild:
     fullTypeName: MetaMask.Transports.Unity.UI.MetaMaskOTPPanel
     methodName: OnDisconnect
   - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
+    methodName: OnAction
+  - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: OnScrollbarClicked
   - assembly: Unity.RenderPipelines.Core.Runtime
@@ -953,8 +985,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 84
-      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -968,251 +998,249 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 17324}
+      Script: {instanceID: 17366}
     - Class: 114
-      Script: {instanceID: 17326}
+      Script: {instanceID: 17368}
     - Class: 114
-      Script: {instanceID: 17328}
+      Script: {instanceID: 17370}
     - Class: 114
-      Script: {instanceID: 17330}
+      Script: {instanceID: 17372}
     - Class: 114
-      Script: {instanceID: 17332}
+      Script: {instanceID: 17374}
     - Class: 114
-      Script: {instanceID: 17334}
+      Script: {instanceID: 17376}
     - Class: 114
-      Script: {instanceID: 17336}
+      Script: {instanceID: 17378}
     - Class: 114
-      Script: {instanceID: 17350}
+      Script: {instanceID: 17392}
     - Class: 114
-      Script: {instanceID: 17402}
+      Script: {instanceID: 17444}
     - Class: 114
-      Script: {instanceID: 18156}
+      Script: {instanceID: 18202}
     - Class: 114
-      Script: {instanceID: 18342}
+      Script: {instanceID: 18388}
     - Class: 114
-      Script: {instanceID: 18550}
+      Script: {instanceID: 18596}
     - Class: 114
-      Script: {instanceID: 18638}
+      Script: {instanceID: 18684}
     - Class: 114
-      Script: {instanceID: 18742}
+      Script: {instanceID: 18882}
     - Class: 114
-      Script: {instanceID: 18836}
+      Script: {instanceID: 18974}
     - Class: 114
-      Script: {instanceID: 18926}
+      Script: {instanceID: 19164}
     - Class: 114
-      Script: {instanceID: 19116}
+      Script: {instanceID: 19236}
     - Class: 114
-      Script: {instanceID: 19188}
+      Script: {instanceID: 19542}
     - Class: 114
-      Script: {instanceID: 19494}
+      Script: {instanceID: 19804}
     - Class: 114
-      Script: {instanceID: 19756}
+      Script: {instanceID: 20030}
     - Class: 114
-      Script: {instanceID: 19982}
+      Script: {instanceID: 20186}
     - Class: 114
-      Script: {instanceID: 20134}
+      Script: {instanceID: 20420}
     - Class: 114
-      Script: {instanceID: 20366}
+      Script: {instanceID: 20680}
     - Class: 114
-      Script: {instanceID: 20626}
+      Script: {instanceID: 20712}
     - Class: 114
-      Script: {instanceID: 20656}
+      Script: {instanceID: 21070}
     - Class: 114
-      Script: {instanceID: 21012}
+      Script: {instanceID: 21424}
     - Class: 114
-      Script: {instanceID: 21366}
+      Script: {instanceID: 21758}
     - Class: 114
-      Script: {instanceID: 21698}
-    - Class: 114
-      Script: {instanceID: 21832}
-    - Class: 114
-      Script: {instanceID: 21884}
+      Script: {instanceID: 21892}
     - Class: 114
       Script: {instanceID: 21944}
     - Class: 114
-      Script: {instanceID: 22188}
+      Script: {instanceID: 22004}
     - Class: 114
-      Script: {instanceID: 22208}
+      Script: {instanceID: 22248}
     - Class: 114
-      Script: {instanceID: 22328}
+      Script: {instanceID: 22268}
     - Class: 114
-      Script: {instanceID: 22372}
+      Script: {instanceID: 22388}
     - Class: 114
-      Script: {instanceID: 22424}
+      Script: {instanceID: 22432}
     - Class: 114
-      Script: {instanceID: 22462}
+      Script: {instanceID: 22484}
     - Class: 114
-      Script: {instanceID: 22636}
+      Script: {instanceID: 22522}
     - Class: 114
-      Script: {instanceID: 22714}
+      Script: {instanceID: 22696}
     - Class: 114
-      Script: {instanceID: 22820}
+      Script: {instanceID: 22774}
     - Class: 114
-      Script: {instanceID: 22926}
+      Script: {instanceID: 22880}
     - Class: 114
-      Script: {instanceID: 22988}
+      Script: {instanceID: 22986}
     - Class: 114
-      Script: {instanceID: 23188}
+      Script: {instanceID: 23048}
     - Class: 114
-      Script: {instanceID: 23218}
+      Script: {instanceID: 23248}
     - Class: 114
-      Script: {instanceID: 23978}
+      Script: {instanceID: 23278}
     - Class: 114
-      Script: {instanceID: 23988}
+      Script: {instanceID: 24040}
     - Class: 114
-      Script: {instanceID: 24106}
+      Script: {instanceID: 24050}
     - Class: 114
-      Script: {instanceID: 24124}
+      Script: {instanceID: 24168}
     - Class: 114
-      Script: {instanceID: 24250}
+      Script: {instanceID: 24186}
     - Class: 114
-      Script: {instanceID: 24312}
+      Script: {instanceID: 24314}
     - Class: 114
-      Script: {instanceID: 24344}
+      Script: {instanceID: 24376}
     - Class: 114
-      Script: {instanceID: 24436}
+      Script: {instanceID: 24408}
     - Class: 114
-      Script: {instanceID: 24772}
+      Script: {instanceID: 24500}
     - Class: 114
-      Script: {instanceID: 24832}
+      Script: {instanceID: 24836}
     - Class: 114
-      Script: {instanceID: 24982}
+      Script: {instanceID: 24896}
     - Class: 114
-      Script: {instanceID: 25084}
+      Script: {instanceID: 25046}
     - Class: 114
-      Script: {instanceID: 25106}
+      Script: {instanceID: 25148}
     - Class: 114
-      Script: {instanceID: 25190}
+      Script: {instanceID: 25170}
     - Class: 114
-      Script: {instanceID: 25886}
+      Script: {instanceID: 25254}
     - Class: 114
-      Script: {instanceID: 26016}
+      Script: {instanceID: 25952}
     - Class: 114
-      Script: {instanceID: 26028}
+      Script: {instanceID: 26082}
     - Class: 114
-      Script: {instanceID: 26554}
+      Script: {instanceID: 26094}
     - Class: 114
-      Script: {instanceID: 26566}
+      Script: {instanceID: 26622}
     - Class: 114
-      Script: {instanceID: 26728}
+      Script: {instanceID: 26634}
     - Class: 114
-      Script: {instanceID: 26760}
+      Script: {instanceID: 26796}
     - Class: 114
-      Script: {instanceID: 27562}
+      Script: {instanceID: 27632}
     - Class: 114
-      Script: {instanceID: 27570}
+      Script: {instanceID: 27640}
     - Class: 114
-      Script: {instanceID: 27624}
+      Script: {instanceID: 27694}
     - Class: 114
-      Script: {instanceID: 28186}
+      Script: {instanceID: 28258}
     - Class: 114
-      Script: {instanceID: 28280}
+      Script: {instanceID: 28352}
     - Class: 114
-      Script: {instanceID: 28370}
+      Script: {instanceID: 28442}
     - Class: 114
-      Script: {instanceID: 28524}
+      Script: {instanceID: 28596}
     - Class: 114
-      Script: {instanceID: 28558}
+      Script: {instanceID: 28630}
     - Class: 114
-      Script: {instanceID: 28564}
+      Script: {instanceID: 28636}
     - Class: 114
-      Script: {instanceID: 28668}
+      Script: {instanceID: 28740}
     - Class: 114
-      Script: {instanceID: 28892}
+      Script: {instanceID: 28964}
     - Class: 114
-      Script: {instanceID: 29010}
+      Script: {instanceID: 29082}
     - Class: 114
-      Script: {instanceID: 29094}
+      Script: {instanceID: 29166}
     - Class: 114
-      Script: {instanceID: 29230}
+      Script: {instanceID: 29302}
     - Class: 114
-      Script: {instanceID: 29376}
+      Script: {instanceID: 29450}
     - Class: 114
-      Script: {instanceID: 29588}
+      Script: {instanceID: 29662}
     - Class: 114
-      Script: {instanceID: 30330}
+      Script: {instanceID: 30410}
     - Class: 114
-      Script: {instanceID: 30374}
+      Script: {instanceID: 30454}
     - Class: 114
-      Script: {instanceID: 30436}
+      Script: {instanceID: 30516}
     - Class: 114
-      Script: {instanceID: 30876}
+      Script: {instanceID: 30956}
     - Class: 114
-      Script: {instanceID: 31028}
+      Script: {instanceID: 31110}
     - Class: 114
-      Script: {instanceID: 31070}
+      Script: {instanceID: 31152}
     - Class: 114
-      Script: {instanceID: 31230}
+      Script: {instanceID: 31314}
     - Class: 114
-      Script: {instanceID: 31504}
+      Script: {instanceID: 31590}
     - Class: 114
-      Script: {instanceID: 31624}
+      Script: {instanceID: 31712}
     - Class: 114
-      Script: {instanceID: 31816}
+      Script: {instanceID: 31910}
     - Class: 114
-      Script: {instanceID: 32410}
+      Script: {instanceID: 32504}
     - Class: 114
-      Script: {instanceID: 32652}
+      Script: {instanceID: 32748}
     - Class: 114
-      Script: {instanceID: 32752}
+      Script: {instanceID: 32848}
     - Class: 114
-      Script: {instanceID: 32788}
+      Script: {instanceID: 32884}
     - Class: 114
-      Script: {instanceID: 33072}
+      Script: {instanceID: 33170}
     - Class: 114
-      Script: {instanceID: 33268}
+      Script: {instanceID: 33366}
     - Class: 114
-      Script: {instanceID: 33452}
+      Script: {instanceID: 33550}
     - Class: 114
-      Script: {instanceID: 33564}
+      Script: {instanceID: 33664}
     - Class: 114
-      Script: {instanceID: 33986}
+      Script: {instanceID: 34086}
     - Class: 114
-      Script: {instanceID: 34054}
+      Script: {instanceID: 34156}
     - Class: 114
-      Script: {instanceID: 34214}
+      Script: {instanceID: 34318}
     - Class: 114
-      Script: {instanceID: 34236}
+      Script: {instanceID: 34340}
     - Class: 114
-      Script: {instanceID: 34258}
+      Script: {instanceID: 34362}
     - Class: 114
-      Script: {instanceID: 34360}
+      Script: {instanceID: 34420}
     - Class: 114
-      Script: {instanceID: 34382}
+      Script: {instanceID: 34466}
     - Class: 114
-      Script: {instanceID: 34396}
+      Script: {instanceID: 34488}
     - Class: 114
-      Script: {instanceID: 34536}
+      Script: {instanceID: 34502}
     - Class: 114
-      Script: {instanceID: 34716}
+      Script: {instanceID: 34642}
     - Class: 114
-      Script: {instanceID: 34906}
+      Script: {instanceID: 34822}
     - Class: 114
-      Script: {instanceID: 34940}
+      Script: {instanceID: 35012}
     - Class: 114
-      Script: {instanceID: 35314}
+      Script: {instanceID: 35046}
     - Class: 114
-      Script: {instanceID: 35328}
+      Script: {instanceID: 35420}
     - Class: 114
-      Script: {instanceID: 35390}
+      Script: {instanceID: 35434}
     - Class: 114
-      Script: {instanceID: 35474}
+      Script: {instanceID: 35496}
     - Class: 114
-      Script: {instanceID: 35584}
+      Script: {instanceID: 35580}
     - Class: 114
       Script: {instanceID: 35692}
     - Class: 114
-      Script: {instanceID: 35914}
+      Script: {instanceID: 35800}
     - Class: 114
-      Script: {instanceID: 35994}
+      Script: {instanceID: 36022}
     - Class: 114
-      Script: {instanceID: 36210}
+      Script: {instanceID: 36104}
     - Class: 114
-      Script: {instanceID: 36346}
+      Script: {instanceID: 36320}
     - Class: 114
-      Script: {instanceID: 36776}
+      Script: {instanceID: 36456}
     - Class: 114
-      Script: {instanceID: 37202}
+      Script: {instanceID: 36886}
+    - Class: 114
+      Script: {instanceID: 37312}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1240,8 +1268,6 @@ ScriptsOnlyBuild:
     - Class: 225
       Script: {instanceID: 0}
     - Class: 258
-      Script: {instanceID: 0}
-    - Class: 328
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -1758,10 +1784,22 @@ ScriptsOnlyBuild:
     className: VisualEffectActivationClip
   - hash:
       serializedVersion: 2
+      Hash: b57aca2f9d573c2f770bb35994fd1104
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ReduceMesh
+  - hash:
+      serializedVersion: 2
       Hash: 99431ab619f390cf9400bd06d3e1bdd3
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalRenderPipelineGlobalSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 211fd19fd446c8244f4755d21c467c2e
+    assemblyName: Whinarn.UnityMeshSimplifier.Runtime
+    namespaceName: UnityMeshSimplifier
+    className: LODGeneratorHelper
   - hash:
       serializedVersion: 2
       Hash: 5c21f4846181ee6e245db1fcfb62fc0e
@@ -2520,7 +2558,7 @@ ScriptsOnlyBuild:
     className: LiftGammaGain
   - hash:
       serializedVersion: 2
-      Hash: 7c7b2ecf1e04dc3c01bd91c242d718f7
+      Hash: f5fed31cdbcd110c93452cdd34a1e79f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CameraController
@@ -3012,7 +3050,7 @@ ScriptsOnlyBuild:
     className: SpriteLibrarySourceAsset
   - hash:
       serializedVersion: 2
-      Hash: f65fdf5cf974698397ca91d71415b839
+      Hash: 6b45541fdc361140a9ec00d2ff82b5cf
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GroundTrigger
@@ -3510,7 +3548,7 @@ ScriptsOnlyBuild:
     className: Fog
   - hash:
       serializedVersion: 2
-      Hash: a2154a786229879b389ee3ff120fde58
+      Hash: 7a0bde3ac6d739f92105cfe5613df2e0
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalAdditionalCameraData
@@ -3624,7 +3662,7 @@ ScriptsOnlyBuild:
     className: CinemachineIndependentImpulseListener
   - hash:
       serializedVersion: 2
-      Hash: f1517b35c237a69369487a9116ce44bd
+      Hash: e04b3d7efb7b6b41b6c1ff110d89e84c
     assemblyName: Unity.RenderPipelines.HighDefinition.Runtime
     namespaceName: UnityEngine.Rendering.HighDefinition
     className: HDRenderPipelineAsset
@@ -4140,6 +4178,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerHBox
   - hash:
       serializedVersion: 2
+      Hash: a0de23c69e7d27eccc276a347a82c805
+    assemblyName: Whinarn.UnityMeshSimplifier.Runtime
+    namespaceName: UnityMeshSimplifier
+    className: LODBackupComponent
+  - hash:
+      serializedVersion: 2
       Hash: 5e89dee8842b55780d1a95e840f0deaf
     assemblyName: Unity.RenderPipelines.HighDefinition.Runtime
     namespaceName: UnityEngine.Rendering.HighDefinition
@@ -4186,6 +4230,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Splines
     namespaceName: UnityEngine.Splines
     className: SplineAnimate
+  - hash:
+      serializedVersion: 2
+      Hash: 583e029620a9a8e15ba84dde3b661bb7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: OptimizeMesh
   - hash:
       serializedVersion: 2
       Hash: ba331fc935a6a1327554a41b7ff164fe

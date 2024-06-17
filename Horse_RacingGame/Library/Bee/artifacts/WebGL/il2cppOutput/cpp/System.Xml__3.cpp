@@ -2664,10 +2664,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Uri_op_Equality_mD7D7AAB7023C0873B37D8B8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlTextReaderImpl__ctor_m285CC96B7C323DF9216D243E3353C9091CC5B288 (XmlTextReaderImpl_t5F48FDC8E88C9E27593266F6C660B3973AE2167B* __this, TextReader_tB8D43017CB6BE1633E5A86D64E7757366507C1F7* ___0_input, XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* ___1_settings, String_t* ___2_baseUriStr, XmlParserContext_t843976A0319F7334808DCCAAA4F36EAB41A92F3B* ___3_context, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 (RuntimeObject* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlReaderSettings_Initialize_m06C6F113289807FBE5B5E248DC1E1C9B199CD477 (XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* __this, XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* ___0_resolver, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlReaderSettings_EnableLegacyXmlSettings_mE04ABCDC86EA268BDAC1BC8F29C15F958150F424 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* XmlReaderSettings_CreateDefaultResolver_m0D158301CF988E9310F894C9C74F1404DDE5B44E (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlUrlResolver__ctor_m2BF23C41038D2825C0854A4C01DCE078E171A7BB (XmlUrlResolver_tD1DCA07B66A58F98930187AF17C9B31258C1008E* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* XmlReaderSettings_GetXmlResolver_CheckConfig_mADD7B22F1880EB692D45CED946E9BF39D42034DB (XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlReaderSettings_EnableLegacyXmlSettings_mE04ABCDC86EA268BDAC1BC8F29C15F958150F424 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XsdValidatingReader__ctor_mEFDFB844E2E2199663E2DD8906B0B4A74B3EF5F0 (XsdValidatingReader_tC7C9B4A5D46184E4A548F7A12177D50D22CC361E* __this, XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD* ___0_reader, XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* ___1_xmlResolver, XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* ___2_readerSettings, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* XmlReaderSettings_CreateDtdValidatingReader_mDFB0D648AD00CA7B1B027BFA1FBA9E0464B70971 (XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* __this, XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD* ___0_baseReader, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ValidationEventHandler_t400B20AD482B62613818392D3E5588426332560A* XmlReaderSettings_GetEventHandler_m846EA87D263A6804F452088315D63F5FA898AC64_inline (XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* __this, const RuntimeMethod* method) ;
@@ -2921,7 +2921,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlRawWriter_WriteBase64_m3B717B23DDCA78
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlWriterSettings_get_IndentChars_mF26B2899F7718E3DC75CA62FDFB5915BAF5C158D_inline (XmlWriterSettings_t4C33BC8989A2AF592E88EAE69930915E6D960674* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XmlWriterSettings_get_NewLineOnAttributes_m3ACAFD8A94C15826E9DDC4F20B280C6AF3407F7D_inline (XmlWriterSettings_t4C33BC8989A2AF592E88EAE69930915E6D960674* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BitStack__ctor_m9BADB5496087F772604E9F62D3B18C07630EA45A (BitStack_t11BAF39DA304BA77E31BB65B8E3C4B5B46E1A10C* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReaderImpl_get_Namespaces_m4415C799078697BDACBD0FE115AD65DB6C0031A3 (XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* __this, const RuntimeMethod* method) ;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -8018,41 +8017,62 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlReaderSettings_Initialize_mC0DBEC15D6
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlReaderSettings_Initialize_m06C6F113289807FBE5B5E248DC1E1C9B199CD477 (XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* __this, XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* ___0_resolver, const RuntimeMethod* method) 
 {
-	XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* G_B2_0 = NULL;
-	XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* G_B1_0 = NULL;
-	XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* G_B3_0 = NULL;
-	XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* G_B3_1 = NULL;
+	XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* G_B4_0 = NULL;
+	XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* G_B3_0 = NULL;
+	XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* G_B5_0 = NULL;
+	XmlReaderSettings_t8D51BA3ED2A013EE1F44525C9861326CAFB44AEA* G_B5_1 = NULL;
 	{
 		__this->___nameTable = (XmlNameTable_tBDBAACFF3DB40A8E6AF3BDC11F0FF166CF11ABB8*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___nameTable), (void*)(XmlNameTable_tBDBAACFF3DB40A8E6AF3BDC11F0FF166CF11ABB8*)NULL);
-		XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* L_0 = ___0_resolver;
-		if (!L_0)
+		bool L_0;
+		L_0 = XmlReaderSettings_EnableLegacyXmlSettings_mE04ABCDC86EA268BDAC1BC8F29C15F958150F424(NULL);
+		if (L_0)
 		{
-			G_B2_0 = __this;
-			goto IL_000e;
+			goto IL_0023;
 		}
-		G_B1_0 = __this;
 	}
 	{
 		XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* L_1 = ___0_resolver;
-		G_B3_0 = L_1;
-		G_B3_1 = G_B1_0;
-		goto IL_0013;
+		__this->___xmlResolver = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___xmlResolver), (void*)L_1);
+		__this->___maxCharactersFromEntities = ((int64_t)((int32_t)10000000));
+		goto IL_003c;
 	}
 
-IL_000e:
+IL_0023:
 	{
-		XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* L_2;
-		L_2 = XmlReaderSettings_CreateDefaultResolver_m0D158301CF988E9310F894C9C74F1404DDE5B44E(NULL);
-		G_B3_0 = L_2;
-		G_B3_1 = G_B2_0;
+		XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* L_2 = ___0_resolver;
+		if (!L_2)
+		{
+			G_B4_0 = __this;
+			goto IL_002a;
+		}
+		G_B3_0 = __this;
+	}
+	{
+		XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* L_3 = ___0_resolver;
+		G_B5_0 = L_3;
+		G_B5_1 = G_B3_0;
+		goto IL_002f;
 	}
 
-IL_0013:
+IL_002a:
 	{
-		G_B3_1->___xmlResolver = G_B3_0;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B3_1->___xmlResolver), (void*)G_B3_0);
+		XmlResolver_tE25A33DFCB87A939D11BC8543970F6857AEC3DCF* L_4;
+		L_4 = XmlReaderSettings_CreateDefaultResolver_m0D158301CF988E9310F894C9C74F1404DDE5B44E(NULL);
+		G_B5_0 = L_4;
+		G_B5_1 = G_B4_0;
+	}
+
+IL_002f:
+	{
+		G_B5_1->___xmlResolver = G_B5_0;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B5_1->___xmlResolver), (void*)G_B5_0);
 		__this->___maxCharactersFromEntities = ((int64_t)0);
+	}
+
+IL_003c:
+	{
 		__this->___lineNumberOffset = 0;
 		__this->___linePositionOffset = 0;
 		__this->___checkCharacters = (bool)1;
@@ -8067,8 +8087,8 @@ IL_0013:
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___schemas), (void*)(XmlSchemaSet_t048A12CE7D00EF330EF32A388B69A240899F88D1*)NULL);
 		__this->___validationType = 0;
 		__this->___validationFlags = 8;
-		int32_t L_3 = __this->___validationFlags;
-		__this->___validationFlags = ((int32_t)((int32_t)L_3|((int32_t)16)));
+		int32_t L_5 = __this->___validationFlags;
+		__this->___validationFlags = ((int32_t)((int32_t)L_5|((int32_t)16)));
 		__this->___useAsync = (bool)0;
 		__this->___isReadOnly = (bool)0;
 		XmlReaderSettings_set_IsXmlResolverSet_m871B57224C2E3918C193D03425F0F409E4A44A03_inline(__this, (bool)0, NULL);
@@ -22893,270 +22913,6 @@ IL_0025:
 	}
 	{
 		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XmlValidatingReader_get_NodeType_mAF3765B4AC9841518828D5EC161183C4406DCA5C (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(6, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_get_LocalName_mCBB39E66822EC770A0E3AE7DB453F28DD37CE250 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1;
-		L_1 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_get_NamespaceURI_mCE149ADA9B61980AA7CB3401077EF9075F16CB4E (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1;
-		L_1 = VirtualFuncInvoker0< String_t* >::Invoke(9, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_get_Prefix_mE4ABA72D869E05B026E4BFE89F433AD27E6CE174 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1;
-		L_1 = VirtualFuncInvoker0< String_t* >::Invoke(10, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_get_Value_m236A951CD11868469BE265FAE2A0B291FB40EA0B (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1;
-		L_1 = VirtualFuncInvoker0< String_t* >::Invoke(11, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XmlValidatingReader_get_Depth_mE8BC3EE8EB045E920EDFA0FFBA482B175E068A0D (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(12, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_get_BaseURI_m1D32CAC20A880B003FBDFA8E20B771B07EBDB2EE (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1;
-		L_1 = VirtualFuncInvoker0< String_t* >::Invoke(13, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_get_IsEmptyElement_mA8F8DD284E583518A6391038C027E202D091AA7B (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		bool L_1;
-		L_1 = VirtualFuncInvoker0< bool >::Invoke(14, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XmlValidatingReader_get_AttributeCount_m2A0904D49A2D985790CE93CADE7050045EBF8C56 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(39, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_GetAttribute_m5E5A6346601611468C2A3BD9920935A2D4D2AD38 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, String_t* ___0_name, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1 = ___0_name;
-		String_t* L_2;
-		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(40, L_0, L_1);
-		return L_2;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_GetAttribute_m93EEF0C5AD32F33CDD0A0500B5DC173B01DFEE75 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, String_t* ___0_localName, String_t* ___1_namespaceURI, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1 = ___0_localName;
-		String_t* L_2 = ___1_namespaceURI;
-		String_t* L_3;
-		L_3 = VirtualFuncInvoker2< String_t*, String_t*, String_t* >::Invoke(41, L_0, L_1, L_2);
-		return L_3;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_GetAttribute_m795D6E982C39D960B252A0C6E50613B07D00F4B9 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, int32_t ___0_i, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		int32_t L_1 = ___0_i;
-		String_t* L_2;
-		L_2 = VirtualFuncInvoker1< String_t*, int32_t >::Invoke(42, L_0, L_1);
-		return L_2;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_MoveToAttribute_m6AE87D9AE8C96783EBA26589022F8E24AB74C6D0 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, String_t* ___0_name, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1 = ___0_name;
-		bool L_2;
-		L_2 = VirtualFuncInvoker1< bool, String_t* >::Invoke(43, L_0, L_1);
-		return L_2;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_MoveToAttribute_mEA0EC133D542F71E1465AC87F2DD26DDDDA089E4 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, String_t* ___0_localName, String_t* ___1_namespaceURI, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1 = ___0_localName;
-		String_t* L_2 = ___1_namespaceURI;
-		bool L_3;
-		L_3 = VirtualFuncInvoker2< bool, String_t*, String_t* >::Invoke(44, L_0, L_1, L_2);
-		return L_3;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_MoveToFirstAttribute_m97251F4825A0129F45E769F7883476D734B0F4FF (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		bool L_1;
-		L_1 = VirtualFuncInvoker0< bool >::Invoke(46, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_MoveToNextAttribute_m3CCC26F43F738C7E388A5DF75679C519385C9AE7 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		bool L_1;
-		L_1 = VirtualFuncInvoker0< bool >::Invoke(47, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_MoveToElement_m6971E20817A796DE438B9C73254C5700B4129167 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		bool L_1;
-		L_1 = VirtualFuncInvoker0< bool >::Invoke(48, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_ReadAttributeValue_mEF840AEDDDF381AA50108FB39683607F51CB99B8 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		bool L_1;
-		L_1 = VirtualFuncInvoker0< bool >::Invoke(49, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_Read_m33E0852D4F75E12D452FE299291273ACD3061AB3 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		bool L_1;
-		L_1 = VirtualFuncInvoker0< bool >::Invoke(50, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_get_EOF_m563954E9E5B16FD30F68A0CCB93BD0D8C612778C (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		bool L_1;
-		L_1 = VirtualFuncInvoker0< bool >::Invoke(51, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XmlValidatingReader_get_ReadState_m83F7A0A0CBBB7F6730994B4D8B5BD783B62DCF15 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(53, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XmlNameTable_tBDBAACFF3DB40A8E6AF3BDC11F0FF166CF11ABB8* XmlValidatingReader_get_NameTable_m917273B1CE2D8C531FFA16D35CD1509F55180C01 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		XmlNameTable_tBDBAACFF3DB40A8E6AF3BDC11F0FF166CF11ABB8* L_1;
-		L_1 = VirtualFuncInvoker0< XmlNameTable_tBDBAACFF3DB40A8E6AF3BDC11F0FF166CF11ABB8* >::Invoke(55, L_0);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlValidatingReader_LookupNamespace_mD5FCF7E0552FFF68E9A7C87EA6E2A853C08DAC68 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, String_t* ___0_prefix, const RuntimeMethod* method) 
-{
-	String_t* V_0 = NULL;
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		String_t* L_1 = ___0_prefix;
-		String_t* L_2;
-		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(56, L_0, L_1);
-		V_0 = L_2;
-		String_t* L_3 = V_0;
-		if (!L_3)
-		{
-			goto IL_001a;
-		}
-	}
-	{
-		String_t* L_4 = V_0;
-		int32_t L_5;
-		L_5 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_4, NULL);
-		if (L_5)
-		{
-			goto IL_001a;
-		}
-	}
-	{
-		V_0 = (String_t*)NULL;
-	}
-
-IL_001a:
-	{
-		String_t* L_6 = V_0;
-		return L_6;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlValidatingReader_ResolveEntity_mDE64E0FBAD47C1529BF75EAFC4DA6520D8ECFD77 (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		VirtualActionInvoker0::Invoke(58, L_0);
-		return;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlValidatingReader_get_Namespaces_mE9B13FB33252408970F9376B2FF440E9FB71D50F (XmlValidatingReader_tC22B0C99C972133DC954BB9906B62835330FB3F9* __this, const RuntimeMethod* method) 
-{
-	{
-		XmlValidatingReaderImpl_t5E1938148F73C4871F4B28C234B1EEF586998EA8* L_0 = __this->___impl;
-		bool L_1;
-		L_1 = XmlValidatingReaderImpl_get_Namespaces_m4415C799078697BDACBD0FE115AD65DB6C0031A3(L_0, NULL);
-		return L_1;
 	}
 }
 #ifdef __clang__

@@ -1919,6 +1919,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847
 	bool ___localFlipsWinding;
 	bool ___localTransformScaleZero;
 	bool ___worldFlipsWinding;
+	bool ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -1964,6 +1965,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847_marshaled_pin
 	int32_t ___localFlipsWinding;
 	int32_t ___localTransformScaleZero;
 	int32_t ___worldFlipsWinding;
+	int32_t ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -2009,6 +2011,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847_marshaled_com
 	int32_t ___localFlipsWinding;
 	int32_t ___localTransformScaleZero;
 	int32_t ___worldFlipsWinding;
+	int32_t ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -2705,6 +2708,7 @@ struct UIElementsUtility_t03323144D50362C6BF96652D3355728749769293_StaticFields
 	String_t* ___s_EventProfilerMarkerName;
 	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___s_RepaintProfilerMarker;
 	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___s_EventProfilerMarker;
+	CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* ___s_Modifiers;
 };
 struct VectorImageManager_tBABA8290D62F9BDB5DCE3CC8FDA877915D1DBFED_StaticFields
 {
@@ -8461,25 +8465,63 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RenderEvents_UpdateZeroScaling_m024294FE
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	bool V_1 = false;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* V_2 = NULL;
+	Hierarchy_t4CF226F0EDE9C117C51C505730FC80641B1F1677 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	bool V_4 = false;
 	{
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = ___0_ve;
-		RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847* L_1 = (RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847*)(&L_0->___renderChainData);
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_2 = ___0_ve;
-		RuntimeObject* L_3;
-		L_3 = VisualElement_get_transform_m3BAB67CC182B8B60920924AEE52826BD736A051D(L_2, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
-		L_4 = InterfaceFuncInvoker0< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(2, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_3);
-		float L_5 = L_4.___x;
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_6 = ___0_ve;
-		RuntimeObject* L_7;
-		L_7 = VisualElement_get_transform_m3BAB67CC182B8B60920924AEE52826BD736A051D(L_6, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
-		L_8 = InterfaceFuncInvoker0< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(2, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_7);
-		float L_9 = L_8.___y;
+		RuntimeObject* L_1;
+		L_1 = VisualElement_get_transform_m3BAB67CC182B8B60920924AEE52826BD736A051D(L_0, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = InterfaceFuncInvoker0< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(2, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_1);
+		float L_3 = L_2.___x;
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_4 = ___0_ve;
+		RuntimeObject* L_5;
+		L_5 = VisualElement_get_transform_m3BAB67CC182B8B60920924AEE52826BD736A051D(L_4, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = InterfaceFuncInvoker0< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(2, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_5);
+		float L_7 = L_6.___y;
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		float L_10;
-		L_10 = fabsf(((float)il2cpp_codegen_multiply(L_5, L_9)));
-		L_1->___localTransformScaleZero = (bool)((((float)L_10) < ((float)(0.00100000005f)))? 1 : 0);
+		float L_8;
+		L_8 = fabsf(((float)il2cpp_codegen_multiply(L_3, L_7)));
+		V_0 = (bool)((((float)L_8) < ((float)(0.00100000005f)))? 1 : 0);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_9 = ___0_ve;
+		RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847* L_10 = (RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847*)(&L_9->___renderChainData);
+		bool L_11 = V_0;
+		L_10->___localTransformScaleZero = L_11;
+		V_1 = (bool)0;
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_12 = ___0_ve;
+		Hierarchy_t4CF226F0EDE9C117C51C505730FC80641B1F1677 L_13;
+		L_13 = VisualElement_get_hierarchy_m2E897DE4CFD349E65CFA38EFF6BAAFECE2F4E3E4_inline(L_12, NULL);
+		V_3 = L_13;
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_14;
+		L_14 = Hierarchy_get_parent_m1CB3F7548632A5B5747041AF64B12BB0E0F402D4((&V_3), NULL);
+		V_2 = L_14;
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_15 = V_2;
+		V_4 = (bool)((!(((RuntimeObject*)(VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)L_15) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_16 = V_4;
+		if (!L_16)
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_17 = V_2;
+		RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847* L_18 = (RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847*)(&L_17->___renderChainData);
+		bool L_19 = L_18->___worldTransformScaleZero;
+		V_1 = L_19;
+	}
+
+IL_0062:
+	{
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_20 = ___0_ve;
+		RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847* L_21 = (RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847*)(&L_20->___renderChainData);
+		bool L_22 = V_1;
+		bool L_23 = V_0;
+		L_21->___worldTransformScaleZero = (bool)((int32_t)((int32_t)L_22|(int32_t)L_23));
 		return;
 	}
 }

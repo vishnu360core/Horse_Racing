@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     AudioSource _audioSource;
 
 
-    public enum SFXType { button,pop}
+    public enum SFXType { button,pop,lose,win}
 
     private void Awake()
     {
@@ -36,6 +36,14 @@ public class AudioManager : MonoBehaviour
             case SFXType.pop:
                 _audioSource.PlayOneShot(_audioData.GetClip(AudioType.SFX, "Pop"), 1.0f);
                 break;
+
+            case SFXType.lose:
+                _audioSource.PlayOneShot(_audioData.GetClip(AudioType.SFX, "Lose"), 1.0f);
+                break;
+
+            case SFXType.win:
+                _audioSource.PlayOneShot(_audioData.GetClip(AudioType.SFX, "Win"), 1.0f);
+                break;
         }
     }
 
@@ -52,6 +60,22 @@ public class AudioManager : MonoBehaviour
         _audioSource.clip = _audioData.GetClip(AudioType.CLIP, "Horse_Race");
         _audioSource.Play();
     }
+
+    public void PlayMainScreen(bool enable)
+    {
+        _audioSource.loop = enable;
+
+        if (!enable)
+        {
+            _audioSource.Stop();
+            return;
+        }
+
+        _audioSource.clip = _audioData.GetClip(AudioType.CLIP, "MainMenu");
+        _audioSource.Play();
+    }
+
+
 
     public void ButtonClick()
     {

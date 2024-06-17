@@ -130,8 +130,10 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
     private void SetIDAction(string obj)
     {
+        AudioManager.Instance.PlayMainScreen(true);
+
         idText = obj;
-       id_Text.text = "Wallet Address:" + obj;
+        id_Text.text = "Wallet Address:" + obj;
     }
 
     /// <summary>
@@ -193,11 +195,15 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
             if (loseAmount > 0)
             {
+                AudioManager.Instance.PlayAudio(AudioManager.SFXType.lose);
+
                 Network.Instance.SendResult(loseAmount.ToString(), idText, Notification.Result.Loss);
                 Actions.SetTheResult(ResultStat.fail, loseAmount.ToString());
             }
             return;
         }
+
+        AudioManager.Instance.PlayAudio (AudioManager.SFXType.win);
 
         Network.Instance.SendResult(setAmount.ToString(), idText, Notification.Result.Win);
         Actions.SetTheResult(ResultStat.success, setAmount.ToString());
@@ -205,7 +211,6 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         float tempAmount = amount + setAmount - loseAmount;
 
         Debug.Log("TempAmount >>>" + tempAmount);
-        amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
         _loadPanel.SetActive(true);
         _loadPanel.GetComponent<Loader>().SetLoadMessage("\n Credit in progress");
@@ -216,6 +221,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     public void PlayButtonAction()
     {
         _playButton.interactable = false;
+        AudioManager.Instance.PlayMainScreen(false);
 
         PlayAction();
     }
@@ -239,7 +245,6 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         Actions.BetHorses(betedHorses);
 
         float tempAmount = amount - loseAmount;
-        amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
         bet_Text.text = "Total Bets: " + loseAmount;
 
@@ -285,7 +290,6 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         }
 
         float tempAmount = amount - loseAmount;
-        amount_Text.text = "Amount: $" + tempAmount.ToString("F2");
 
         bet_Text.text = "Total Bets: " + loseAmount;
 
@@ -328,6 +332,8 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         loseAmount = 0;
 
         bet_Text.text = "Total Bets: " + loseAmount;
+
+        AudioManager.Instance.PlayMainScreen(true);
 
         for (int i = 0; i < betBlocks.Count; i++)
             betBlocks[i].ResetAction();

@@ -5,9 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class GroundTrigger : MonoBehaviour
 {
-    public Collider collider;
+   [SerializeField]  Collider collider;
 
-    int _dustIndex = 0;
+   [SerializeField] int _dustIndex = 0;
 
     public void SetDustParticle(int dustIndex)
     {  _dustIndex = dustIndex; }

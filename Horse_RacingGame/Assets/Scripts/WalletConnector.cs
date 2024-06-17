@@ -183,8 +183,9 @@ public class WalletConnector : MonoBehaviour
         catch
         {
             Actions.Credit(false);
-            RequestBalance();
         }
+
+        RequestBalance();
     }
 
     public async void Deduct(string wei)
@@ -205,11 +206,11 @@ public class WalletConnector : MonoBehaviour
                 Actions.Deduct(true);
 
             Debug.LogWarning("Transaction failed" );
-
-            RequestBalance();
-
             Actions.Deduct(false);
         }
+
+        RequestBalance();
+
     }
 
     #endregion

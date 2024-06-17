@@ -43,10 +43,10 @@ public class Horse : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 0; i < groundTriggers.Count; ++i)
-        {
-            groundTriggers[i].SetDustParticle(particleIndex);
-        }
+        //for (int i = 0; i < groundTriggers.Count; ++i)
+        //{
+        //    groundTriggers[i].SetDustParticle(particleIndex);
+        //}
     }
 
     private void OnEnable()

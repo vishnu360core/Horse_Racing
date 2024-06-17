@@ -33,6 +33,8 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
     [SerializeField] UnityEvent _onBetsCamIntialised;
     [SerializeField] UnityEvent _onBetsCleared;
     [SerializeField] UnityEvent _onBetCamNav;
+    [SerializeField] UnityEvent _onFinalRun;
+    [SerializeField] UnityEvent _onReset;
 
 
     float startTimeScale;
@@ -208,6 +210,8 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
     {
         ClearCameraPriorityAction();
 
+        _onFinalRun?.Invoke();
+
         _brain.m_DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.Cut, 1.0f);
 
         virtualCameras.Find(x => x.name == "Virtual Camera_Final").Priority = 20;
@@ -222,6 +226,8 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
     public void EnableSlowMotion(bool enable)
     {
         StopAllCoroutines();
+
+
 
         if(enable)
         {
@@ -253,6 +259,8 @@ public class CameraController : MonoBehaviour, CameraColliderInterface
     void ResetAction()
     {
         ClearCameraPriorityAction();
+
+        _onReset?.Invoke();
 
         _brain.m_DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.EaseInOut, 1.0f);
 

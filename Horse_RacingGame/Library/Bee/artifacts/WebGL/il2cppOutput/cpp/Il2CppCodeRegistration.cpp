@@ -66,6 +66,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Configuration_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Core_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Data_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Drawing_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Net_Http_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Numerics_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Reactive_CodeGenModule;
@@ -98,6 +99,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenMod
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_PropertiesModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_ScreenCaptureModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_SharedInternalsModule_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_SpriteMaskModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_SpriteShapeModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_SubsystemsModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_TerrainModule_CodeGenModule;
@@ -139,6 +141,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_WalletConnectSharp_Network_Websocket
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_WalletConnectSharp_Sign_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_WalletConnectSharp_Storage_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Websocket_Client_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Whinarn_UnityMeshSimplifier_Runtime_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g___Generated_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_com_Tivadar_Best_HTTP_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_embeddedU2Dwallet_CodeGenModule;
@@ -146,7 +149,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_evm_net_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_zxing_unity_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[125] = 
+const Il2CppCodeGenModule* g_CodeGenModules[128] = 
 {
 	(&g_AWSSDK_CognitoIdentityProvider_CodeGenModule),
 	(&g_AWSSDK_CognitoIdentity_CodeGenModule),
@@ -194,6 +197,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[125] =
 	(&g_System_Configuration_CodeGenModule),
 	(&g_System_Core_CodeGenModule),
 	(&g_System_Data_CodeGenModule),
+	(&g_System_Drawing_CodeGenModule),
 	(&g_System_Net_Http_CodeGenModule),
 	(&g_System_Numerics_CodeGenModule),
 	(&g_System_Reactive_CodeGenModule),
@@ -226,6 +230,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[125] =
 	(&g_UnityEngine_PropertiesModule_CodeGenModule),
 	(&g_UnityEngine_ScreenCaptureModule_CodeGenModule),
 	(&g_UnityEngine_SharedInternalsModule_CodeGenModule),
+	(&g_UnityEngine_SpriteMaskModule_CodeGenModule),
 	(&g_UnityEngine_SpriteShapeModule_CodeGenModule),
 	(&g_UnityEngine_SubsystemsModule_CodeGenModule),
 	(&g_UnityEngine_TerrainModule_CodeGenModule),
@@ -267,6 +272,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[125] =
 	(&g_WalletConnectSharp_Sign_CodeGenModule),
 	(&g_WalletConnectSharp_Storage_CodeGenModule),
 	(&g_Websocket_Client_CodeGenModule),
+	(&g_Whinarn_UnityMeshSimplifier_Runtime_CodeGenModule),
 	(&g___Generated_CodeGenModule),
 	(&g_com_Tivadar_Best_HTTP_CodeGenModule),
 	(&g_embeddedU2Dwallet_CodeGenModule),
@@ -279,20 +285,20 @@ const Il2CppCodeRegistration g_CodeRegistration =
 {
 	35,
 	g_ReversePInvokeWrapperPointers,
-	101204,
+	101973,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	18695,
+	18840,
 	g_Il2CppInvokerPointers,
-	3834,
+	3843,
 	g_UnresolvedVirtualMethodPointers,
 	g_UnresolvedInstanceMethodPointers,
 	g_UnresolvedStaticMethodPointers,
-	917,
+	924,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	125,
+	128,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

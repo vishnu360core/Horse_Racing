@@ -434,6 +434,7 @@ IL2CPP_EXTERN_C RuntimeClass* Func_2_t2BECA93EEB5C5A67E9EFEE1DEEF90D0568B8514C_i
 IL2CPP_EXTERN_C RuntimeClass* Func_2_t67B0388A899E4C708FA042B083D87FF5BDC0D9ED_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_t7EE81CF26AC04DA708CB2D71E7A7EAAD54248769_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_tBA43006BE5B44011173C435E32D4BC18730623FB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GlyphRect_tB6D225B9318A527A1CBC1B4078EB923398EB808D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Glyph_t700CF8EBE04ED4AEAB520885AAA1B309E02A103F_il2cpp_TypeInfo_var;
@@ -27172,7 +27173,14 @@ IL_00bb:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_clipboard_m53271C5A442FE382959DEF76525B14616E58BFAE (const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 		String_t* L_0;
 		L_0 = GUIUtility_get_systemCopyBuffer_m01E2DF71533C31A4C552B9177D7CBA0C6CA3FC2A(NULL);
 		return L_0;
@@ -27180,8 +27188,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_clipboard_m53271
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_clipboard_m2A21EC4F18EF6AB80DD0D03887BB115E3AB5D0BB (String_t* ___0_value, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		String_t* L_0 = ___0_value;
+		il2cpp_codegen_runtime_class_init_inline(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 		GUIUtility_set_systemCopyBuffer_mD14AE32BFEA4773BDC679205D470A228B8F225E8(L_0, NULL);
 		return;
 	}

@@ -408,9 +408,7 @@
           },
           {
             "name": "RenderTexture",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -623,6 +621,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.screencapture"
+          },
+          {
+            "name": "Required by SpriteMask Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.spritemask"
           },
           {
             "name": "Required by Subsystems Module",
@@ -1066,6 +1070,12 @@
             "icon": "package/com.unity.modules.screencapture"
           },
           {
+            "name": "Required by SpriteMask Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.spritemask"
+          },
+          {
             "name": "Required by Subsystems Module",
             "scenes": [],
             "dependencyType": 2,
@@ -1156,6 +1166,10 @@
             "icon": "package/com.unity.modules.xr"
           }
         ]
+      },
+      {
+        "name": "SpriteMask",
+        "dependencies": []
       },
       {
         "name": "Subsystems",
@@ -1383,9 +1397,7 @@
         "dependencies": [
           {
             "name": "VideoPlayer",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           }

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638522130432464851
-    m_Hash: 3228924099
+      ticks: 638540305097360273
+    m_Hash: 96277660
   m_LockFileStatus:
     m_FilePath: D:/Work/Horse_Racing/Horse_RacingGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638522130432587022
-    m_Hash: 524083786
+      ticks: 638540305097408935
+    m_Hash: 1536375527
 m_EmbeddedPackageManifests:
   m_ManifestsStatus:
     D:/Work/Horse_Racing/Horse_RacingGame/Packages/com.tivadar.best.http/package.json:
@@ -28,14 +28,14 @@ m_EmbeddedPackageManifests:
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: D:/Work/Horse_Racing/Horse_RacingGame/Packages
-m_EditorVersion: 2022.3.20f1 (61c2feb0970d)
+m_EditorVersion: 2022.3.33f1 (b2c853adf198)
 m_ResolvedPackages:
-- packageId: com.unity.cinemachine@2.9.7
+- packageId: com.unity.cinemachine@2.10.0
   testable: 0
   isDirectDependency: 1
-  version: 2.9.7
+  version: 2.10.0
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.cinemachine@2.9.7
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.cinemachine@2.10.0
   assetPath: Packages/com.unity.cinemachine
   name: com.unity.cinemachine
   displayName: Cinemachine
@@ -44,7 +44,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: cinematography
-  type: asset
+  type: assets
   description: "Smart camera tools for passionate creators. \n\nNew starting from
     2.7.1: Are you looking for the Cinemachine menu? It has moved to the GameObject
     menu.\n\nIMPORTANT NOTE: If you are upgrading from the legacy Asset Store version
@@ -130,8 +130,6 @@ m_ResolvedPackages:
     - 3.0.1
     - 3.1.0
     compatible:
-    - 2.9.5
-    - 2.9.7
     - 2.10.0
     - 3.0.0-pre.3
     - 3.0.0-pre.4
@@ -142,7 +140,7 @@ m_ResolvedPackages:
     - 3.0.0-pre.9
     - 3.0.1
     - 3.1.0
-    recommended: 2.9.7
+    recommended: 2.10.0
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -189,22 +187,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638191355130000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.cinemachine@2.9/manual/index.html
+  datePublishedTicks: 638451680320000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.cinemachine@2.10/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/com.unity.cinemachine.git
-    revision: 46485ca80113434766f2b256525bb98def548fb9
+    revision: 3b55bae0f41b1048cc2080391ac3d4eb1c22b7ef
     path: 
   unityLifecycle:
-    version: 2.9.5
+    version: 2.10.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.collab-proxy@2.3.1
   testable: 0
   isDirectDependency: 1
@@ -299,9 +298,8 @@ m_ResolvedPackages:
     - 2.2.0
     - 2.3.1
     compatible:
-    - 2.2.0
     - 2.3.1
-    recommended: 2.2.0
+    recommended: 2.3.1
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -339,13 +337,14 @@ m_ResolvedPackages:
     revision: 613362ccb4468f55ee42e0a35809fb9a61f3f8f1
     path: 
   unityLifecycle:
-    version: 2.2.0
+    version: 2.3.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.device-simulator.devices@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -406,12 +405,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.feature.2d@2.0.0
+  fingerprint: 
+- packageId: com.unity.feature.2d@2.0.1
   testable: 0
   isDirectDependency: 1
-  version: 2.0.0
+  version: 2.0.1
   source: 2
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.feature.2d@2.0.0
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.feature.2d@2.0.1
   assetPath: Packages/com.unity.feature.2d
   name: com.unity.feature.2d
   displayName: 2D
@@ -430,10 +430,10 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 2.0.0
+    - 2.0.1
     compatible:
-    - 2.0.0
-    recommended: 2.0.0
+    - 2.0.1
+    recommended: 2.0.1
     deprecated: []
   dependencies:
   - name: com.unity.2d.animation
@@ -454,7 +454,7 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.2d.animation
-    version: 9.1.0
+    version: 9.1.1
   - name: com.unity.2d.common
     version: 8.0.2
   - name: com.unity.2d.sprite
@@ -472,7 +472,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -482,9 +482,9 @@ m_ResolvedPackages:
   - name: com.unity.2d.pixel-perfect
     version: 5.0.3
   - name: com.unity.2d.psdimporter
-    version: 8.0.4
+    version: 8.0.5
   - name: com.unity.2d.spriteshape
-    version: 9.0.2
+    version: 9.0.3
   - name: com.unity.modules.physics2d
     version: 1.0.0
   - name: com.unity.2d.tilemap
@@ -496,7 +496,7 @@ m_ResolvedPackages:
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.2d.aseprite
-    version: 1.1.1
+    version: 1.1.4
   keywords: []
   registry:
     id: main
@@ -517,13 +517,14 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 2.0.0
+    version: 2.0.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.feature.development@1.0.1
   testable: 0
   isDirectDependency: 1
@@ -579,7 +580,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.ide.rider
-    version: 3.0.27
+    version: 3.0.28
   - name: com.unity.ide.vscode
     version: 1.2.5
   - name: com.unity.editorcoroutines
@@ -617,6 +618,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.postprocessing@3.4.0
   testable: 0
   isDirectDependency: 1
@@ -714,12 +716,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.render-pipelines.high-definition@14.0.10
+  fingerprint: 
+- packageId: com.unity.render-pipelines.high-definition@14.0.11
   testable: 0
   isDirectDependency: 1
-  version: 14.0.10
+  version: 14.0.11
   source: 2
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.high-definition@14.0.10
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.high-definition@14.0.11
   assetPath: Packages/com.unity.render-pipelines.high-definition
   name: com.unity.render-pipelines.high-definition
   displayName: High Definition RP
@@ -836,10 +839,10 @@ m_ResolvedPackages:
     - 10.9.0
     - 10.10.0
     - 10.10.1
-    - 14.0.10
+    - 14.0.11
     compatible:
-    - 14.0.10
-    recommended: 14.0.10
+    - 14.0.11
+    recommended: 14.0.11
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -855,18 +858,18 @@ m_ResolvedPackages:
   - name: com.unity.modules.terrain
     version: 1.0.0
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.shadergraph
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.visualeffectgraph
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.render-pipelines.high-definition-config
-    version: 14.0.10
+    version: 14.0.11
   resolvedDependencies:
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.modules.video
@@ -884,7 +887,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.terrain
     version: 1.0.0
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.modules.imgui
@@ -892,13 +895,13 @@ m_ResolvedPackages:
   - name: com.unity.modules.physics
     version: 1.0.0
   - name: com.unity.shadergraph
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.searcher
     version: 4.9.2
   - name: com.unity.visualeffectgraph
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.render-pipelines.high-definition-config
-    version: 14.0.10
+    version: 14.0.11
   keywords:
   - graphics
   - performance
@@ -924,19 +927,20 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 14.0.10
+    version: 14.0.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.render-pipelines.universal@14.0.10
+  fingerprint: 
+- packageId: com.unity.render-pipelines.universal@14.0.11
   testable: 0
   isDirectDependency: 1
-  version: 14.0.10
+  version: 14.0.11
   source: 2
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.universal@14.0.11
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal RP
@@ -999,10 +1003,10 @@ m_ResolvedPackages:
     - 10.9.0
     - 10.10.0
     - 10.10.1
-    - 14.0.10
+    - 14.0.11
     compatible:
-    - 14.0.10
-    recommended: 14.0.10
+    - 14.0.11
+    recommended: 14.0.11
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -1010,20 +1014,20 @@ m_ResolvedPackages:
   - name: com.unity.burst
     version: 1.8.9
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.shadergraph
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.render-pipelines.universal-config
     version: 14.0.9
   resolvedDependencies:
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.modules.ui
@@ -1035,11 +1039,11 @@ m_ResolvedPackages:
   - name: com.unity.modules.terrain
     version: 1.0.0
   - name: com.unity.shadergraph
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.searcher
     version: 4.9.2
   - name: com.unity.render-pipelines.universal-config
-    version: 14.0.9
+    version: 14.0.10
   keywords:
   - graphics
   - performance
@@ -1066,19 +1070,20 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 14.0.10
+    version: 14.0.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.splines@2.5.2
+  fingerprint: 
+- packageId: com.unity.splines@2.6.1
   testable: 0
   isDirectDependency: 1
-  version: 2.5.2
+  version: 2.6.1
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.splines@2.5.2
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.splines@2.6.1
   assetPath: Packages/com.unity.splines
   name: com.unity.splines
   displayName: Splines
@@ -1112,10 +1117,10 @@ m_ResolvedPackages:
     - 2.5.1
     - 2.5.2
     - 2.6.0
+    - 2.6.1
     compatible:
-    - 2.5.2
-    - 2.6.0
-    recommended: 2.5.2
+    - 2.6.1
+    recommended: 2.6.1
     deprecated: []
   dependencies:
   - name: com.unity.settings-manager
@@ -1149,22 +1154,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638403055030000000
+  datePublishedTicks: 638522292040000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.splines.git
-    revision: 80fae673490cb05db4e1532f2eeae338a9603846
+    revision: f77ddc46ebeef1a8dca1264827b93dbec50d3772
     path: 
   unityLifecycle:
-    version: 2.5.2
+    version: 2.6.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.textmeshpro@3.0.6
   testable: 0
   isDirectDependency: 1
@@ -1296,6 +1302,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.7
     - 3.2.0-pre.8
     - 3.2.0-pre.9
+    - 3.2.0-pre.10
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     compatible:
@@ -1312,6 +1319,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.7
     - 3.2.0-pre.8
     - 3.2.0-pre.9
+    - 3.2.0-pre.10
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     recommended: 3.0.9
@@ -1358,6 +1366,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.timeline@1.7.6
   testable: 0
   isDirectDependency: 1
@@ -1464,6 +1473,7 @@ m_ResolvedPackages:
     - 1.8.4
     - 1.8.5
     - 1.8.6
+    - 1.8.7
     compatible:
     - 1.7.6
     - 1.8.0
@@ -1473,6 +1483,7 @@ m_ResolvedPackages:
     - 1.8.4
     - 1.8.5
     - 1.8.6
+    - 1.8.7
     recommended: 1.7.6
     deprecated: []
   dependencies:
@@ -1525,6 +1536,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.ugui@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1597,12 +1609,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.visualscripting@1.9.1
+  fingerprint: 
+- packageId: com.unity.visualscripting@1.9.4
   testable: 0
   isDirectDependency: 1
-  version: 1.9.1
+  version: 1.9.4
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.visualscripting@1.9.1
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.visualscripting@1.9.4
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1650,8 +1663,6 @@ m_ResolvedPackages:
     - 1.9.2
     - 1.9.4
     compatible:
-    - 1.9.1
-    - 1.9.2
     - 1.9.4
     recommended: 1.9.4
     deprecated:
@@ -1681,22 +1692,85 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638284821510000000
+  datePublishedTicks: 638488567680000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
-    revision: 5e78e9c354ed1567dbcea08e2bd9992e4a473cfb
+    revision: 41aac2b7038c2b1259c546329890d3736ce2394e
     path: 
   unityLifecycle:
-    version: 1.9.1
+    version: 1.9.4
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
+- packageId: com.whinarn.unitymeshsimplifier@https://github.com/Whinarn/UnityMeshSimplifier.git
+  testable: 0
+  isDirectDependency: 1
+  version: 3.1.0
+  source: 5
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.whinarn.unitymeshsimplifier@d741912bfe
+  assetPath: Packages/com.whinarn.unitymeshsimplifier
+  name: com.whinarn.unitymeshsimplifier
+  displayName: Unity Mesh Simplifier
+  author:
+    name: Mattias Edlund
+    email: 
+    url: https://github.com/Whinarn
+  category: 
+  type: library
+  description: Simplifies 3D meshes with ease. Works both in the editor and during
+    runtime in builds.
+  status: 0
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - 3d
+  - mesh
+  - polygon
+  - triangle
+  - simplification
+  - decimation
+  - reduction
+  - optimization
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1752,6 +1826,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.androidjni@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1806,6 +1881,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.animation@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1861,6 +1937,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.assetbundle@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1916,6 +1993,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.audio@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1971,6 +2049,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.cloth@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2030,6 +2109,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.director@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2093,6 +2173,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.imageconversion@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2149,6 +2230,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.imgui@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2204,6 +2286,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.jsonserialize@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2259,6 +2342,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.particlesystem@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2314,6 +2398,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.physics@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2369,6 +2454,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.physics2d@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2424,6 +2510,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.screencapture@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2483,6 +2570,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.terrain@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2538,6 +2626,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.terrainphysics@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2601,6 +2690,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.tilemap@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2659,6 +2749,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.ui@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2714,6 +2805,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.uielements@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2781,6 +2873,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.umbra@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2836,6 +2929,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unityanalytics@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2899,6 +2993,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequest@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2954,6 +3049,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequestassetbundle@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3017,6 +3113,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequestaudio@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3080,6 +3177,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequesttexture@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3143,6 +3241,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.unitywebrequestwww@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3222,6 +3321,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.vehicles@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3281,6 +3381,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.video@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3348,6 +3449,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.vr@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3417,6 +3519,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.wind@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3472,6 +3575,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.xr@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -3539,6 +3643,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.tivadar.best.http@file:D:\Work\Horse_Racing\Horse_RacingGame\Packages\com.tivadar.best.http
   testable: 1
   isDirectDependency: 1
@@ -3572,7 +3677,7 @@ m_ResolvedPackages:
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.modules.jsonserialize
@@ -3616,12 +3721,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.burst@1.8.12
+  fingerprint: 
+- packageId: com.unity.burst@1.8.15
   testable: 0
   isDirectDependency: 0
-  version: 1.8.12
+  version: 1.8.15
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.burst@1.8.12
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.burst@1.8.15
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -3767,12 +3873,11 @@ m_ResolvedPackages:
     - 1.8.13
     - 1.8.14
     - 1.8.15
+    - 1.8.16
     compatible:
-    - 1.8.12
-    - 1.8.13
-    - 1.8.14
     - 1.8.15
-    recommended: 1.8.15
+    - 1.8.16
+    recommended: 1.8.16
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -3795,22 +3900,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638406469710000000
+  datePublishedTicks: 638512905860000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
   hasRepository: 1
   repository:
     type: git
-    url: git@github.cds.internal.unity3d.com:unity/burst
-    revision: a18fd968a92da11c38d1edd157e68ad9a490e67b
+    url: https://github.cds.internal.unity3d.com/unity/burst.git
+    revision: 8f7d98c1300f8870dc1aa02f91c6e71c4b7e28fe
     path: 
   unityLifecycle:
-    version: 1.8.12
+    version: 1.8.15
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.profiling.core@1.0.2
   testable: 0
   isDirectDependency: 0
@@ -3874,6 +3980,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.modules.subsystems@1.0.0
   testable: 0
   isDirectDependency: 0
@@ -3933,6 +4040,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.settings-manager@2.0.1
   testable: 0
   isDirectDependency: 0
@@ -3995,6 +4103,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.mathematics@1.2.6
   testable: 0
   isDirectDependency: 0
@@ -4071,12 +4180,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.render-pipelines.core@14.0.10
+  fingerprint: 
+- packageId: com.unity.render-pipelines.core@14.0.11
   testable: 0
   isDirectDependency: 0
-  version: 14.0.10
+  version: 14.0.11
   source: 2
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.core@14.0.10
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.core@14.0.11
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Core RP Library
@@ -4195,10 +4305,10 @@ m_ResolvedPackages:
     - 10.9.0
     - 10.10.0
     - 10.10.1
-    - 14.0.10
+    - 14.0.11
     compatible:
-    - 14.0.10
-    recommended: 14.0.10
+    - 14.0.11
+    recommended: 14.0.11
     deprecated: []
   dependencies:
   - name: com.unity.ugui
@@ -4242,19 +4352,20 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 14.0.10
+    version: 14.0.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.shadergraph@14.0.10
+  fingerprint: 
+- packageId: com.unity.shadergraph@14.0.11
   testable: 0
   isDirectDependency: 0
-  version: 14.0.10
+  version: 14.0.11
   source: 2
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.shadergraph@14.0.10
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.shadergraph@14.0.11
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -4370,19 +4481,19 @@ m_ResolvedPackages:
     - 10.9.0
     - 10.10.0
     - 10.10.1
-    - 14.0.10
+    - 14.0.11
     compatible:
-    - 14.0.10
-    recommended: 14.0.10
+    - 14.0.11
+    recommended: 14.0.11
     deprecated: []
   dependencies:
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.searcher
     version: 4.9.2
   resolvedDependencies:
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.modules.ui
@@ -4417,19 +4528,20 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 14.0.10
+    version: 14.0.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.render-pipelines.universal-config@14.0.9
+  fingerprint: 
+- packageId: com.unity.render-pipelines.universal-config@14.0.10
   testable: 0
   isDirectDependency: 0
-  version: 14.0.9
+  version: 14.0.10
   source: 2
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.9
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.10
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal RP Config
@@ -4444,17 +4556,17 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 14.0.9
+    - 14.0.10
     compatible:
-    - 14.0.9
-    recommended: 14.0.9
+    - 14.0.10
+    recommended: 14.0.10
     deprecated: []
   dependencies:
   - name: com.unity.render-pipelines.core
-    version: 14.0.9
+    version: 14.0.10
   resolvedDependencies:
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.modules.ui
@@ -4487,19 +4599,20 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 
+    version: 14.0.10
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.visualeffectgraph@14.0.10
+  fingerprint: 
+- packageId: com.unity.visualeffectgraph@14.0.11
   testable: 0
   isDirectDependency: 0
-  version: 14.0.10
+  version: 14.0.11
   source: 2
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.visualeffectgraph@14.0.10
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.visualeffectgraph@14.0.11
   assetPath: Packages/com.unity.visualeffectgraph
   name: com.unity.visualeffectgraph
   displayName: Visual Effect Graph
@@ -4584,21 +4697,21 @@ m_ResolvedPackages:
     - 10.9.0
     - 10.10.0
     - 10.10.1
-    - 14.0.10
+    - 14.0.11
     compatible:
-    - 14.0.10
-    recommended: 14.0.10
+    - 14.0.11
+    recommended: 14.0.11
     deprecated: []
   dependencies:
   - name: com.unity.shadergraph
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   resolvedDependencies:
   - name: com.unity.shadergraph
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.modules.ui
@@ -4638,19 +4751,20 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 14.0.10
+    version: 14.0.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.render-pipelines.high-definition-config@14.0.10
+  fingerprint: 
+- packageId: com.unity.render-pipelines.high-definition-config@14.0.11
   testable: 0
   isDirectDependency: 0
-  version: 14.0.10
+  version: 14.0.11
   source: 2
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.high-definition-config@14.0.10
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.render-pipelines.high-definition-config@14.0.11
   assetPath: Packages/com.unity.render-pipelines.high-definition-config
   name: com.unity.render-pipelines.high-definition-config
   displayName: High Definition RP Config
@@ -4710,17 +4824,17 @@ m_ResolvedPackages:
     - 10.9.0
     - 10.10.0
     - 10.10.1
-    - 14.0.10
+    - 14.0.11
     compatible:
-    - 14.0.10
-    recommended: 14.0.10
+    - 14.0.11
+    recommended: 14.0.11
     deprecated: []
   dependencies:
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   resolvedDependencies:
   - name: com.unity.render-pipelines.core
-    version: 14.0.10
+    version: 14.0.11
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.modules.ui
@@ -4753,13 +4867,14 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 14.0.10
+    version: 14.0.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 0
@@ -4849,12 +4964,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.ide.rider@3.0.27
+  fingerprint: 
+- packageId: com.unity.ide.rider@3.0.28
   testable: 0
   isDirectDependency: 0
-  version: 3.0.27
+  version: 3.0.28
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.ide.rider@3.0.27
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.ide.rider@3.0.28
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -4914,7 +5030,6 @@ m_ResolvedPackages:
     - 3.0.27
     - 3.0.28
     compatible:
-    - 3.0.27
     - 3.0.28
     recommended: 3.0.28
     deprecated: []
@@ -4935,22 +5050,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638373878680000000
+  datePublishedTicks: 638447139880000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: 1d471c19a7f21834ae5b8d0358fd6f9b242c1ee8
+    revision: f4880c72477e9bbd7321c0dbda4428fa10d916df
     path: 
   unityLifecycle:
-    version: 3.0.27
+    version: 3.0.28
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.ide.vscode@1.2.5
   testable: 0
   isDirectDependency: 0
@@ -5019,6 +5135,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.editorcoroutines@1.0.0
   testable: 0
   isDirectDependency: 0
@@ -5084,6 +5201,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.performance.profile-analyzer@1.2.2
   testable: 0
   isDirectDependency: 0
@@ -5155,6 +5273,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.test-framework@1.1.33
   testable: 0
   isDirectDependency: 0
@@ -5292,6 +5411,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.testtools.codecoverage@1.2.5
   testable: 0
   isDirectDependency: 0
@@ -5397,12 +5517,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.2d.animation@9.1.0
+  fingerprint: 
+- packageId: com.unity.2d.animation@9.1.1
   testable: 0
   isDirectDependency: 0
-  version: 9.1.0
+  version: 9.1.1
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.2d.animation@9.1.0
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.2d.animation@9.1.1
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -5516,6 +5637,7 @@ m_ResolvedPackages:
     - 7.0.12
     - 7.0.13
     - 7.1.0
+    - 7.1.1
     - 8.0.0-pre.3
     - 8.0.0-pre.4
     - 8.0.0
@@ -5543,7 +5665,6 @@ m_ResolvedPackages:
     - 10.1.1
     - 10.1.2
     compatible:
-    - 9.1.0
     - 9.1.1
     recommended: 9.1.1
     deprecated: []
@@ -5576,7 +5697,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -5596,22 +5717,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638406543510000000
+  datePublishedTicks: 638515171890000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.animation@9.1/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: dfc01cb8076aa8ca74afe1ded252f91c99b080ac
+    revision: c76edf174a772eda3d3152a9d38ad8c364cce43e
     path: 
   unityLifecycle:
-    version: 9.1.0
+    version: 9.1.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.2d.pixel-perfect@5.0.3
   testable: 0
   isDirectDependency: 0
@@ -5695,12 +5817,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.2d.psdimporter@8.0.4
+  fingerprint: 
+- packageId: com.unity.2d.psdimporter@8.0.5
   testable: 0
   isDirectDependency: 0
-  version: 8.0.4
+  version: 8.0.5
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.2d.psdimporter@8.0.4
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.2d.psdimporter@8.0.5
   assetPath: Packages/com.unity.2d.psdimporter
   name: com.unity.2d.psdimporter
   displayName: 2D PSD Importer
@@ -5797,20 +5920,19 @@ m_ResolvedPackages:
     - 9.0.2
     - 9.0.3
     compatible:
-    - 8.0.4
     - 8.0.5
     recommended: 8.0.5
     deprecated: []
   dependencies:
   - name: com.unity.2d.animation
-    version: 9.1.0
+    version: 9.1.1
   - name: com.unity.2d.common
     version: 8.0.2
   - name: com.unity.2d.sprite
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.2d.animation
-    version: 9.1.0
+    version: 9.1.1
   - name: com.unity.2d.common
     version: 8.0.2
   - name: com.unity.2d.sprite
@@ -5828,7 +5950,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -5849,22 +5971,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638406543530000000
+  datePublishedTicks: 638515171920000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.psdimporter@8.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: dfc01cb8076aa8ca74afe1ded252f91c99b080ac
+    revision: c76edf174a772eda3d3152a9d38ad8c364cce43e
     path: 
   unityLifecycle:
-    version: 8.0.4
+    version: 8.0.5
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.2d.sprite@1.0.0
   testable: 0
   isDirectDependency: 0
@@ -5923,12 +6046,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.2d.spriteshape@9.0.2
+  fingerprint: 
+- packageId: com.unity.2d.spriteshape@9.0.3
   testable: 0
   isDirectDependency: 0
-  version: 9.0.2
+  version: 9.0.3
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.2d.spriteshape@9.0.2
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.2d.spriteshape@9.0.3
   assetPath: Packages/com.unity.2d.spriteshape
   name: com.unity.2d.spriteshape
   displayName: 2D SpriteShape
@@ -5937,7 +6061,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: assets
   description: SpriteShape Runtime & Editor Package contains the tooling and the
     runtime component that allows you to create very organic looking spline based
     2D worlds. It comes with intuitive configurator and a highly performant renderer.
@@ -6033,7 +6157,6 @@ m_ResolvedPackages:
     - 10.0.5
     - 10.0.6
     compatible:
-    - 9.0.2
     - 9.0.3
     recommended: 9.0.3
     deprecated: []
@@ -6041,7 +6164,7 @@ m_ResolvedPackages:
   - name: com.unity.mathematics
     version: 1.1.0
   - name: com.unity.2d.common
-    version: 8.0.1
+    version: 8.0.2
   - name: com.unity.modules.physics2d
     version: 1.0.0
   resolvedDependencies:
@@ -6062,7 +6185,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   - name: com.unity.modules.physics2d
     version: 1.0.0
   keywords:
@@ -6082,22 +6205,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638150103540000000
+  datePublishedTicks: 638515171940000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.spriteshape@9.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: ff926a6d093212af31bc3c835f61abfbb1b3f163
+    revision: c76edf174a772eda3d3152a9d38ad8c364cce43e
     path: 
   unityLifecycle:
-    version: 9.0.2
+    version: 9.0.3
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.2d.tilemap@1.0.0
   testable: 0
   isDirectDependency: 0
@@ -6171,6 +6295,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.2d.tilemap.extras@3.1.2
   testable: 0
   isDirectDependency: 0
@@ -6299,12 +6424,13 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.2d.aseprite@1.1.1
+  fingerprint: 
+- packageId: com.unity.2d.aseprite@1.1.4
   testable: 0
   isDirectDependency: 0
-  version: 1.1.1
+  version: 1.1.4
   source: 1
-  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.2d.aseprite@1.1.1
+  resolvedPath: D:\Work\Horse_Racing\Horse_RacingGame\Library\PackageCache\com.unity.2d.aseprite@1.1.4
   assetPath: Packages/com.unity.2d.aseprite
   name: com.unity.2d.aseprite
   displayName: 2D Aseprite Importer
@@ -6332,9 +6458,6 @@ m_ResolvedPackages:
     - 1.1.3
     - 1.1.4
     compatible:
-    - 1.1.1
-    - 1.1.2
-    - 1.1.3
     - 1.1.4
     recommended: 1.1.4
     deprecated: []
@@ -6365,7 +6488,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   keywords:
   - 2d
   - Aseprite
@@ -6382,22 +6505,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638415153370000000
+  datePublishedTicks: 638509289520000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.aseprite@1.1/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/AsepriteImporter.git
-    revision: 4c5ce5be19fca25f82112eb80561965bc91c72c2
+    revision: 331d65bad3469b434c81f625682efc587a1e9258
     path: 
   unityLifecycle:
-    version: 1.1.1
+    version: 1.1.4
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.searcher@4.9.2
   testable: 0
   isDirectDependency: 0
@@ -6470,6 +6594,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
   isDirectDependency: 0
@@ -6541,6 +6666,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.2d.common@8.0.2
   testable: 0
   isDirectDependency: 0
@@ -6648,7 +6774,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   keywords:
   - 2d
   registry:
@@ -6677,6 +6803,7 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.collections@1.2.4
   testable: 0
   isDirectDependency: 0
@@ -6763,6 +6890,7 @@ m_ResolvedPackages:
     - 2.4.0-pre.5
     - 2.4.0
     - 2.4.1
+    - 2.4.2
     compatible:
     - 1.2.4
     - 1.3.1
@@ -6784,7 +6912,8 @@ m_ResolvedPackages:
     - 2.4.0-pre.5
     - 2.4.0
     - 2.4.1
-    recommended: 1.2.4
+    - 2.4.2
+    recommended: 2.4.2
     deprecated: []
   dependencies:
   - name: com.unity.burst
@@ -6793,7 +6922,7 @@ m_ResolvedPackages:
     version: 1.1.31
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.12
+    version: 1.8.15
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.modules.jsonserialize
@@ -6829,8 +6958,10 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.2.4
     nextVersion: 
-    recommendedVersion: 
+    recommendedVersion: 2.4.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+  fingerprint: 
+m_BuiltInPackagesHash: 4b4df7ab180286a0a57597df90b4eec2c1ee5cc5

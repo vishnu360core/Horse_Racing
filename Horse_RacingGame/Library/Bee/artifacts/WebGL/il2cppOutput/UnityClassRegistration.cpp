@@ -48,6 +48,9 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_ScreenCapture();
 	RegisterModule_ScreenCapture();
 
+	void RegisterModule_SpriteMask();
+	RegisterModule_SpriteMask();
+
 	void RegisterModule_Subsystems();
 	RegisterModule_Subsystems();
 

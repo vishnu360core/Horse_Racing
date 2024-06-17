@@ -1282,10 +1282,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_ResetStereoProjectionMatrices();
 		Register_UnityEngine_Camera_ResetStereoProjectionMatrices();
 
-		//System.Void UnityEngine.Camera::ResetStereoViewMatrices()
-		void Register_UnityEngine_Camera_ResetStereoViewMatrices();
-		Register_UnityEngine_Camera_ResetStereoViewMatrices();
-
 		//System.Void UnityEngine.Camera::ResetWorldToCameraMatrix()
 		void Register_UnityEngine_Camera_ResetWorldToCameraMatrix();
 		Register_UnityEngine_Camera_ResetWorldToCameraMatrix();
@@ -4054,6 +4050,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_get_canAccess();
 		Register_UnityEngine_Mesh_get_canAccess();
 
+		//System.Int32 UnityEngine.Mesh::GetBlendShapeFrameCount(System.Int32)
+		void Register_UnityEngine_Mesh_GetBlendShapeFrameCount();
+		Register_UnityEngine_Mesh_GetBlendShapeFrameCount();
+
 		//System.Int32 UnityEngine.Mesh::GetVertexAttributeOffset(UnityEngine.Rendering.VertexAttribute)
 		void Register_UnityEngine_Mesh_GetVertexAttributeOffset();
 		Register_UnityEngine_Mesh_GetVertexAttributeOffset();
@@ -4061,6 +4061,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Mesh::GetVertexAttributeStream(UnityEngine.Rendering.VertexAttribute)
 		void Register_UnityEngine_Mesh_GetVertexAttributeStream();
 		Register_UnityEngine_Mesh_GetVertexAttributeStream();
+
+		//System.Int32 UnityEngine.Mesh::get_blendShapeCount()
+		void Register_UnityEngine_Mesh_get_blendShapeCount();
+		Register_UnityEngine_Mesh_get_blendShapeCount();
 
 		//System.Int32 UnityEngine.Mesh::get_subMeshCount()
 		void Register_UnityEngine_Mesh_get_subMeshCount();
@@ -4074,9 +4078,29 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_GetIndicesImpl();
 		Register_UnityEngine_Mesh_GetIndicesImpl();
 
+		//System.Int32[] UnityEngine.Mesh::GetTrianglesImpl(System.Int32,System.Boolean)
+		void Register_UnityEngine_Mesh_GetTrianglesImpl();
+		Register_UnityEngine_Mesh_GetTrianglesImpl();
+
+		//System.Single UnityEngine.Mesh::GetBlendShapeFrameWeight(System.Int32,System.Int32)
+		void Register_UnityEngine_Mesh_GetBlendShapeFrameWeight();
+		Register_UnityEngine_Mesh_GetBlendShapeFrameWeight();
+
+		//System.String UnityEngine.Mesh::GetBlendShapeName(System.Int32)
+		void Register_UnityEngine_Mesh_GetBlendShapeName();
+		Register_UnityEngine_Mesh_GetBlendShapeName();
+
 		//System.UInt32 UnityEngine.Mesh::GetIndexCountImpl(System.Int32)
 		void Register_UnityEngine_Mesh_GetIndexCountImpl();
 		Register_UnityEngine_Mesh_GetIndexCountImpl();
+
+		//System.Void UnityEngine.Mesh::AddBlendShapeFrame(System.String,System.Single,UnityEngine.Vector3[],UnityEngine.Vector3[],UnityEngine.Vector3[])
+		void Register_UnityEngine_Mesh_AddBlendShapeFrame();
+		Register_UnityEngine_Mesh_AddBlendShapeFrame();
+
+		//System.Void UnityEngine.Mesh::ClearBlendShapes()
+		void Register_UnityEngine_Mesh_ClearBlendShapes();
+		Register_UnityEngine_Mesh_ClearBlendShapes();
 
 		//System.Void UnityEngine.Mesh::ClearImpl(System.Boolean)
 		void Register_UnityEngine_Mesh_ClearImpl();
@@ -4089,6 +4113,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Mesh::GetArrayFromChannelImpl(UnityEngine.Rendering.VertexAttribute,UnityEngine.Rendering.VertexAttributeFormat,System.Int32,System.Array)
 		void Register_UnityEngine_Mesh_GetArrayFromChannelImpl();
 		Register_UnityEngine_Mesh_GetArrayFromChannelImpl();
+
+		//System.Void UnityEngine.Mesh::GetBlendShapeFrameVertices(System.Int32,System.Int32,UnityEngine.Vector3[],UnityEngine.Vector3[],UnityEngine.Vector3[])
+		void Register_UnityEngine_Mesh_GetBlendShapeFrameVertices();
+		Register_UnityEngine_Mesh_GetBlendShapeFrameVertices();
 
 		//System.Void UnityEngine.Mesh::GetSubMesh_Injected(System.Int32,UnityEngine.Rendering.SubMeshDescriptor&)
 		void Register_UnityEngine_Mesh_GetSubMesh_Injected();
@@ -4118,6 +4146,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_SetArrayForChannelImpl();
 		Register_UnityEngine_Mesh_SetArrayForChannelImpl();
 
+		//System.Void UnityEngine.Mesh::SetBoneWeightsImpl(UnityEngine.BoneWeight[])
+		void Register_UnityEngine_Mesh_SetBoneWeightsImpl();
+		Register_UnityEngine_Mesh_SetBoneWeightsImpl();
+
 		//System.Void UnityEngine.Mesh::SetIndicesImpl(System.Int32,UnityEngine.MeshTopology,UnityEngine.Rendering.IndexFormat,System.Array,System.Int32,System.Int32,System.Boolean,System.Int32)
 		void Register_UnityEngine_Mesh_SetIndicesImpl();
 		Register_UnityEngine_Mesh_SetIndicesImpl();
@@ -4138,6 +4170,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_get_bounds_Injected();
 		Register_UnityEngine_Mesh_get_bounds_Injected();
 
+		//System.Void UnityEngine.Mesh::set_bindposes(UnityEngine.Matrix4x4[])
+		void Register_UnityEngine_Mesh_set_bindposes();
+		Register_UnityEngine_Mesh_set_bindposes();
+
 		//System.Void UnityEngine.Mesh::set_bounds_Injected(UnityEngine.Bounds&)
 		void Register_UnityEngine_Mesh_set_bounds_Injected();
 		Register_UnityEngine_Mesh_set_bounds_Injected();
@@ -4150,9 +4186,17 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_set_indexFormat();
 		Register_UnityEngine_Mesh_set_indexFormat();
 
+		//System.Void UnityEngine.Mesh::set_subMeshCount(System.Int32)
+		void Register_UnityEngine_Mesh_set_subMeshCount();
+		Register_UnityEngine_Mesh_set_subMeshCount();
+
 		//System.Void UnityEngine.Mesh::set_vertexBufferTarget(UnityEngine.GraphicsBuffer/Target)
 		void Register_UnityEngine_Mesh_set_vertexBufferTarget();
 		Register_UnityEngine_Mesh_set_vertexBufferTarget();
+
+		//UnityEngine.BoneWeight[] UnityEngine.Mesh::GetBoneWeightsImpl()
+		void Register_UnityEngine_Mesh_GetBoneWeightsImpl();
+		Register_UnityEngine_Mesh_GetBoneWeightsImpl();
 
 		//UnityEngine.GraphicsBuffer UnityEngine.Mesh::GetIndexBufferImpl()
 		void Register_UnityEngine_Mesh_GetIndexBufferImpl();
@@ -4169,6 +4213,10 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.GraphicsBuffer/Target UnityEngine.Mesh::get_vertexBufferTarget()
 		void Register_UnityEngine_Mesh_get_vertexBufferTarget();
 		Register_UnityEngine_Mesh_get_vertexBufferTarget();
+
+		//UnityEngine.Matrix4x4[] UnityEngine.Mesh::get_bindposes()
+		void Register_UnityEngine_Mesh_get_bindposes();
+		Register_UnityEngine_Mesh_get_bindposes();
 
 		//UnityEngine.Rendering.VertexAttributeFormat UnityEngine.Mesh::GetVertexAttributeFormat(UnityEngine.Rendering.VertexAttribute)
 		void Register_UnityEngine_Mesh_GetVertexAttributeFormat();
@@ -6198,6 +6246,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rendering_ScriptableRenderContext_CreateRendererList_Internal_Injected();
 		Register_UnityEngine_Rendering_ScriptableRenderContext_CreateRendererList_Internal_Injected();
 
+		//System.Void UnityEngine.Rendering.ScriptableRenderContext::CreateSkyboxRendererList_Internal_Injected(UnityEngine.Rendering.ScriptableRenderContext&,UnityEngine.Camera,System.Int32,UnityEngine.Matrix4x4&,UnityEngine.Matrix4x4&,UnityEngine.Matrix4x4&,UnityEngine.Matrix4x4&,UnityEngine.Rendering.RendererList&)
+		void Register_UnityEngine_Rendering_ScriptableRenderContext_CreateSkyboxRendererList_Internal_Injected();
+		Register_UnityEngine_Rendering_ScriptableRenderContext_CreateSkyboxRendererList_Internal_Injected();
+
 		//System.Void UnityEngine.Rendering.ScriptableRenderContext::DrawRenderers_Internal_Injected(UnityEngine.Rendering.ScriptableRenderContext&,System.IntPtr,UnityEngine.Rendering.DrawingSettings&,UnityEngine.Rendering.FilteringSettings&,UnityEngine.Rendering.ShaderTagId&,System.Boolean,System.IntPtr,System.IntPtr,System.Int32)
 		void Register_UnityEngine_Rendering_ScriptableRenderContext_DrawRenderers_Internal_Injected();
 		Register_UnityEngine_Rendering_ScriptableRenderContext_DrawRenderers_Internal_Injected();
@@ -6205,10 +6257,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Rendering.ScriptableRenderContext::DrawShadows_Internal_Injected(UnityEngine.Rendering.ScriptableRenderContext&,System.IntPtr)
 		void Register_UnityEngine_Rendering_ScriptableRenderContext_DrawShadows_Internal_Injected();
 		Register_UnityEngine_Rendering_ScriptableRenderContext_DrawShadows_Internal_Injected();
-
-		//System.Void UnityEngine.Rendering.ScriptableRenderContext::DrawSkybox_Internal_Injected(UnityEngine.Rendering.ScriptableRenderContext&,UnityEngine.Camera)
-		void Register_UnityEngine_Rendering_ScriptableRenderContext_DrawSkybox_Internal_Injected();
-		Register_UnityEngine_Rendering_ScriptableRenderContext_DrawSkybox_Internal_Injected();
 
 		//System.Void UnityEngine.Rendering.ScriptableRenderContext::DrawUIOverlay_Internal_Injected(UnityEngine.Rendering.ScriptableRenderContext&,UnityEngine.Camera)
 		void Register_UnityEngine_Rendering_ScriptableRenderContext_DrawUIOverlay_Internal_Injected();
@@ -7031,6 +7079,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Sprite_get_vertices();
 
 	//End Registrations for type : UnityEngine.Sprite
+
+	//Start Registrations for type : UnityEngine.SpriteMaskUtility
+
+		//System.Boolean UnityEngine.SpriteMaskUtility::HasSpriteMaskInScene()
+		void Register_UnityEngine_SpriteMaskUtility_HasSpriteMaskInScene();
+		Register_UnityEngine_SpriteMaskUtility_HasSpriteMaskInScene();
+
+	//End Registrations for type : UnityEngine.SpriteMaskUtility
 
 	//Start Registrations for type : UnityEngine.SpriteRenderer
 
@@ -7858,10 +7914,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Transform_get_childCount();
 		Register_UnityEngine_Transform_get_childCount();
 
-		//System.Int32 UnityEngine.Transform::internal_getHierarchyCount()
-		void Register_UnityEngine_Transform_internal_getHierarchyCount();
-		Register_UnityEngine_Transform_internal_getHierarchyCount();
-
 		//System.Void UnityEngine.Transform::Internal_LookAt_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 		void Register_UnityEngine_Transform_Internal_LookAt_Injected();
 		Register_UnityEngine_Transform_Internal_LookAt_Injected();
@@ -8094,7 +8146,7 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.UIElements.UIPainter2D
 
-		//System.IntPtr UnityEngine.UIElements.UIPainter2D::Create(System.Single)
+		//System.IntPtr UnityEngine.UIElements.UIPainter2D::Create(System.Boolean)
 		void Register_UnityEngine_UIElements_UIPainter2D_Create();
 		Register_UnityEngine_UIElements_UIPainter2D_Create();
 

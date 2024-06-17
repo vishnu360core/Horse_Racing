@@ -356,6 +356,7 @@ IL2CPP_EXTERN_C RuntimeClass* Func_1_tBCD1755FB5907BF70164C4DDA6F820006B15935B_i
 IL2CPP_EXTERN_C RuntimeClass* Func_2_t74BA73845DFA0004A7F25F3773A11A75228F5277_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_t81B76467028D6BD95DE2EC625D0325AA0387285E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GC_t920F9CF6EBB7C787E5010A4352E1B587F356DC58_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GradientRemapPool_t92123B2D5FEB0D9D60A2DF4BB39A4254B68BCF5B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GradientRemap_t74470C9887918BD4AFA8BB25818F21AFB414F307_il2cpp_TypeInfo_var;
@@ -2557,6 +2558,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847
 	bool ___localFlipsWinding;
 	bool ___localTransformScaleZero;
 	bool ___worldFlipsWinding;
+	bool ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -2602,6 +2604,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847_marshaled_pin
 	int32_t ___localFlipsWinding;
 	int32_t ___localTransformScaleZero;
 	int32_t ___worldFlipsWinding;
+	int32_t ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -2647,6 +2650,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847_marshaled_com
 	int32_t ___localFlipsWinding;
 	int32_t ___localTransformScaleZero;
 	int32_t ___worldFlipsWinding;
+	int32_t ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -10286,6 +10290,7 @@ IL_0100:
 	}
 	{
 		Exception_t* L_40 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var)));
 		bool L_41;
 		L_41 = GUIUtility_IsExitGUIException_mB887DAF961E8C1124916777B812FBF2324F5265F(L_40, NULL);
 		V_7 = L_41;
@@ -20289,7 +20294,7 @@ IL_0037:
 		RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847* L_14 = (RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847*)(&L_13->___renderChainData);
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_15 = L_14->___boneTransformAncestor;
 		RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847* L_16 = (RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847*)(&L_15->___renderChainData);
-		bool L_17 = L_16->___localTransformScaleZero;
+		bool L_17 = L_16->___worldTransformScaleZero;
 		V_2 = L_17;
 		bool L_18 = V_2;
 		if (!L_18)
@@ -20345,7 +20350,7 @@ IL_0098:
 		RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847* L_36 = (RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847*)(&L_35->___renderChainData);
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_37 = L_36->___groupTransformAncestor;
 		RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847* L_38 = (RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847*)(&L_37->___renderChainData);
-		bool L_39 = L_38->___localTransformScaleZero;
+		bool L_39 = L_38->___worldTransformScaleZero;
 		V_4 = L_39;
 		bool L_40 = V_4;
 		if (!L_40)

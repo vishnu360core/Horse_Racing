@@ -579,11 +579,15 @@ struct INotifyValueChanged_1_t9F444590945CE5030A5A1DAE3E564F8BC5B76594;
 struct IReadOnlyList_1_tB86476F62FBF3BB3389F17E0FFB65836DD3F2F65;
 struct ITypeConstructor_1_t81670FEA206550EF92A986F4A63FC5302AB1D638;
 struct ITypeConstructor_1_t3B0FE01881012CC548F6EE132D9D04AA93EDE092;
+struct ITypeConstructor_1_t2957C3F3F922000D05C6AE59163AF0088BB8D2E4;
 struct ITypeConstructor_1_t73C3366FF37ECFD1CC6142A80D1A0E31E89DDB04;
 struct ITypeConstructor_1_t0FE2B73907C0A0AEB0E84716E021DD7420B23A2B;
 struct ITypeConstructor_1_t5E4FD8D127EC0F24B375DF611109A9783C9949D0;
+struct ITypeConstructor_1_tCC196E183FB5A7CF798C682F9C3B70CDDA50CFFF;
 struct ITypeConstructor_1_tADCE5163310B602EB1878CA0050295BFB0F6B542;
+struct ITypeConstructor_1_t61D5D3D9EDD28391B0FE316A5641A34D7FF16FD0;
 struct ITypeConstructor_1_t5B814DBA70C191660AF27E38032998417073D7A2;
+struct ITypeConstructor_1_t63AA3F84ED218C4C0589371B74758F62E3EFCF85;
 struct ITypeConstructor_1_t38B0D0EFBEAA57884DFAE0A863E841E681DE2224;
 struct IValueField_1_t7FDADF714F26148078529A373CF444A23BF24045;
 struct IValueField_1_tD13635E556FD2273E3255901D85B34D6E43A123E;
@@ -1607,6 +1611,16 @@ struct Cache_1_t6A09774E9EC924515184CB0FBF6689D74CD57526
 		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
 	};
 };
+struct Cache_1_t1EC3F18F5B6510EED65B625CE37A6C73B0F46377 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
+	};
+};
 struct Cache_1_tB8D73F5DFD6D8711956A5D57AEEA41C64DD59FE6 
 {
 	union
@@ -1637,6 +1651,16 @@ struct Cache_1_t4ED442C7D3A39C62CE6AD3207C2A7F04760D2F3C
 		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
 	};
 };
+struct Cache_1_tC0A5B4DEAAD4F636D5EB7222F76AFA30C44BD765 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
+	};
+};
 struct Cache_1_t1734B78F91A5E97A0376AADF017CDD9C28F0D1E8 
 {
 	union
@@ -1647,7 +1671,27 @@ struct Cache_1_t1734B78F91A5E97A0376AADF017CDD9C28F0D1E8
 		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
 	};
 };
+struct Cache_1_t165F6C79CDB8F92D5632BF06B4D2859B4F8CB803 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
+	};
+};
 struct Cache_1_t9D717A73959DD798ED20109ED37309FA61F9047D 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Cache_1_tB7C8F25DA26549A8A98B68AFB46FBDD5723178DA__padding[1];
+	};
+};
+struct Cache_1_t2AE8DCA73B885EC1BE3528F43866A2B28BA27459 
 {
 	union
 	{
@@ -3757,6 +3801,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847
 	bool ___localFlipsWinding;
 	bool ___localTransformScaleZero;
 	bool ___worldFlipsWinding;
+	bool ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -3802,6 +3847,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847_marshaled_pin
 	int32_t ___localFlipsWinding;
 	int32_t ___localTransformScaleZero;
 	int32_t ___worldFlipsWinding;
+	int32_t ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -3847,6 +3893,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847_marshaled_com
 	int32_t ___localFlipsWinding;
 	int32_t ___localTransformScaleZero;
 	int32_t ___worldFlipsWinding;
+	int32_t ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -4413,6 +4460,10 @@ struct Cache_1_t6A09774E9EC924515184CB0FBF6689D74CD57526_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
 };
+struct Cache_1_t1EC3F18F5B6510EED65B625CE37A6C73B0F46377_StaticFields
+{
+	RuntimeObject* ___TypeConstructor;
+};
 struct Cache_1_tB8D73F5DFD6D8711956A5D57AEEA41C64DD59FE6_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
@@ -4425,11 +4476,23 @@ struct Cache_1_t4ED442C7D3A39C62CE6AD3207C2A7F04760D2F3C_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
 };
+struct Cache_1_tC0A5B4DEAAD4F636D5EB7222F76AFA30C44BD765_StaticFields
+{
+	RuntimeObject* ___TypeConstructor;
+};
 struct Cache_1_t1734B78F91A5E97A0376AADF017CDD9C28F0D1E8_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
 };
+struct Cache_1_t165F6C79CDB8F92D5632BF06B4D2859B4F8CB803_StaticFields
+{
+	RuntimeObject* ___TypeConstructor;
+};
 struct Cache_1_t9D717A73959DD798ED20109ED37309FA61F9047D_StaticFields
+{
+	RuntimeObject* ___TypeConstructor;
+};
+struct Cache_1_t2AE8DCA73B885EC1BE3528F43866A2B28BA27459_StaticFields
 {
 	RuntimeObject* ___TypeConstructor;
 };
@@ -8164,7 +8227,7 @@ IL_0024:
 	{
 		V_0 = G_B3_0;
 		float L_5 = V_0;
-		VirtualActionInvoker1< float >::Invoke(116, (BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7*)__this, L_5);
+		VirtualActionInvoker1< float >::Invoke(117, (BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7*)__this, L_5);
 		BaseSlider_1_UpdateDragElementPosition_m75711F113DE115483DDEBEA1BB3554471D348A42(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 7));
 		VisualElement_SaveViewData_m6F18758E27148CBC3B9E4FCB1F33798AAB427CD6((VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)__this, NULL);
 		return;
@@ -8604,7 +8667,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1__ctor_mE602DADCF973601966CE
 		int32_t L_6 = ___3_direction;
 		BaseSlider_1_set_direction_mA89EF4131FA66223C8623888A4FE853B0C06AF1C(__this, L_6, il2cpp_rgctx_method(method->klass->rgctx_data, 27));
 		float L_7 = ___4_pageSize;
-		VirtualActionInvoker1< float >::Invoke(123, __this, L_7);
+		VirtualActionInvoker1< float >::Invoke(124, __this, L_7);
 		float L_8 = ___1_start;
 		BaseSlider_1_set_lowValue_mCB5CC01D06D09C9C0EF756860341D46998ADF033(__this, L_8, il2cpp_rgctx_method(method->klass->rgctx_data, 29));
 		float L_9 = ___2_end;
@@ -8841,7 +8904,7 @@ IL_0014:
 		float L_6 = ___0_a;
 		float L_7 = V_0;
 		float L_8;
-		L_8 = VirtualFuncInvoker3< float, float, float, float >::Invoke(127, __this, L_5, L_6, L_7);
+		L_8 = VirtualFuncInvoker3< float, float, float, float >::Invoke(128, __this, L_5, L_6, L_7);
 		V_2 = L_8;
 		goto IL_0038;
 	}
@@ -8852,7 +8915,7 @@ IL_002c:
 		float L_10 = ___1_b;
 		float L_11 = V_0;
 		float L_12;
-		L_12 = VirtualFuncInvoker3< float, float, float, float >::Invoke(127, __this, L_9, L_10, L_11);
+		L_12 = VirtualFuncInvoker3< float, float, float, float >::Invoke(128, __this, L_9, L_10, L_11);
 		V_2 = L_12;
 		goto IL_0038;
 	}
@@ -9083,7 +9146,7 @@ IL_0018:
 	}
 	{
 		float L_6;
-		L_6 = VirtualFuncInvoker0< float >::Invoke(122, __this);
+		L_6 = VirtualFuncInvoker0< float >::Invoke(123, __this);
 		bool L_7;
 		L_7 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline(L_6, (0.0f), NULL);
 		V_2 = L_7;
@@ -9308,7 +9371,7 @@ IL_021c:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_102;
 		L_102 = Clickable_get_lastMousePosition_m44881B6F9DFBD98ECBA7DE638D4894220B61BCDF_inline((Clickable_tED3E313565F64BDF5DA9D3FE0FEFFD0E17E53834*)L_101, NULL);
 		float L_103 = L_102.___x;
-		VirtualActionInvoker4< float, float, float, float >::Invoke(131, __this, L_93, L_96, L_100, L_103);
+		VirtualActionInvoker4< float, float, float, float >::Invoke(132, __this, L_93, L_96, L_100, L_103);
 		goto IL_02c5;
 	}
 
@@ -9338,7 +9401,7 @@ IL_0279:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_115;
 		L_115 = Clickable_get_lastMousePosition_m44881B6F9DFBD98ECBA7DE638D4894220B61BCDF_inline((Clickable_tED3E313565F64BDF5DA9D3FE0FEFFD0E17E53834*)L_114, NULL);
 		float L_116 = L_115.___y;
-		VirtualActionInvoker4< float, float, float, float >::Invoke(131, __this, L_106, L_109, L_113, L_116);
+		VirtualActionInvoker4< float, float, float, float >::Invoke(132, __this, L_106, L_109, L_113, L_116);
 	}
 
 IL_02c5:
@@ -9728,7 +9791,7 @@ IL_0102:
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_36 = ___0_evt;
 		bool L_37;
 		L_37 = KeyboardEventBase_1_get_shiftKey_m6F17812A43DB9076880B0ACA64DD5675FA30E418((KeyboardEventBase_1_t8A33E6EBB804F18BFE49BE0C38C5D0B8E233B6FA*)L_36, KeyboardEventBase_1_get_shiftKey_m6F17812A43DB9076880B0ACA64DD5675FA30E418_RuntimeMethod_var);
-		VirtualActionInvoker2< int32_t, bool >::Invoke(130, __this, L_35, L_37);
+		VirtualActionInvoker2< int32_t, bool >::Invoke(131, __this, L_35, L_37);
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_38 = ___0_evt;
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_38, NULL);
 	}
@@ -9899,7 +9962,7 @@ IL_005b:
 		NavigationMoveEvent_t70F4AAAE0B5287449430A2A7A2DC78A2AF1364DF* L_14 = ___0_evt;
 		bool L_15;
 		L_15 = NavigationEventBase_1_get_shiftKey_m0EB41E8F39376192C851BF0A0A09BD1B61B7C1AA((NavigationEventBase_1_tEDD047CC06F9BA7B1CA7D54DCAA4B7DDFA99DF31*)L_14, NavigationEventBase_1_get_shiftKey_m0EB41E8F39376192C851BF0A0A09BD1B61B7C1AA_RuntimeMethod_var);
-		VirtualActionInvoker2< int32_t, bool >::Invoke(130, __this, L_13, L_15);
+		VirtualActionInvoker2< int32_t, bool >::Invoke(131, __this, L_13, L_15);
 		NavigationMoveEvent_t70F4AAAE0B5287449430A2A7A2DC78A2AF1364DF* L_16 = ___0_evt;
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_16, NULL);
 	}
@@ -10007,7 +10070,7 @@ IL_0044:
 	}
 	{
 		float L_17;
-		L_17 = VirtualFuncInvoker0< float >::Invoke(122, __this);
+		L_17 = VirtualFuncInvoker0< float >::Invoke(123, __this);
 		G_B11_0 = L_17;
 		goto IL_005d;
 	}
@@ -10015,7 +10078,7 @@ IL_0044:
 IL_0056:
 	{
 		float L_18;
-		L_18 = VirtualFuncInvoker0< float >::Invoke(122, __this);
+		L_18 = VirtualFuncInvoker0< float >::Invoke(123, __this);
 		G_B11_0 = ((-L_18));
 	}
 
@@ -10442,7 +10505,7 @@ IL_0013:
 		float L_4;
 		L_4 = BaseSlider_1_get_highValue_mA43FD4DA4AFDF3EBCB5455B312942219B635DA05(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 18));
 		float L_5;
-		L_5 = VirtualFuncInvoker3< float, float, float, float >::Invoke(128, __this, L_2, L_3, L_4);
+		L_5 = VirtualFuncInvoker3< float, float, float, float >::Invoke(129, __this, L_2, L_3, L_4);
 		V_0 = L_5;
 		bool L_6;
 		L_6 = BaseSlider_1_get_inverted_m400F51D5AA0E87AAC6A3A4EA4B52895367163453(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 52));
@@ -10732,7 +10795,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1_UpdateTextFieldVisibility_m
 	int32_t G_B7_0 = 0;
 	{
 		bool L_0;
-		L_0 = VirtualFuncInvoker0< bool >::Invoke(124, __this);
+		L_0 = VirtualFuncInvoker0< bool >::Invoke(125, __this);
 		V_0 = L_0;
 		bool L_1 = V_0;
 		if (!L_1)
@@ -10932,7 +10995,7 @@ IL_0018:
 		RuntimeObject* L_7 = Box(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1), &L_6);
 		String_t* L_8;
 		L_8 = String_Format_m3844098E7C18576D263AAF62F69BE5C70BF9A744((RuntimeObject*)L_4, _stringLiteral1660425A84D28CF416641D0BE690D8A44FF05026, L_7, NULL);
-		VirtualActionInvoker1< String_t* >::Invoke(116, (BaseField_1_tCFD0CD0290BAF33C363F8F2C2AC37320EBA86BE5*)L_3, L_8);
+		VirtualActionInvoker1< String_t* >::Invoke(117, (BaseField_1_tCFD0CD0290BAF33C363F8F2C2AC37320EBA86BE5*)L_3, L_8);
 	}
 
 IL_003e:
@@ -10983,7 +11046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1_OnTextFieldValueChange_m7B4
 		String_t* L_3;
 		L_3 = ChangeEvent_1_get_newValue_m6437E6333E876EDE34EF3A7B7BBEF2919D4946F8_inline(L_2, ChangeEvent_1_get_newValue_m6437E6333E876EDE34EF3A7B7BBEF2919D4946F8_RuntimeMethod_var);
 		float L_4;
-		L_4 = VirtualFuncInvoker2< float, String_t*, String_t* >::Invoke(129, __this, L_1, L_3);
+		L_4 = VirtualFuncInvoker2< float, String_t*, String_t* >::Invoke(130, __this, L_1, L_3);
 		float L_5;
 		L_5 = BaseSlider_1_GetClampedValue_m07FB7B89D8796029B4FA432C4D2C7E6E679219BB(__this, L_4, il2cpp_rgctx_method(method->klass->rgctx_data, 11));
 		V_0 = L_5;
@@ -11440,7 +11503,7 @@ IL_0024:
 	{
 		il2cpp_codegen_memcpy(V_0, G_B3_0, SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		il2cpp_codegen_memcpy(L_5, V_0, SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
-		VirtualActionInvoker1Invoker< Il2CppFullySharedGenericAny >::Invoke(116, (BaseField_1_t138FF51687BD46C69284C164DC2E54C531A39AAA*)__this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_5: *(void**)L_5));
+		VirtualActionInvoker1Invoker< Il2CppFullySharedGenericAny >::Invoke(117, (BaseField_1_t138FF51687BD46C69284C164DC2E54C531A39AAA*)__this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_5: *(void**)L_5));
 		((  void (*) (BaseSlider_1_t316E0BEC7EEA7DB85F0A813E83E76B1CF896EFD9*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 7)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 7));
 		VisualElement_SaveViewData_m6F18758E27148CBC3B9E4FCB1F33798AAB427CD6((VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)__this, NULL);
 		return;
@@ -11926,7 +11989,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1__ctor_mC58F6023BE2FB9AB315C
 		int32_t L_6 = ___3_direction;
 		((  void (*) (BaseSlider_1_t316E0BEC7EEA7DB85F0A813E83E76B1CF896EFD9*, int32_t, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 27)))(__this, L_6, il2cpp_rgctx_method(method->klass->rgctx_data, 27));
 		float L_7 = ___4_pageSize;
-		VirtualActionInvoker1< float >::Invoke(123, __this, L_7);
+		VirtualActionInvoker1< float >::Invoke(124, __this, L_7);
 		il2cpp_codegen_memcpy(L_8, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? ___1_start : &___1_start), SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		InvokerActionInvoker1< Il2CppFullySharedGenericAny >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 29)), il2cpp_rgctx_method(method->klass->rgctx_data, 29), __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_8: *(void**)L_8));
 		il2cpp_codegen_memcpy(L_9, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? ___2_end : &___2_end), SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
@@ -12172,7 +12235,7 @@ IL_0014:
 		il2cpp_codegen_memcpy(L_5, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? ___1_b : &___1_b), SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		il2cpp_codegen_memcpy(L_6, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? ___0_a : &___0_a), SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		float L_7 = V_0;
-		VirtualActionInvoker4Invoker< Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, float, Il2CppFullySharedGenericAny* >::Invoke(127, __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_5: *(void**)L_5), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_6: *(void**)L_6), L_7, (Il2CppFullySharedGenericAny*)L_8);
+		VirtualActionInvoker4Invoker< Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, float, Il2CppFullySharedGenericAny* >::Invoke(128, __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_5: *(void**)L_5), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_6: *(void**)L_6), L_7, (Il2CppFullySharedGenericAny*)L_8);
 		il2cpp_codegen_memcpy(V_2, L_8, SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		goto IL_0038;
 	}
@@ -12182,7 +12245,7 @@ IL_002c:
 		il2cpp_codegen_memcpy(L_9, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? ___0_a : &___0_a), SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		il2cpp_codegen_memcpy(L_10, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? ___1_b : &___1_b), SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		float L_11 = V_0;
-		VirtualActionInvoker4Invoker< Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, float, Il2CppFullySharedGenericAny* >::Invoke(127, __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_9: *(void**)L_9), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_10: *(void**)L_10), L_11, (Il2CppFullySharedGenericAny*)L_12);
+		VirtualActionInvoker4Invoker< Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, float, Il2CppFullySharedGenericAny* >::Invoke(128, __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_9: *(void**)L_9), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_10: *(void**)L_10), L_11, (Il2CppFullySharedGenericAny*)L_12);
 		il2cpp_codegen_memcpy(V_2, L_12, SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		goto IL_0038;
 	}
@@ -12413,7 +12476,7 @@ IL_0018:
 	}
 	{
 		float L_6;
-		L_6 = VirtualFuncInvoker0< float >::Invoke(122, __this);
+		L_6 = VirtualFuncInvoker0< float >::Invoke(123, __this);
 		bool L_7;
 		L_7 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline(L_6, (0.0f), NULL);
 		V_2 = L_7;
@@ -12638,7 +12701,7 @@ IL_021c:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_102;
 		L_102 = Clickable_get_lastMousePosition_m44881B6F9DFBD98ECBA7DE638D4894220B61BCDF_inline((Clickable_tED3E313565F64BDF5DA9D3FE0FEFFD0E17E53834*)L_101, NULL);
 		float L_103 = L_102.___x;
-		VirtualActionInvoker4< float, float, float, float >::Invoke(131, __this, L_93, L_96, L_100, L_103);
+		VirtualActionInvoker4< float, float, float, float >::Invoke(132, __this, L_93, L_96, L_100, L_103);
 		goto IL_02c5;
 	}
 
@@ -12668,7 +12731,7 @@ IL_0279:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_115;
 		L_115 = Clickable_get_lastMousePosition_m44881B6F9DFBD98ECBA7DE638D4894220B61BCDF_inline((Clickable_tED3E313565F64BDF5DA9D3FE0FEFFD0E17E53834*)L_114, NULL);
 		float L_116 = L_115.___y;
-		VirtualActionInvoker4< float, float, float, float >::Invoke(131, __this, L_106, L_109, L_113, L_116);
+		VirtualActionInvoker4< float, float, float, float >::Invoke(132, __this, L_106, L_109, L_113, L_116);
 	}
 
 IL_02c5:
@@ -13058,7 +13121,7 @@ IL_0102:
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_36 = ___0_evt;
 		bool L_37;
 		L_37 = KeyboardEventBase_1_get_shiftKey_m6F17812A43DB9076880B0ACA64DD5675FA30E418((KeyboardEventBase_1_t8A33E6EBB804F18BFE49BE0C38C5D0B8E233B6FA*)L_36, KeyboardEventBase_1_get_shiftKey_m6F17812A43DB9076880B0ACA64DD5675FA30E418_RuntimeMethod_var);
-		VirtualActionInvoker2< int32_t, bool >::Invoke(130, __this, L_35, L_37);
+		VirtualActionInvoker2< int32_t, bool >::Invoke(131, __this, L_35, L_37);
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_38 = ___0_evt;
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_38, NULL);
 	}
@@ -13229,7 +13292,7 @@ IL_005b:
 		NavigationMoveEvent_t70F4AAAE0B5287449430A2A7A2DC78A2AF1364DF* L_14 = ___0_evt;
 		bool L_15;
 		L_15 = NavigationEventBase_1_get_shiftKey_m0EB41E8F39376192C851BF0A0A09BD1B61B7C1AA((NavigationEventBase_1_tEDD047CC06F9BA7B1CA7D54DCAA4B7DDFA99DF31*)L_14, NavigationEventBase_1_get_shiftKey_m0EB41E8F39376192C851BF0A0A09BD1B61B7C1AA_RuntimeMethod_var);
-		VirtualActionInvoker2< int32_t, bool >::Invoke(130, __this, L_13, L_15);
+		VirtualActionInvoker2< int32_t, bool >::Invoke(131, __this, L_13, L_15);
 		NavigationMoveEvent_t70F4AAAE0B5287449430A2A7A2DC78A2AF1364DF* L_16 = ___0_evt;
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB((EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C*)L_16, NULL);
 	}
@@ -13344,7 +13407,7 @@ IL_0044:
 	}
 	{
 		float L_17;
-		L_17 = VirtualFuncInvoker0< float >::Invoke(122, __this);
+		L_17 = VirtualFuncInvoker0< float >::Invoke(123, __this);
 		G_B11_0 = L_17;
 		goto IL_005d;
 	}
@@ -13352,7 +13415,7 @@ IL_0044:
 IL_0056:
 	{
 		float L_18;
-		L_18 = VirtualFuncInvoker0< float >::Invoke(122, __this);
+		L_18 = VirtualFuncInvoker0< float >::Invoke(123, __this);
 		G_B11_0 = ((-L_18));
 	}
 
@@ -13774,7 +13837,7 @@ IL_0013:
 		InvokerActionInvoker1< Il2CppFullySharedGenericAny* >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 17)), il2cpp_rgctx_method(method->klass->rgctx_data, 17), __this, (Il2CppFullySharedGenericAny*)L_3);
 		InvokerActionInvoker1< Il2CppFullySharedGenericAny* >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 18)), il2cpp_rgctx_method(method->klass->rgctx_data, 18), __this, (Il2CppFullySharedGenericAny*)L_4);
 		float L_5;
-		L_5 = VirtualFuncInvoker3Invoker< float, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny >::Invoke(128, __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_2: *(void**)L_2), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_3: *(void**)L_3), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_4: *(void**)L_4));
+		L_5 = VirtualFuncInvoker3Invoker< float, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny >::Invoke(129, __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_2: *(void**)L_2), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_3: *(void**)L_3), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_4: *(void**)L_4));
 		V_0 = L_5;
 		bool L_6;
 		L_6 = ((  bool (*) (BaseSlider_1_t316E0BEC7EEA7DB85F0A813E83E76B1CF896EFD9*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 52)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 52));
@@ -14064,7 +14127,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1_UpdateTextFieldVisibility_m
 	int32_t G_B7_0 = 0;
 	{
 		bool L_0;
-		L_0 = VirtualFuncInvoker0< bool >::Invoke(124, __this);
+		L_0 = VirtualFuncInvoker0< bool >::Invoke(125, __this);
 		V_0 = L_0;
 		bool L_1 = V_0;
 		if (!L_1)
@@ -14264,7 +14327,7 @@ IL_0018:
 		RuntimeObject* L_6 = Box(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1), L_5);
 		String_t* L_7;
 		L_7 = String_Format_m3844098E7C18576D263AAF62F69BE5C70BF9A744((RuntimeObject*)L_4, _stringLiteral1660425A84D28CF416641D0BE690D8A44FF05026, L_6, NULL);
-		VirtualActionInvoker1< String_t* >::Invoke(116, (BaseField_1_tCFD0CD0290BAF33C363F8F2C2AC37320EBA86BE5*)L_3, L_7);
+		VirtualActionInvoker1< String_t* >::Invoke(117, (BaseField_1_tCFD0CD0290BAF33C363F8F2C2AC37320EBA86BE5*)L_3, L_7);
 	}
 
 IL_003e:
@@ -14321,7 +14384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseSlider_1_OnTextFieldValueChange_m924
 		ChangeEvent_1_tC8920B8153267870361787158B3897821AA4522F* L_2 = ___0_evt;
 		String_t* L_3;
 		L_3 = ChangeEvent_1_get_newValue_m6437E6333E876EDE34EF3A7B7BBEF2919D4946F8_inline(L_2, ChangeEvent_1_get_newValue_m6437E6333E876EDE34EF3A7B7BBEF2919D4946F8_RuntimeMethod_var);
-		VirtualActionInvoker3Invoker< String_t*, String_t*, Il2CppFullySharedGenericAny* >::Invoke(129, __this, L_1, L_3, (Il2CppFullySharedGenericAny*)L_4);
+		VirtualActionInvoker3Invoker< String_t*, String_t*, Il2CppFullySharedGenericAny* >::Invoke(130, __this, L_1, L_3, (Il2CppFullySharedGenericAny*)L_4);
 		InvokerActionInvoker2< Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny* >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 11)), il2cpp_rgctx_method(method->klass->rgctx_data, 11), __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1)) ? L_4: *(void**)L_4), (Il2CppFullySharedGenericAny*)L_5);
 		il2cpp_codegen_memcpy(V_0, L_5, SizeOf_TValueType_t21DBB8D1FC65EA4D9730221829C527A87EB74E94);
 		EqualityComparer_1_t974B6EF56BCA01CA6AD3434C04A3F054C43783CC* L_6;
@@ -25471,6 +25534,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CachePointer_1__cctor_mB08012B7E7B557539
 		return;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

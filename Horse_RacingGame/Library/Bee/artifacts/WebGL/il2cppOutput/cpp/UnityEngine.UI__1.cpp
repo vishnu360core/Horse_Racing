@@ -261,6 +261,7 @@ IL2CPP_EXTERN_C RuntimeClass* EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957
 IL2CPP_EXTERN_C RuntimeClass* Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_1_tDBE6893D00AC6B576B73E8126944C481BCC4A74E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_t49236B9EA14C72C8FFE252C9FA0F309EB5CA6DB5_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IClippable_t09D11192EED426BAE8C534418912FFCCAA2DDCF4_il2cpp_TypeInfo_var;
@@ -2673,7 +2674,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppChar InputField_get_asteris
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_CreateString_mAA0705B41B390BDB42F67894B9B67C956814C71B (String_t* __this, Il2CppChar ___0_c, int32_t ___1_count, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A (Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA* __this, bool ___0_value, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_ForceUpdateCanvases_m6ECDBC5E85ADA3301BB20611753C45769F15EB51 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D RectTransform_get_rect_mC82A60F8C3805ED9833508CCC233689641207488 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TextGenerationSettings_tBB6E86AC0B348D19158D6721BE790865B04993F3 Text_GetGenerationSettings_m620E0E5AFB30E3331A0371EB2361F587BB0A1E0F (Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_extents, const RuntimeMethod* method) ;
@@ -5229,7 +5229,14 @@ IL_0021:
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InputField_get_clipboard_m4ACB240747BB6AF77A3FEF28A63A5C2B2A049543 (const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 		String_t* L_0;
 		L_0 = GUIUtility_get_systemCopyBuffer_m01E2DF71533C31A4C552B9177D7CBA0C6CA3FC2A(NULL);
 		return L_0;
@@ -5237,8 +5244,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InputField_get_clipboard_m4ACB24074
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputField_set_clipboard_mA8C4BC1DA5B1C12F8A7E7880E0F74185E2D8BCDB (String_t* ___0_value, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		String_t* L_0 = ___0_value;
+		il2cpp_codegen_runtime_class_init_inline(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 		GUIUtility_set_systemCopyBuffer_mD14AE32BFEA4773BDC679205D470A228B8F225E8(L_0, NULL);
 		return;
 	}
@@ -5753,7 +5767,7 @@ IL_00f8:
 		L_30 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_28, L_29, NULL);
 		if (!L_30)
 		{
-			goto IL_0286;
+			goto IL_027b;
 		}
 	}
 	{
@@ -5767,7 +5781,7 @@ IL_00f8:
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_32 = __this->___m_Keyboard;
 		String_t* L_33 = __this->___m_Text;
 		TouchScreenKeyboard_set_text_m0A8AA05F4D9D27E8764955F0041452145B6C6FBB(L_32, L_33, NULL);
-		goto IL_02e2;
+		goto IL_02d7;
 	}
 
 IL_0133:
@@ -5775,7 +5789,7 @@ IL_0133:
 		__this->___m_Text = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		V_2 = 0;
-		goto IL_01ee;
+		goto IL_01e3;
 	}
 
 IL_0145:
@@ -5853,255 +5867,253 @@ IL_01a2:
 		L_52 = InputField_get_lineType_m6CEA63D8FCACAEC05D3499577ED0771EFFF33377_inline(__this, NULL);
 		if ((!(((uint32_t)L_52) == ((uint32_t)1))))
 		{
-			goto IL_01cf;
+			goto IL_01c4;
 		}
 	}
 	{
 		Il2CppChar L_53 = V_3;
 		if ((!(((uint32_t)L_53) == ((uint32_t)((int32_t)10)))))
 		{
-			goto IL_01cf;
+			goto IL_01c4;
 		}
 	}
 	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_54 = __this->___m_Keyboard;
-		String_t* L_55 = __this->___m_Text;
-		TouchScreenKeyboard_set_text_m0A8AA05F4D9D27E8764955F0041452145B6C6FBB(L_54, L_55, NULL);
+		InputField_UpdateLabel_mDBE25D21A1021AE4563539586438B5EA89511D58(__this, NULL);
 		InputField_SendOnSubmit_m933C160291FD9118A9EC7FD7AED5E805B998BA27(__this, NULL);
 		VirtualActionInvoker1< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(37, __this, (BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F*)NULL);
 		return;
 	}
 
-IL_01cf:
+IL_01c4:
 	{
-		Il2CppChar L_56 = V_3;
-		if (!L_56)
+		Il2CppChar L_54 = V_3;
+		if (!L_54)
 		{
-			goto IL_01ea;
+			goto IL_01df;
 		}
 	}
 	{
-		String_t* L_57 = __this->___m_Text;
+		String_t* L_55 = __this->___m_Text;
 		il2cpp_codegen_runtime_class_init_inline(Char_t521A6F19B456D956AF452D926C32709DC03D6B17_il2cpp_TypeInfo_var);
-		String_t* L_58;
-		L_58 = Char_ToString_m2A308731F9577C06AF3C0901234E2EAC8327410C((&V_3), NULL);
-		String_t* L_59;
-		L_59 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_57, L_58, NULL);
-		__this->___m_Text = L_59;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_59);
+		String_t* L_56;
+		L_56 = Char_ToString_m2A308731F9577C06AF3C0901234E2EAC8327410C((&V_3), NULL);
+		String_t* L_57;
+		L_57 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_55, L_56, NULL);
+		__this->___m_Text = L_57;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_57);
 	}
 
-IL_01ea:
+IL_01df:
 	{
-		int32_t L_60 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_60, 1));
+		int32_t L_58 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_58, 1));
 	}
 
-IL_01ee:
+IL_01e3:
 	{
-		int32_t L_61 = V_2;
-		String_t* L_62 = V_0;
-		int32_t L_63;
-		L_63 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_62, NULL);
-		if ((((int32_t)L_61) < ((int32_t)L_63)))
+		int32_t L_59 = V_2;
+		String_t* L_60 = V_0;
+		int32_t L_61;
+		L_61 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_60, NULL);
+		if ((((int32_t)L_59) < ((int32_t)L_61)))
 		{
 			goto IL_0145;
 		}
 	}
 	{
-		int32_t L_64;
-		L_64 = InputField_get_characterLimit_m7FE26FC66741545B89BFFDCAD8E8B34EB1274403_inline(__this, NULL);
-		if ((((int32_t)L_64) <= ((int32_t)0)))
+		int32_t L_62;
+		L_62 = InputField_get_characterLimit_m7FE26FC66741545B89BFFDCAD8E8B34EB1274403_inline(__this, NULL);
+		if ((((int32_t)L_62) <= ((int32_t)0)))
 		{
-			goto IL_022e;
+			goto IL_0223;
 		}
 	}
 	{
-		String_t* L_65 = __this->___m_Text;
-		int32_t L_66;
-		L_66 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_65, NULL);
+		String_t* L_63 = __this->___m_Text;
+		int32_t L_64;
+		L_64 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_63, NULL);
+		int32_t L_65;
+		L_65 = InputField_get_characterLimit_m7FE26FC66741545B89BFFDCAD8E8B34EB1274403_inline(__this, NULL);
+		if ((((int32_t)L_64) <= ((int32_t)L_65)))
+		{
+			goto IL_0223;
+		}
+	}
+	{
+		String_t* L_66 = __this->___m_Text;
 		int32_t L_67;
 		L_67 = InputField_get_characterLimit_m7FE26FC66741545B89BFFDCAD8E8B34EB1274403_inline(__this, NULL);
-		if ((((int32_t)L_66) <= ((int32_t)L_67)))
-		{
-			goto IL_022e;
-		}
-	}
-	{
-		String_t* L_68 = __this->___m_Text;
-		int32_t L_69;
-		L_69 = InputField_get_characterLimit_m7FE26FC66741545B89BFFDCAD8E8B34EB1274403_inline(__this, NULL);
-		String_t* L_70;
-		L_70 = String_Substring_mB1D94F47935D22E130FF2C01DBB6A4135FBB76CE(L_68, 0, L_69, NULL);
-		__this->___m_Text = L_70;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_70);
+		String_t* L_68;
+		L_68 = String_Substring_mB1D94F47935D22E130FF2C01DBB6A4135FBB76CE(L_66, 0, L_67, NULL);
+		__this->___m_Text = L_68;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_68);
 	}
 
-IL_022e:
+IL_0223:
 	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_71 = __this->___m_Keyboard;
-		bool L_72;
-		L_72 = TouchScreenKeyboard_get_canGetSelection_m340ACEFDB9609DEED4FE7D451A4DCCC1024F767A(L_71, NULL);
-		if (!L_72)
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_69 = __this->___m_Keyboard;
+		bool L_70;
+		L_70 = TouchScreenKeyboard_get_canGetSelection_m340ACEFDB9609DEED4FE7D451A4DCCC1024F767A(L_69, NULL);
+		if (!L_70)
 		{
-			goto IL_0243;
+			goto IL_0238;
 		}
 	}
 	{
 		InputField_UpdateCaretFromKeyboard_mCFB186696BE23B347D7AA94DF50A13555C31F8B4(__this, NULL);
-		goto IL_025f;
+		goto IL_0254;
 	}
 
-IL_0243:
+IL_0238:
 	{
-		String_t* L_73 = __this->___m_Text;
-		int32_t L_74;
-		L_74 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_73, NULL);
-		int32_t L_75 = L_74;
-		V_4 = L_75;
-		InputField_set_caretSelectPositionInternal_mCA096AAD610587421E739BDD195A1680FD93A75A(__this, L_75, NULL);
-		int32_t L_76 = V_4;
-		InputField_set_caretPositionInternal_mA35B05D5FF035A060967C6E456610D659367C3EA(__this, L_76, NULL);
+		String_t* L_71 = __this->___m_Text;
+		int32_t L_72;
+		L_72 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_71, NULL);
+		int32_t L_73 = L_72;
+		V_4 = L_73;
+		InputField_set_caretSelectPositionInternal_mCA096AAD610587421E739BDD195A1680FD93A75A(__this, L_73, NULL);
+		int32_t L_74 = V_4;
+		InputField_set_caretPositionInternal_mA35B05D5FF035A060967C6E456610D659367C3EA(__this, L_74, NULL);
 	}
 
-IL_025f:
+IL_0254:
 	{
-		String_t* L_77 = __this->___m_Text;
-		String_t* L_78 = V_0;
-		bool L_79;
-		L_79 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_77, L_78, NULL);
-		if (!L_79)
+		String_t* L_75 = __this->___m_Text;
+		String_t* L_76 = V_0;
+		bool L_77;
+		L_77 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_75, L_76, NULL);
+		if (!L_77)
 		{
-			goto IL_027e;
+			goto IL_0273;
 		}
 	}
 	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_80 = __this->___m_Keyboard;
-		String_t* L_81 = __this->___m_Text;
-		TouchScreenKeyboard_set_text_m0A8AA05F4D9D27E8764955F0041452145B6C6FBB(L_80, L_81, NULL);
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_78 = __this->___m_Keyboard;
+		String_t* L_79 = __this->___m_Text;
+		TouchScreenKeyboard_set_text_m0A8AA05F4D9D27E8764955F0041452145B6C6FBB(L_78, L_79, NULL);
 	}
 
-IL_027e:
+IL_0273:
 	{
 		InputField_SendOnValueChangedAndUpdateLabel_mEB064D57921681BB49F55AA796E046A951DAA7BA(__this, NULL);
-		goto IL_02e2;
+		goto IL_02d7;
 	}
 
-IL_0286:
+IL_027b:
 	{
-		bool L_82 = __this->___m_HideMobileInput;
-		if (!L_82)
+		bool L_80 = __this->___m_HideMobileInput;
+		if (!L_80)
 		{
-			goto IL_02c7;
+			goto IL_02bc;
 		}
 	}
 	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_83 = __this->___m_Keyboard;
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_81 = __this->___m_Keyboard;
+		if (!L_81)
+		{
+			goto IL_02bc;
+		}
+	}
+	{
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_82 = __this->___m_Keyboard;
+		bool L_83;
+		L_83 = TouchScreenKeyboard_get_canSetSelection_m6CD6C069A9FEF91CC8014B877EB057ECF598EDF9(L_82, NULL);
 		if (!L_83)
 		{
-			goto IL_02c7;
-		}
-	}
-	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_84 = __this->___m_Keyboard;
-		bool L_85;
-		L_85 = TouchScreenKeyboard_get_canSetSelection_m6CD6C069A9FEF91CC8014B877EB057ECF598EDF9(L_84, NULL);
-		if (!L_85)
-		{
-			goto IL_02c7;
+			goto IL_02bc;
 		}
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
-		int32_t L_86;
-		L_86 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
-		if ((((int32_t)L_86) == ((int32_t)8)))
+		int32_t L_84;
+		L_84 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
+		if ((((int32_t)L_84) == ((int32_t)8)))
 		{
-			goto IL_02c7;
+			goto IL_02bc;
 		}
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
-		int32_t L_87;
-		L_87 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
-		if ((((int32_t)L_87) == ((int32_t)((int32_t)31))))
+		int32_t L_85;
+		L_85 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
+		if ((((int32_t)L_85) == ((int32_t)((int32_t)31))))
 		{
-			goto IL_02c7;
+			goto IL_02bc;
 		}
 	}
 	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_88 = __this->___m_Keyboard;
-		RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268 L_89;
-		L_89 = InputField_GetInternalSelection_m35675AC10C34AD29A54A6E980CDA925CB1BFC6F3(__this, NULL);
-		TouchScreenKeyboard_set_selection_mC27C2948118086822A151118C379FAAF692DB2DF(L_88, L_89, NULL);
-		goto IL_02e2;
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_86 = __this->___m_Keyboard;
+		RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268 L_87;
+		L_87 = InputField_GetInternalSelection_m35675AC10C34AD29A54A6E980CDA925CB1BFC6F3(__this, NULL);
+		TouchScreenKeyboard_set_selection_mC27C2948118086822A151118C379FAAF692DB2DF(L_86, L_87, NULL);
+		goto IL_02d7;
 	}
 
-IL_02c7:
+IL_02bc:
 	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_90 = __this->___m_Keyboard;
-		if (!L_90)
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_88 = __this->___m_Keyboard;
+		if (!L_88)
 		{
-			goto IL_02e2;
+			goto IL_02d7;
 		}
 	}
 	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_91 = __this->___m_Keyboard;
-		bool L_92;
-		L_92 = TouchScreenKeyboard_get_canGetSelection_m340ACEFDB9609DEED4FE7D451A4DCCC1024F767A(L_91, NULL);
-		if (!L_92)
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_89 = __this->___m_Keyboard;
+		bool L_90;
+		L_90 = TouchScreenKeyboard_get_canGetSelection_m340ACEFDB9609DEED4FE7D451A4DCCC1024F767A(L_89, NULL);
+		if (!L_90)
 		{
-			goto IL_02e2;
+			goto IL_02d7;
 		}
 	}
 	{
 		InputField_UpdateCaretFromKeyboard_mCFB186696BE23B347D7AA94DF50A13555C31F8B4(__this, NULL);
 	}
 
-IL_02e2:
+IL_02d7:
+	{
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_91 = __this->___m_Keyboard;
+		int32_t L_92;
+		L_92 = TouchScreenKeyboard_get_status_mCC466FDEC7E1913D8585ABA7F048FC198CB19504(L_91, NULL);
+		if (!L_92)
+		{
+			goto IL_0316;
+		}
+	}
 	{
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_93 = __this->___m_Keyboard;
 		int32_t L_94;
 		L_94 = TouchScreenKeyboard_get_status_mCC466FDEC7E1913D8585ABA7F048FC198CB19504(L_93, NULL);
-		if (!L_94)
+		if ((!(((uint32_t)L_94) == ((uint32_t)2))))
 		{
-			goto IL_0321;
-		}
-	}
-	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_95 = __this->___m_Keyboard;
-		int32_t L_96;
-		L_96 = TouchScreenKeyboard_get_status_mCC466FDEC7E1913D8585ABA7F048FC198CB19504(L_95, NULL);
-		if ((!(((uint32_t)L_96) == ((uint32_t)2))))
-		{
-			goto IL_0306;
+			goto IL_02fb;
 		}
 	}
 	{
 		__this->___m_WasCanceled = (bool)1;
-		goto IL_031a;
+		goto IL_030f;
 	}
 
-IL_0306:
+IL_02fb:
 	{
-		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_97 = __this->___m_Keyboard;
-		int32_t L_98;
-		L_98 = TouchScreenKeyboard_get_status_mCC466FDEC7E1913D8585ABA7F048FC198CB19504(L_97, NULL);
-		if ((!(((uint32_t)L_98) == ((uint32_t)1))))
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_95 = __this->___m_Keyboard;
+		int32_t L_96;
+		L_96 = TouchScreenKeyboard_get_status_mCC466FDEC7E1913D8585ABA7F048FC198CB19504(L_95, NULL);
+		if ((!(((uint32_t)L_96) == ((uint32_t)1))))
 		{
-			goto IL_031a;
+			goto IL_030f;
 		}
 	}
 	{
 		InputField_SendOnSubmit_m933C160291FD9118A9EC7FD7AED5E805B998BA27(__this, NULL);
 	}
 
-IL_031a:
+IL_030f:
 	{
 		VirtualActionInvoker1< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(37, __this, (BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F*)NULL);
 	}
 
-IL_0321:
+IL_0316:
 	{
 		return;
 	}
@@ -9314,7 +9326,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputField_UpdateLabel_mDBE25D21A1021AE4
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_01b9;
+			goto IL_01b4;
 		}
 	}
 	{
@@ -9326,14 +9338,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputField_UpdateLabel_mDBE25D21A1021AE4
 		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_4)
 		{
-			goto IL_01b9;
+			goto IL_01b4;
 		}
 	}
 	{
 		bool L_5 = __this->___m_PreventFontCallback;
 		if (L_5)
 		{
-			goto IL_01b9;
+			goto IL_01b4;
 		}
 	}
 	{
@@ -9472,11 +9484,10 @@ IL_0111:
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_38;
 		L_38 = InputField_get_textComponent_m319EF4B9B24056AF25327874A2455362FF7B7A85_inline(__this, NULL);
 		VirtualActionInvoker0::Invoke(27, L_38);
-		Canvas_ForceUpdateCanvases_m6ECDBC5E85ADA3301BB20611753C45769F15EB51(NULL);
 		bool L_39 = V_2;
 		if (L_39)
 		{
-			goto IL_01a0;
+			goto IL_019b;
 		}
 	}
 	{
@@ -9521,7 +9532,7 @@ IL_0111:
 		InputField_SetCaretVisible_m9DB05703AF6B427F53FB4948BB592CF061AA37AB(__this, NULL);
 	}
 
-IL_01a0:
+IL_019b:
 	{
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_61 = __this->___m_TextComponent;
 		String_t* L_62 = V_1;
@@ -9530,7 +9541,7 @@ IL_01a0:
 		__this->___m_PreventFontCallback = (bool)0;
 	}
 
-IL_01b9:
+IL_01b4:
 	{
 		return;
 	}

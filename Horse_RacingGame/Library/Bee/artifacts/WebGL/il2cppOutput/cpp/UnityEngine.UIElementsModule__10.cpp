@@ -505,6 +505,7 @@ IL2CPP_EXTERN_C RuntimeClass* Func_1_t905087FF6E1EB173056D185967EB735C22FCDC82_i
 IL2CPP_EXTERN_C RuntimeClass* Func_1_tF192A8C8ECD7D00C1E8FE9913AB15698748697C0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_1_tFD260A9106E37BD66BCBF98EFC3F1ECCBC00F9D9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GC_t920F9CF6EBB7C787E5010A4352E1B587F356DC58_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* HashSet_1_t1E83A872D720F688A22A53879E9C48E0DE80B3BE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* HashSet_1_t95ABEAA04E177570445F27ECCBABE556363578CB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* HashSet_1_tAEC7BD76329F43CDD4FD40F4B80587C9CF36CBF9_il2cpp_TypeInfo_var;
@@ -1364,6 +1365,7 @@ struct StyleVariableContext_tF74F2787CE1F6BEBBFBFF0771CF493AC9E403527  : public 
 	int32_t ___m_VariableHash;
 	List_1_t4EB7DA35FB6C543101A0C09A56EE4B652F4E1777* ___m_Variables;
 	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___m_SortedHash;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___m_UnsortedHash;
 };
 struct TextureSlotManager_tB1F8E620AE296DE3728FAAFBE3CC85D2A176928D  : public RuntimeObject
 {
@@ -3370,6 +3372,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847
 	bool ___localFlipsWinding;
 	bool ___localTransformScaleZero;
 	bool ___worldFlipsWinding;
+	bool ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -3415,6 +3418,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847_marshaled_pin
 	int32_t ___localFlipsWinding;
 	int32_t ___localTransformScaleZero;
 	int32_t ___worldFlipsWinding;
+	int32_t ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -3460,6 +3464,7 @@ struct RenderChainVEData_t582DE9DA38C6B608A9A38286FCF6FA70398B5847_marshaled_com
 	int32_t ___localFlipsWinding;
 	int32_t ___localTransformScaleZero;
 	int32_t ___worldFlipsWinding;
+	int32_t ___worldTransformScaleZero;
 	int32_t ___clipMethod;
 	int32_t ___childrenStencilRef;
 	int32_t ___childrenMaskDepth;
@@ -6843,6 +6848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3Cget_stylesheetsU3Ed__23_MoveNext_mE32
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m0F35FA94C672FCD1590E8F7CBB0FA2D1591DC152_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mB01CAB67AAFD4D1DBD35911A2AA6C3442801D332_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Add_mFD083E688F32BA0BB8C13438E13933EB7ED05F85_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Contains_mFC8840E4BB39FB404B3C3FA5906098F7EB3D7318_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1__ctor_mE1DD3B35A620D5310E096D5BAF4F0D53F44D9F74_RuntimeMethod_var);
@@ -7070,6 +7076,7 @@ IL_016d_1:
 				il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 				Type_t* L_37;
 				L_37 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_36, NULL);
+				il2cpp_codegen_runtime_class_init_inline(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 				float L_38;
 				L_38 = GUIUtility_get_pixelsPerPoint_m13E69FE793E736FA60A61C6756F2FF57BA6C9F31(NULL);
 				il2cpp_codegen_runtime_class_init_inline(Panel_t2B0DCF68A7A5EBC347FAE66F046EA98B53AF1AB9_il2cpp_TypeInfo_var);
@@ -7398,6 +7405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3Cget_templateDependenciesU3Ed__19_Move
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mA67ACB36D2774F1590F1742B228285B38E44B5E0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mF165B8B1A4E1644714E9221C1C93BD19545F4B9B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Add_mA930937A142ACE169754CE5758072593207FEDE3_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Contains_m33268356A8797CDB7B69FC7F8B023A56C6034F18_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1__ctor_m8787525B614A2111300E59838EBDF5215CF69E39_RuntimeMethod_var);
@@ -7628,6 +7636,7 @@ IL_011d_1:
 				il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 				Type_t* L_35;
 				L_35 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_34, NULL);
+				il2cpp_codegen_runtime_class_init_inline(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 				float L_36;
 				L_36 = GUIUtility_get_pixelsPerPoint_m13E69FE793E736FA60A61C6756F2FF57BA6C9F31(NULL);
 				il2cpp_codegen_runtime_class_init_inline(Panel_t2B0DCF68A7A5EBC347FAE66F046EA98B53AF1AB9_il2cpp_TypeInfo_var);
