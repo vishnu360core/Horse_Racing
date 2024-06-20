@@ -814,6 +814,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Animator_get_layerCount();
 		Register_UnityEngine_Animator_get_layerCount();
 
+		//System.Single UnityEngine.Animator::get_speed()
+		void Register_UnityEngine_Animator_get_speed();
+		Register_UnityEngine_Animator_get_speed();
+
 		//System.Void UnityEngine.Animator::GetAnimatorClipInfoInternal(System.Int32,System.Boolean,System.Object)
 		void Register_UnityEngine_Animator_GetAnimatorClipInfoInternal();
 		Register_UnityEngine_Animator_GetAnimatorClipInfoInternal();
@@ -857,6 +861,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Animator::SetTriggerString(System.String)
 		void Register_UnityEngine_Animator_SetTriggerString();
 		Register_UnityEngine_Animator_SetTriggerString();
+
+		//System.Void UnityEngine.Animator::set_speed(System.Single)
+		void Register_UnityEngine_Animator_set_speed();
+		Register_UnityEngine_Animator_set_speed();
 
 		//UnityEngine.Avatar UnityEngine.Animator::get_avatar()
 		void Register_UnityEngine_Animator_get_avatar();

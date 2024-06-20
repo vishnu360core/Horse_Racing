@@ -7206,7 +7206,7 @@ struct U3CU3Ec_t4D2C2153592377E66C102117C610441A264700A8  : public RuntimeObject
 struct U3CU3Ec_t8D3F4DEF77F4B5B5191EDC8EF8DC18378CC07890  : public RuntimeObject
 {
 };
-struct U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C  : public RuntimeObject
+struct U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -36323,10 +36323,14 @@ struct Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE  : public MonoBehaviour_t
 	float ___transitionDuration;
 	float ___currentMaxSpeed;
 	float ___targetMaxSpeed;
+	float ___currentRiderSpeed;
 	List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* ___groundTriggers;
 	int32_t ___particleIndex;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___arrowcolor;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___arrowImage;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____riderAnimator;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____horseAnimator;
+	float ____animatorSpeed;
 	float ___pos;
 	int32_t ___rank;
 };
@@ -52374,7 +52378,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize14806 = { sizeof(GroundTrigg
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize14807;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize14807 = { sizeof(int32_t)+ sizeof(RuntimeObject), sizeof(int32_t), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize14808;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize14808 = { sizeof(U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize14808 = { sizeof(U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize14809;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize14809 = { sizeof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize14810;

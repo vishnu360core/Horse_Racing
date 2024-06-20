@@ -110,22 +110,15 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         }
         else
         {
-
-            setAmount = 0;
-            loseAmount = 0;
-
-            bet_Text.text = "Total Bets: " + loseAmount;
-
-            for (int i = 0; i < betBlocks.Count; i++)
-                betBlocks[i].ResetAction();
-
-            _playAgainButton.SetActive(false);
+            RestartAction();
         }
     }
 
     private void CreditAction(bool enable)
     {
         _loadPanel.SetActive(false);
+
+        AudioManager.Instance.PlayAudio(AudioManager.SFXType.win);
     }
 
     private void SetIDAction(string obj)
@@ -202,8 +195,6 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
             }
             return;
         }
-
-        AudioManager.Instance.PlayAudio (AudioManager.SFXType.win);
 
         Network.Instance.SendResult(setAmount.ToString(), idText, Notification.Result.Win);
         Actions.SetTheResult(ResultStat.success, setAmount.ToString());

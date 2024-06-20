@@ -369,7 +369,7 @@ struct VcamActivatedEvent_tBE585CFE82663479F5588F34F5039F7CCAE50154;
 struct CreatePipelineDelegate_tC9ED5364DE6A2A753E8C9FF767C2C37C5CBB6BFC;
 struct DestroyPipelineDelegate_tDBA135A8B9ACD670F6144200C281F32F728BB842;
 struct U3CU3Ec_tA21E9B5F43D11B4949C361F0D4998BBA4E94885E;
-struct U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C;
+struct U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF;
 struct U3CU3Ec_t8030C49D282AC8114338D03BF8BA96EF3E8A5F26;
 struct U3CU3Ec__DisplayClass13_0_t713982A404612369FEF7B1233105BAA8BFF72505;
 struct U3CChangeSpeedU3Ed__13_tDFB85292D376DBE5B9ECC9B4F99A58A0CDEF187C;
@@ -453,7 +453,7 @@ IL2CPP_EXTERN_C RuntimeClass* RiderStat_t218E2EDBE43C4B173EBD93E454141A58394BF18
 IL2CPP_EXTERN_C RuntimeClass* Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CBalanceOfU3Ed__13_t6E478E8E3724D5B690C05DEF21645A7C69C699B1_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CChangeSpeedU3Ed__13_tDFB85292D376DBE5B9ECC9B4F99A58A0CDEF187C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CCheckForDeletedParticlesU3Ed__25_t6CEF539FF5B363E2DC0A8EAF96787ADDD1402DE0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CCheckForDeletedParticlesU3Ed__41_tD503C8C257CFBD1EC17763EF5DD2717CF9CEBB6C_il2cpp_TypeInfo_var;
@@ -756,6 +756,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mA09EFB7FEACCE519B1C028D2A
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mBE4287B8B4B88F8C80EA27D289612703C5874750_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mC07976D86D0F7D4947E615AD1110962D19AA3AE9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mCDB6200ED785F84848B9EC0CF4A923FD86BA696F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mE1A8A8AB7888168A04A740C7D2D4E3F5534178F7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m14AC5DBE60E674787324BDD56DC960A9A514B6F1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var;
@@ -764,6 +765,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m6D2E98BE24C9156894CAAE025D
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mA15B1E3C6C8FAAF85831F3E0A55AA2FFC53BD04F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mA737F6CE48A3CCFCA16294602BC6052E076EF055_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mB72A87BFB49351C331CBF9B30614A30578F316AF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mDAD0E25B70541133222B21F78D7DF735D11D9ED2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mE7F6A0B504BF2F584B0964F05FFEFE76D0AEC208_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Network_SetID_m4B78867E7E465063878EAF9CE05EA8FCF8257C04_RuntimeMethod_var;
@@ -774,7 +776,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* ParticleManager_GroundHitAction_m6DBFE0AF65
 IL2CPP_EXTERN_C const RuntimeMethod* RestartPanel_RestartAction_m7C1612DF2FB95A33C1912E10D9AB08BE231CE89A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* RestartPanel_SetInfo_mCBA3B65CF0CB68667B1AC81D1D85E8F922CE71D4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CBalanceOfU3Ed__13_System_Collections_IEnumerator_Reset_m183210C960020DA4AB834CAA4EFD53418060D400_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CChangeMaxSpeedSmoothlyU3Ed__27_System_Collections_IEnumerator_Reset_m70BBD5DDA618A9D1C8709C19F6F6063F0787C5AD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CChangeMaxSpeedSmoothlyU3Ed__33_System_Collections_IEnumerator_Reset_m038E7418C390CCFC2E4F4AA8BAFD4E0560A7EB6A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CChangeSpeedU3Ed__13_System_Collections_IEnumerator_Reset_m06B95355A28A67998EFFECEB7B062AEE0CADD747_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CCheckForDeletedParticlesU3Ed__25_System_Collections_IEnumerator_Reset_m766243C9C80375A777FE2A13B85C392B56EB0DFD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CCheckForDeletedParticlesU3Ed__41_System_Collections_IEnumerator_Reset_m60E1BC10AD8CACCBAABAE43F703C8AC38AE31741_RuntimeMethod_var;
@@ -1105,7 +1107,7 @@ struct U3CSlowMotionActionU3Ed__28_tA8135D25AFA315D8495D23CDFAF0950C920F8663  : 
 struct U3CU3Ec_tA21E9B5F43D11B4949C361F0D4998BBA4E94885E  : public RuntimeObject
 {
 };
-struct U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C  : public RuntimeObject
+struct U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -2996,10 +2998,14 @@ struct Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE  : public MonoBehaviour_t
 	float ___transitionDuration;
 	float ___currentMaxSpeed;
 	float ___targetMaxSpeed;
+	float ___currentRiderSpeed;
 	List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* ___groundTriggers;
 	int32_t ___particleIndex;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___arrowcolor;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___arrowImage;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____riderAnimator;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____horseAnimator;
+	float ____animatorSpeed;
 	float ___pos;
 	int32_t ___rank;
 };
@@ -4926,16 +4932,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameData__ctor_m7276C0FA83FE4CDD9CDDCA98
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JsonUtility_ToJson_m28CC6843B9D3723D88AD13EA3829B71FDE7826BA (RuntimeObject* ___0_obj, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_StartGameAction_mB523F51E5A38A7803EE312335BF92A0C602FA1B7 (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SaveGameStatus_m5278875853B17FA5FF9B5D629F955C3F99D81E54 (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, int32_t ___0__status, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972 (float* __this, const RuntimeMethod* method) ;
-inline HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271* List_1_get_Item_mE7F6A0B504BF2F584B0964F05FFEFE76D0AEC208 (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E* __this, int32_t ___0_index, const RuntimeMethod* method)
-{
-	return ((  HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271* (*) (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HorseBetBlock_ResetAction_mBD0903B42C40FE2FD59B7016251D0A3500F08452 (HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271* __this, const RuntimeMethod* method) ;
-inline int32_t List_1_get_Count_mC07976D86D0F7D4947E615AD1110962D19AA3AE9_inline (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E* __this, const RuntimeMethod* method)
-{
-	return ((  int32_t (*) (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
-}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_RestartAction_mE8B5D92CFABA6E8C59BD0C50AD16254E727CB8CC (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioManager_PlayMainScreen_mC4485D1078841AAAD9E2A2EC1750A2B273CA4B83 (AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* __this, bool ___0_enable, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492 (Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D (float* __this, String_t* ___0_format, const RuntimeMethod* method) ;
@@ -4949,6 +4946,7 @@ inline HorseBet_t7E6513D54C33831413EF8F709EF7F4AF7348F3B7* List_1_Find_m34A1297C
 {
 	return ((  HorseBet_t7E6513D54C33831413EF8F709EF7F4AF7348F3B7* (*) (List_1_t15A49FDDAD80A9BB50C263FB460758E05DB94C20*, Predicate_1_tD229925F73B1F5A9383FA720192F0D4BE4F91B58*, const RuntimeMethod*))List_1_Find_m5E78A210541B0D844FE27B94F509313623BE33D3_gshared)(__this, ___0_match, method);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972 (float* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Network_tF556C59474A82EEA5700AD94CED2CAA5B6D67685* Network_get_Instance_mC9BF6033F66409D96BF4C516B4357BFD2A742F6A_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Network_SendResult_m7619B971F353773A5852AB7B94F0FCB35F573C0B (Network_tF556C59474A82EEA5700AD94CED2CAA5B6D67685* __this, String_t* ___0_amount, String_t* ___1_id, int32_t ___2_result, const RuntimeMethod* method) ;
 inline void Action_2_Invoke_mF2BC5102F5D213321FCDB3AFA6C70A7982427BBA_inline (Action_2_t745CAB51730C12884263248AD122449B366127F0* __this, int32_t ___0_arg1, String_t* ___1_arg2, const RuntimeMethod* method)
@@ -4971,6 +4969,15 @@ inline void Action_1_Invoke_m67294D9272C5DDB9981AEC6BDEBF0F17E9F711AA_inline (Ac
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Network_DeductAmount_mAB158D8514D20D955D22F173ED8AA9D84353FDFA (Network_tF556C59474A82EEA5700AD94CED2CAA5B6D67685* __this, float ___0_amount, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Network_StartData_m1FB2817119F628341104ECBDAD9222DCD4B34275 (Network_tF556C59474A82EEA5700AD94CED2CAA5B6D67685* __this, const RuntimeMethod* method) ;
+inline HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271* List_1_get_Item_mE7F6A0B504BF2F584B0964F05FFEFE76D0AEC208 (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E* __this, int32_t ___0_index, const RuntimeMethod* method)
+{
+	return ((  HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271* (*) (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HorseBetBlock_ResetAction_mBD0903B42C40FE2FD59B7016251D0A3500F08452 (HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271* __this, const RuntimeMethod* method) ;
+inline int32_t List_1_get_Count_mC07976D86D0F7D4947E615AD1110962D19AA3AE9_inline (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR WalletConnector_tA93FDDB37476BF442A83196693F131563CB8FA9F* WalletConnector_get_Instance_mA2DBEBD135293EBEC81F37C4FBA9C4A4E02C0C22_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WalletConnector_RequestBalance_m92064AC581F3F07C96945ED317294DA14A022BCD (WalletConnector_tA93FDDB37476BF442A83196693F131563CB8FA9F* __this, const RuntimeMethod* method) ;
 inline void List_1__ctor_m2396D39839ED1BBF6E5D7AA793444469C4F6DD44 (List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E* __this, const RuntimeMethod* method)
@@ -5056,6 +5063,15 @@ inline void Action_2_Invoke_m58C098060DEEE7DA0386627E3A38721FA464315A_inline (Ac
 {
 	((  void (*) (Action_2_tFA203E5DC2C839A715CF5C1712DD1EE31755ECC8*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t, const RuntimeMethod*))Action_2_Invoke_m58C098060DEEE7DA0386627E3A38721FA464315A_gshared_inline)(__this, ___0_arg1, ___1_arg2, method);
 }
+inline GroundTrigger_t784EBB4F9706CC6537673481CED2ACA41089DBE5* List_1_get_Item_mDAD0E25B70541133222B21F78D7DF735D11D9ED2 (List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* __this, int32_t ___0_index, const RuntimeMethod* method)
+{
+	return ((  GroundTrigger_t784EBB4F9706CC6537673481CED2ACA41089DBE5* (*) (List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GroundTrigger_SetDustParticle_m074E851F0A3CE2D98ACA944C32E966D1155CEC1A_inline (GroundTrigger_t784EBB4F9706CC6537673481CED2ACA41089DBE5* __this, int32_t ___0_dustIndex, const RuntimeMethod* method) ;
+inline int32_t List_1_get_Count_mCDB6200ED785F84848B9EC0CF4A923FD86BA696F_inline (List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+}
 inline Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
 	return ((  Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
@@ -5065,14 +5081,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SplineAnimate_get_elapsedTime_m6106C931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplineAnimate_Play_m71B80FCFEC36F3413A6FB070F23B166EECB5A3B5 (SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplineAnimate_Pause_m815C276A78C1F2EE5D5CDD61E966C7833A5BD316 (SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float SplineAnimate_get_MaxSpeed_mE0CAB1620C3D5AF4DEB52A739BD3EF0F555C821A_inline (SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplineAnimate_set_MaxSpeed_m4002BB0887B4B2F958DA2C40FC51F9E411C6D5DE (SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* __this, float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Horse_ChangeMaxSpeedSmoothly_m8CE810BCF9081C68941B00D185AD2C112ECF337B (Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__27__ctor_mABD25B8EBF50F057A863D14A8F7DCB8EF9E6660F (U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__33__ctor_mCD5A21A9376A8A64B5F86ED911428DB8B4BE8166 (U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplineAnimate_Restart_mD68AE0D7BFD6DEFF479C5FAD56DE9EA7167308D6 (SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* __this, bool ___0_autoplay, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_set_speed_m933F4D6770122BC9D8A7FF82DE1CD33D514379FC (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplineAnimate_set_MaxSpeed_m4002BB0887B4B2F958DA2C40FC51F9E411C6D5DE (SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* __this, float ___0_value, const RuntimeMethod* method) ;
 inline void List_1__ctor_m7FADC33126AF264761574B2FC95BC8BFA3B01C6D (List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* __this, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Animator_get_speed_m41AFD6B0AB3FF4FFF8855CCAF684813BA1148CD2 (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* HorseBetBlock_DisplayName_m67F05F863F61684ABFACBD4584E7A7BEAA92ECDD (HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271* __this, const RuntimeMethod* method) ;
 inline int32_t List_1_get_Count_mE1A8A8AB7888168A04A740C7D2D4E3F5534178F7_inline (List_1_t15A49FDDAD80A9BB50C263FB460758E05DB94C20* __this, const RuntimeMethod* method)
 {
@@ -16731,15 +16749,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SaveGameStatus_m527887585
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_DeductAction_mABE5C40C62D169CBE93737764307715AC4FD1DA9 (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, bool ___0_enable, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mC07976D86D0F7D4947E615AD1110962D19AA3AE9_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mE7F6A0B504BF2F584B0964F05FFEFE76D0AEC208_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral81B97EB076BFE06588B03F1003700701C6B27B6C);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
 	{
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->____loadPanel;
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
@@ -16757,44 +16766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_DeductAction_mABE5C40C62D
 
 IL_001d:
 	{
-		__this->___setAmount = (0.0f);
-		__this->___loseAmount = (0.0f);
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = __this->___bet_Text;
-		float* L_3 = (float*)(&__this->___loseAmount);
-		String_t* L_4;
-		L_4 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972(L_3, NULL);
-		String_t* L_5;
-		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral81B97EB076BFE06588B03F1003700701C6B27B6C, L_4, NULL);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_2, L_5);
-		V_0 = 0;
-		goto IL_006c;
-	}
-
-IL_0057:
-	{
-		List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E* L_6 = __this->___betBlocks;
-		int32_t L_7 = V_0;
-		HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271* L_8;
-		L_8 = List_1_get_Item_mE7F6A0B504BF2F584B0964F05FFEFE76D0AEC208(L_6, L_7, List_1_get_Item_mE7F6A0B504BF2F584B0964F05FFEFE76D0AEC208_RuntimeMethod_var);
-		HorseBetBlock_ResetAction_mBD0903B42C40FE2FD59B7016251D0A3500F08452(L_8, NULL);
-		int32_t L_9 = V_0;
-		V_0 = ((int32_t)il2cpp_codegen_add(L_9, 1));
-	}
-
-IL_006c:
-	{
-		int32_t L_10 = V_0;
-		List_1_t5869C9BE2A627315D3339E06588886C1E4D9638E* L_11 = __this->___betBlocks;
-		int32_t L_12;
-		L_12 = List_1_get_Count_mC07976D86D0F7D4947E615AD1110962D19AA3AE9_inline(L_11, List_1_get_Count_mC07976D86D0F7D4947E615AD1110962D19AA3AE9_RuntimeMethod_var);
-		if ((((int32_t)L_10) < ((int32_t)L_12)))
-		{
-			goto IL_0057;
-		}
-	}
-	{
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->____playAgainButton;
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_13, (bool)0, NULL);
+		GameController_RestartAction_mE8B5D92CFABA6E8C59BD0C50AD16254E727CB8CC(__this, NULL);
 		return;
 	}
 }
@@ -16803,6 +16775,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_CreditAction_m9AFB2436968
 	{
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->____loadPanel;
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
+		AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* L_1;
+		L_1 = AudioManager_get_Instance_mE470515848AEDD204D9C8CF0F50D6A9785890211_inline(NULL);
+		AudioManager_PlayAudio_m92BC9B6C03C67277FF9735140026D2EF49F24041(L_1, 3, NULL);
 		return;
 	}
 }
@@ -17192,41 +17167,38 @@ IL_01da:
 
 IL_01db:
 	{
-		AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* L_69;
-		L_69 = AudioManager_get_Instance_mE470515848AEDD204D9C8CF0F50D6A9785890211_inline(NULL);
-		AudioManager_PlayAudio_m92BC9B6C03C67277FF9735140026D2EF49F24041(L_69, 3, NULL);
-		Network_tF556C59474A82EEA5700AD94CED2CAA5B6D67685* L_70;
-		L_70 = Network_get_Instance_mC9BF6033F66409D96BF4C516B4357BFD2A742F6A_inline(NULL);
-		float* L_71 = (float*)(&__this->___setAmount);
-		String_t* L_72;
-		L_72 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972(L_71, NULL);
-		String_t* L_73 = __this->___idText;
-		Network_SendResult_m7619B971F353773A5852AB7B94F0FCB35F573C0B(L_70, L_72, L_73, 0, NULL);
-		Action_2_t745CAB51730C12884263248AD122449B366127F0* L_74 = ((Actions_t6CE3C947D61A3A81D2FBD7762C19C45EFC9D4CF4_StaticFields*)il2cpp_codegen_static_fields_for(Actions_t6CE3C947D61A3A81D2FBD7762C19C45EFC9D4CF4_il2cpp_TypeInfo_var))->___SetTheResult;
-		float* L_75 = (float*)(&__this->___setAmount);
-		String_t* L_76;
-		L_76 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972(L_75, NULL);
-		Action_2_Invoke_mF2BC5102F5D213321FCDB3AFA6C70A7982427BBA_inline(L_74, 0, L_76, NULL);
-		float L_77 = __this->___amount;
-		float L_78 = __this->___setAmount;
-		float L_79 = __this->___loseAmount;
-		V_0 = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add(L_77, L_78)), L_79));
+		Network_tF556C59474A82EEA5700AD94CED2CAA5B6D67685* L_69;
+		L_69 = Network_get_Instance_mC9BF6033F66409D96BF4C516B4357BFD2A742F6A_inline(NULL);
+		float* L_70 = (float*)(&__this->___setAmount);
+		String_t* L_71;
+		L_71 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972(L_70, NULL);
+		String_t* L_72 = __this->___idText;
+		Network_SendResult_m7619B971F353773A5852AB7B94F0FCB35F573C0B(L_69, L_71, L_72, 0, NULL);
+		Action_2_t745CAB51730C12884263248AD122449B366127F0* L_73 = ((Actions_t6CE3C947D61A3A81D2FBD7762C19C45EFC9D4CF4_StaticFields*)il2cpp_codegen_static_fields_for(Actions_t6CE3C947D61A3A81D2FBD7762C19C45EFC9D4CF4_il2cpp_TypeInfo_var))->___SetTheResult;
+		float* L_74 = (float*)(&__this->___setAmount);
+		String_t* L_75;
+		L_75 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972(L_74, NULL);
+		Action_2_Invoke_mF2BC5102F5D213321FCDB3AFA6C70A7982427BBA_inline(L_73, 0, L_75, NULL);
+		float L_76 = __this->___amount;
+		float L_77 = __this->___setAmount;
+		float L_78 = __this->___loseAmount;
+		V_0 = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add(L_76, L_77)), L_78));
+		String_t* L_79;
+		L_79 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972((&V_0), NULL);
 		String_t* L_80;
-		L_80 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972((&V_0), NULL);
-		String_t* L_81;
-		L_81 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral32C57CD8783C05EF69CDA423082D9FB79AD425E8, L_80, NULL);
+		L_80 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral32C57CD8783C05EF69CDA423082D9FB79AD425E8, L_79, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_81, NULL);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_80, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_81 = __this->____loadPanel;
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_81, (bool)1, NULL);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_82 = __this->____loadPanel;
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_82, (bool)1, NULL);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_83 = __this->____loadPanel;
-		Loader_t8DA45BCA474D49F36807820E90683605DA2F5AF8* L_84;
-		L_84 = GameObject_GetComponent_TisLoader_t8DA45BCA474D49F36807820E90683605DA2F5AF8_mFBA885CB1804EFCB6930CE4FD6BC169F2F633B63(L_83, GameObject_GetComponent_TisLoader_t8DA45BCA474D49F36807820E90683605DA2F5AF8_mFBA885CB1804EFCB6930CE4FD6BC169F2F633B63_RuntimeMethod_var);
-		Loader_SetLoadMessage_m9E238A23CA74F20CED61E0D58618DDE3A40780A5(L_84, _stringLiteralA5CE5E31F5B5D73E73335284F113F114E785C064, NULL);
-		Network_tF556C59474A82EEA5700AD94CED2CAA5B6D67685* L_85;
-		L_85 = Network_get_Instance_mC9BF6033F66409D96BF4C516B4357BFD2A742F6A_inline(NULL);
-		float L_86 = __this->___setAmount;
-		Network_CreditAmount_m74FF2DFA0719D99C3CB9D290DBCA765AD9CDAE86(L_85, L_86, NULL);
+		Loader_t8DA45BCA474D49F36807820E90683605DA2F5AF8* L_83;
+		L_83 = GameObject_GetComponent_TisLoader_t8DA45BCA474D49F36807820E90683605DA2F5AF8_mFBA885CB1804EFCB6930CE4FD6BC169F2F633B63(L_82, GameObject_GetComponent_TisLoader_t8DA45BCA474D49F36807820E90683605DA2F5AF8_mFBA885CB1804EFCB6930CE4FD6BC169F2F633B63_RuntimeMethod_var);
+		Loader_SetLoadMessage_m9E238A23CA74F20CED61E0D58618DDE3A40780A5(L_83, _stringLiteralA5CE5E31F5B5D73E73335284F113F114E785C064, NULL);
+		Network_tF556C59474A82EEA5700AD94CED2CAA5B6D67685* L_84;
+		L_84 = Network_get_Instance_mC9BF6033F66409D96BF4C516B4357BFD2A742F6A_inline(NULL);
+		float L_85 = __this->___setAmount;
+		Network_CreditAmount_m74FF2DFA0719D99C3CB9D290DBCA765AD9CDAE86(L_84, L_85, NULL);
 		return;
 	}
 }
@@ -19618,8 +19590,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Horse_get_HorseName_m3FA92CC4202A0C
 		return L_0;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Horse_get_AnimatorSpeed_m92BAC38505D037DF817651011FAFF5964F2310E3 (Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->____animatorSpeed;
+		return L_0;
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Horse_Awake_mEA243C953B110ABB9315E1B01BFC14CB97702D48 (Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mCDB6200ED785F84848B9EC0CF4A923FD86BA696F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mDAD0E25B70541133222B21F78D7DF735D11D9ED2_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		V_0 = 0;
+		goto IL_001f;
+	}
+
+IL_0004:
+	{
+		List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* L_0 = __this->___groundTriggers;
+		int32_t L_1 = V_0;
+		GroundTrigger_t784EBB4F9706CC6537673481CED2ACA41089DBE5* L_2;
+		L_2 = List_1_get_Item_mDAD0E25B70541133222B21F78D7DF735D11D9ED2(L_0, L_1, List_1_get_Item_mDAD0E25B70541133222B21F78D7DF735D11D9ED2_RuntimeMethod_var);
+		int32_t L_3 = __this->___particleIndex;
+		GroundTrigger_SetDustParticle_m074E851F0A3CE2D98ACA944C32E966D1155CEC1A_inline(L_2, L_3, NULL);
+		int32_t L_4 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_4, 1));
+	}
+
+IL_001f:
+	{
+		int32_t L_5 = V_0;
+		List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* L_6 = __this->___groundTriggers;
+		int32_t L_7;
+		L_7 = List_1_get_Count_mCDB6200ED785F84848B9EC0CF4A923FD86BA696F_inline(L_6, List_1_get_Count_mCDB6200ED785F84848B9EC0CF4A923FD86BA696F_RuntimeMethod_var);
+		if ((((int32_t)L_5) < ((int32_t)L_7)))
+		{
+			goto IL_0004;
+		}
+	}
 	{
 		return;
 	}
@@ -19733,13 +19748,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Horse_ChangeSpeed_m619D1B2EAF85780D3DCEA
 		float L_2;
 		L_2 = SplineAnimate_get_MaxSpeed_mE0CAB1620C3D5AF4DEB52A739BD3EF0F555C821A_inline(L_1, NULL);
 		__this->___currentMaxSpeed = L_2;
-		SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* L_3 = __this->___splineAnimate;
-		float L_4 = ___0_speed;
-		SplineAnimate_set_MaxSpeed_m4002BB0887B4B2F958DA2C40FC51F9E411C6D5DE(L_3, L_4, NULL);
-		RuntimeObject* L_5;
-		L_5 = Horse_ChangeMaxSpeedSmoothly_m8CE810BCF9081C68941B00D185AD2C112ECF337B(__this, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_6;
-		L_6 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_5, NULL);
+		RuntimeObject* L_3;
+		L_3 = Horse_ChangeMaxSpeedSmoothly_m8CE810BCF9081C68941B00D185AD2C112ECF337B(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4;
+		L_4 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_3, NULL);
 		return;
 	}
 }
@@ -19748,13 +19760,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Horse_ChangeMaxSpeedSmoothly_m
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* L_0 = (U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C*)il2cpp_codegen_object_new(U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C_il2cpp_TypeInfo_var);
-		U3CChangeMaxSpeedSmoothlyU3Ed__27__ctor_mABD25B8EBF50F057A863D14A8F7DCB8EF9E6660F(L_0, 0, NULL);
-		U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* L_1 = L_0;
+		U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* L_0 = (U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF*)il2cpp_codegen_object_new(U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF_il2cpp_TypeInfo_var);
+		U3CChangeMaxSpeedSmoothlyU3Ed__33__ctor_mCD5A21A9376A8A64B5F86ED911428DB8B4BE8166(L_0, 0, NULL);
+		U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* L_1 = L_0;
 		L_1->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
 		return L_1;
@@ -19774,6 +19786,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Horse_ResetAction_m7984165CBA3BF99270FDB
 		SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* L_0 = __this->___splineAnimate;
 		SplineAnimate_Restart_mD68AE0D7BFD6DEFF479C5FAD56DE9EA7167308D6(L_0, (bool)0, NULL);
 		__this->___rank = (-1);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_1 = __this->____riderAnimator;
+		Animator_set_speed_m933F4D6770122BC9D8A7FF82DE1CD33D514379FC(L_1, (1.0f), NULL);
+		SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* L_2 = __this->___splineAnimate;
+		SplineAnimate_set_MaxSpeed_m4002BB0887B4B2F958DA2C40FC51F9E411C6D5DE(L_2, (25.0f), NULL);
 		return;
 	}
 }
@@ -19816,7 +19832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Horse__ctor_mB4B0E5A56C4DF22C6EE10F585B2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__27__ctor_mABD25B8EBF50F057A863D14A8F7DCB8EF9E6660F (U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__33__ctor_mCD5A21A9376A8A64B5F86ED911428DB8B4BE8166 (U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -19825,18 +19841,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__27__ctor_
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__27_System_IDisposable_Dispose_mE7ECFF0122CE7D05B1E3FCD339A5CD226234C5AC (U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__33_System_IDisposable_Dispose_mC6F01023E89593A1068042CF238C8F02EA0F89C1 (U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CChangeMaxSpeedSmoothlyU3Ed__27_MoveNext_mBD968818EB9FF7B16EE9367DC486A54D29712282 (U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CChangeMaxSpeedSmoothlyU3Ed__33_MoveNext_mD764E38CD970C55B178C30693F869C0B9554D03F (U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* V_1 = NULL;
 	float V_2 = 0.0f;
 	float V_3 = 0.0f;
+	float V_4 = 0.0f;
+	float V_5 = 0.0f;
 	{
 		int32_t L_0 = __this->___U3CU3E1__state;
 		V_0 = L_0;
@@ -19845,28 +19863,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CChangeMaxSpeedSmoothlyU3Ed__27_MoveNe
 		int32_t L_2 = V_0;
 		if (!L_2)
 		{
-			goto IL_0017;
+			goto IL_001a;
 		}
 	}
 	{
 		int32_t L_3 = V_0;
 		if ((((int32_t)L_3) == ((int32_t)1)))
 		{
-			goto IL_007a;
+			goto IL_00b6;
 		}
 	}
 	{
 		return (bool)0;
 	}
 
-IL_0017:
+IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
 		__this->___U3CelapsedTimeU3E5__2 = (0.0f);
-		goto IL_0081;
+		goto IL_00bd;
 	}
 
-IL_002b:
+IL_0031:
 	{
 		float L_4 = __this->___U3CelapsedTimeU3E5__2;
 		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_5 = V_1;
@@ -19881,59 +19899,75 @@ IL_002b:
 		L_12 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_8, L_10, L_11, NULL);
 		V_3 = L_12;
 		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_13 = V_1;
-		SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* L_14 = L_13->___splineAnimate;
-		float L_15 = V_3;
-		SplineAnimate_set_MaxSpeed_m4002BB0887B4B2F958DA2C40FC51F9E411C6D5DE(L_14, L_15, NULL);
-		float L_16 = __this->___U3CelapsedTimeU3E5__2;
+		float L_14 = L_13->___targetMaxSpeed;
+		V_4 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_14, (20.0f))), (0.0769229978f)));
+		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_15 = V_1;
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_16 = L_15->____riderAnimator;
 		float L_17;
-		L_17 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		__this->___U3CelapsedTimeU3E5__2 = ((float)il2cpp_codegen_add(L_16, L_17));
+		L_17 = Animator_get_speed_m41AFD6B0AB3FF4FFF8855CCAF684813BA1148CD2(L_16, NULL);
+		float L_18 = V_4;
+		float L_19 = V_2;
+		float L_20;
+		L_20 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_17, L_18, L_19, NULL);
+		V_5 = L_20;
+		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_21 = V_1;
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_22 = L_21->____riderAnimator;
+		float L_23 = V_5;
+		Animator_set_speed_m933F4D6770122BC9D8A7FF82DE1CD33D514379FC(L_22, L_23, NULL);
+		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_24 = V_1;
+		SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* L_25 = L_24->___splineAnimate;
+		float L_26 = V_3;
+		SplineAnimate_set_MaxSpeed_m4002BB0887B4B2F958DA2C40FC51F9E411C6D5DE(L_25, L_26, NULL);
+		float L_27 = __this->___U3CelapsedTimeU3E5__2;
+		float L_28;
+		L_28 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___U3CelapsedTimeU3E5__2 = ((float)il2cpp_codegen_add(L_27, L_28));
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
 		return (bool)1;
 	}
 
-IL_007a:
+IL_00b6:
 	{
 		__this->___U3CU3E1__state = (-1);
 	}
 
-IL_0081:
+IL_00bd:
 	{
-		float L_18 = __this->___U3CelapsedTimeU3E5__2;
-		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_19 = V_1;
-		float L_20 = L_19->___transitionDuration;
-		if ((((float)L_18) < ((float)L_20)))
+		float L_29 = __this->___U3CelapsedTimeU3E5__2;
+		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_30 = V_1;
+		float L_31 = L_30->___transitionDuration;
+		if ((((float)L_29) < ((float)L_31)))
 		{
-			goto IL_002b;
+			goto IL_0031;
 		}
 	}
 	{
-		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_21 = V_1;
-		SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* L_22 = L_21->___splineAnimate;
-		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_23 = V_1;
-		float L_24 = L_23->___targetMaxSpeed;
-		SplineAnimate_set_MaxSpeed_m4002BB0887B4B2F958DA2C40FC51F9E411C6D5DE(L_22, L_24, NULL);
+		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_32 = V_1;
+		SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* L_33 = L_32->___splineAnimate;
+		Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE* L_34 = V_1;
+		float L_35 = L_34->___targetMaxSpeed;
+		SplineAnimate_set_MaxSpeed_m4002BB0887B4B2F958DA2C40FC51F9E411C6D5DE(L_33, L_35, NULL);
 		return (bool)0;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CChangeMaxSpeedSmoothlyU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m200EF25B60BE580217160FA718D8C1EAB82C5E6C (U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CChangeMaxSpeedSmoothlyU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFE3FB47D85A88FC584A9BAA38FCA9C634344B4EC (U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
 		return L_0;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__27_System_Collections_IEnumerator_Reset_m70BBD5DDA618A9D1C8709C19F6F6063F0787C5AD (U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CChangeMaxSpeedSmoothlyU3Ed__33_System_Collections_IEnumerator_Reset_m038E7418C390CCFC2E4F4AA8BAFD4E0560A7EB6A (U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CChangeMaxSpeedSmoothlyU3Ed__27_System_Collections_IEnumerator_Reset_m70BBD5DDA618A9D1C8709C19F6F6063F0787C5AD_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CChangeMaxSpeedSmoothlyU3Ed__33_System_Collections_IEnumerator_Reset_m038E7418C390CCFC2E4F4AA8BAFD4E0560A7EB6A_RuntimeMethod_var)));
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CChangeMaxSpeedSmoothlyU3Ed__27_System_Collections_IEnumerator_get_Current_mDC2A9C995B08DBFABCF6DECBAE36B9BA8871DD7F (U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CChangeMaxSpeedSmoothlyU3Ed__33_System_Collections_IEnumerator_get_Current_m492445CEAB83540E31E147C2CCD6DD2322140A09 (U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
@@ -21389,7 +21423,7 @@ IL_010a_1:
 
 IL_0113_1:
 			{
-				V_5 = (20.5f);
+				V_5 = (21.0f);
 			}
 
 IL_011a_1:
@@ -22164,6 +22198,14 @@ IL_001d:
 	{
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = V_0;
 		return L_1;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GroundTrigger_SetDustParticle_m074E851F0A3CE2D98ACA944C32E966D1155CEC1A_inline (GroundTrigger_t784EBB4F9706CC6537673481CED2ACA41089DBE5* __this, int32_t ___0_dustIndex, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_dustIndex;
+		__this->____dustIndex = L_0;
+		return;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float SplineAnimate_get_MaxSpeed_mE0CAB1620C3D5AF4DEB52A739BD3EF0F555C821A_inline (SplineAnimate_tC5DBBC111EB3B95DCB345E9DA02D7CD6CA9C6DDB* __this, const RuntimeMethod* method) 

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 
 [RequireComponent(typeof(SplineAnimate))]
-[RequireComponent (typeof(Animator))]
 public class Horse : MonoBehaviour
 {
     public enum Hero { Blazer,Wrangler,Sheriff,Kentucky,Diesel,Tennesse,LadyBird,Sassy}
@@ -29,6 +28,8 @@ public class Horse : MonoBehaviour
     float currentMaxSpeed;
     float targetMaxSpeed;
 
+    float currentRiderSpeed;
+
     [Header("Particle System :")]
     [SerializeField] List<GroundTrigger> groundTriggers = new List<GroundTrigger>();
     [SerializeField] int particleIndex = 0;
@@ -37,16 +38,22 @@ public class Horse : MonoBehaviour
     [SerializeField] Color arrowcolor;
     [SerializeField] Image arrowImage;
 
-    public float pos;
+    [Header("Animators:")]
+    [SerializeField] Animator _riderAnimator;
+    [SerializeField] Animator _horseAnimator;
 
-    public   int rank = -1;
+    float _animatorSpeed;
+    public float AnimatorSpeed => _animatorSpeed;
+
+    public float pos;
+    public  int rank = -1;
 
     private void Awake()
     {
-        //for (int i = 0; i < groundTriggers.Count; ++i)
-        //{
-        //    groundTriggers[i].SetDustParticle(particleIndex);
-        //}
+        for (int i = 0; i < groundTriggers.Count; ++i)
+        {
+            groundTriggers[i].SetDustParticle(particleIndex);
+        }
     }
 
     private void OnEnable()
@@ -96,7 +103,9 @@ public class Horse : MonoBehaviour
         targetMaxSpeed = speed;
 
         currentMaxSpeed = splineAnimate.MaxSpeed;
-        splineAnimate.MaxSpeed = speed;
+       
+
+        //splineAnimate.MaxSpeed = speed;
 
         StartCoroutine(ChangeMaxSpeedSmoothly());
     }
@@ -112,6 +121,11 @@ public class Horse : MonoBehaviour
 
             // Interpolate the current max speed towards the target max speed
             float interpolatedSpeed = Mathf.Lerp(currentMaxSpeed, targetMaxSpeed, t);
+
+            float targetAnimatorSpeed = (targetMaxSpeed - 20)*0.076923f;
+            float newAnimatorSpeed = Mathf.Lerp(_riderAnimator.speed, targetAnimatorSpeed, t);
+
+            _riderAnimator.speed = newAnimatorSpeed;
 
             // Update the max speed of the spline animator
             splineAnimate.MaxSpeed = interpolatedSpeed;
@@ -140,6 +154,8 @@ public class Horse : MonoBehaviour
 
         rank = -1;
 
+        _riderAnimator.speed = 1;
+        splineAnimate.MaxSpeed = 25f;
        // SubscribeAnimateEvent(true);
     }
 }

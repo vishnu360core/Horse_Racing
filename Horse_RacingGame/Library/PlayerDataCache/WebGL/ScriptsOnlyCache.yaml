@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - ControlPanel
     - Finish
     - GameController
+    - GroundTrigger
     - Horse
     - HorseBetBlock
     - HorseCam
@@ -491,42 +492,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ControlPanel
     methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Minus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Empty
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Plus
-  - assembly: Assembly-CSharp
-    fullTypeName: ControlPanel
-    methodName: Full
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -626,6 +591,42 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: AudioManager
     methodName: ButtonClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Minus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Empty
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Plus
+  - assembly: Assembly-CSharp
+    fullTypeName: ControlPanel
+    methodName: Full
   - assembly: Assembly-CSharp
     fullTypeName: ControlPanel
     methodName: Minus
@@ -987,8 +988,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -1123,6 +1122,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 26634}
     - Class: 114
       Script: {instanceID: 26796}
+    - Class: 114
+      Script: {instanceID: 26828}
     - Class: 114
       Script: {instanceID: 27632}
     - Class: 114
@@ -4496,7 +4497,7 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_B
   - hash:
       serializedVersion: 2
-      Hash: 79c81b62ca3e5aaf7e56a1ae611a801d
+      Hash: f3cdc4978b3965ba2fc78b75b794bb98
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Horse

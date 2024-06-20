@@ -46,9 +46,7 @@
           },
           {
             "name": "Avatar",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },

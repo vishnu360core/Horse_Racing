@@ -3277,10 +3277,14 @@ struct Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE  : public MonoBehaviour_t
 	float ___transitionDuration;
 	float ___currentMaxSpeed;
 	float ___targetMaxSpeed;
+	float ___currentRiderSpeed;
 	List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* ___groundTriggers;
 	int32_t ___particleIndex;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___arrowcolor;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___arrowImage;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____riderAnimator;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____horseAnimator;
+	float ____animatorSpeed;
 	float ___pos;
 	int32_t ___rank;
 };

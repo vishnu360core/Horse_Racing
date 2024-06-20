@@ -3581,7 +3581,7 @@ struct Uniforms_t948D0BB5CB54302616CE188BF0E297BB90B10EAC  : public RuntimeObjec
 {
 	HableCurve_t8410F0B8D99335EA2B9F6AFA92227879E24B1876* ___parent;
 };
-struct U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C  : public RuntimeObject
+struct U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -16368,10 +16368,14 @@ struct Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE  : public MonoBehaviour_t
 	float ___transitionDuration;
 	float ___currentMaxSpeed;
 	float ___targetMaxSpeed;
+	float ___currentRiderSpeed;
 	List_1_t42CABC23892806C20DE9C475E8B6C9F369E807C0* ___groundTriggers;
 	int32_t ___particleIndex;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___arrowcolor;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___arrowImage;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____riderAnimator;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____horseAnimator;
+	float ____animatorSpeed;
 	float ___pos;
 	int32_t ___rank;
 };
@@ -27149,10 +27153,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14807[9] =
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14808[4] = 
 {
-	static_cast<int32_t>(offsetof(U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CChangeMaxSpeedSmoothlyU3Ed__27_t9DD224B773E7592FEF22BE1F21B17D14F1B5396C, ___U3CelapsedTimeU3E5__2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14809[14] = 
+	static_cast<int32_t>(offsetof(U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CChangeMaxSpeedSmoothlyU3Ed__33_t4C5560992F3F81258F7049148B00D17033DAF9AF, ___U3CelapsedTimeU3E5__2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14809[18] = 
 {
-	static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____hero)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___splineAnimate)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___animator)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____currentPos)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____horsName)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___transitionDuration)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___currentMaxSpeed)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___targetMaxSpeed)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___groundTriggers)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___particleIndex)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___arrowcolor)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___arrowImage)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___pos)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___rank)),};
+	static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____hero)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___splineAnimate)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___animator)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____currentPos)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____horsName)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___transitionDuration)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___currentMaxSpeed)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___targetMaxSpeed)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___currentRiderSpeed)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___groundTriggers)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___particleIndex)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___arrowcolor)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___arrowImage)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____riderAnimator)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____horseAnimator)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ____animatorSpeed)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___pos)),static_cast<int32_t>(offsetof(Horse_t1544AD7ED825950F1E2038B173FDDFBC53F041BE, ___rank)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14810[8] = 
 {
 	static_cast<int32_t>(offsetof(HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271, ___heroType)),static_cast<int32_t>(offsetof(HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271, ___winPanel)),static_cast<int32_t>(offsetof(HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271, ___placePanel)),static_cast<int32_t>(offsetof(HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271, ___showPanel)),static_cast<int32_t>(offsetof(HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271, ____setAmount)),static_cast<int32_t>(offsetof(HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271, ____loseAmount)),static_cast<int32_t>(offsetof(HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271, ___horseName)),static_cast<int32_t>(offsetof(HorseBetBlock_t1CC8DF640DF6476BAE1DD7D99DCC9C55401EE271, ___horseBets)),};

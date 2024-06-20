@@ -126,7 +126,7 @@ public class HorseTrackManager : MonoBehaviour
                     case 5: speed = 23f; break;
                     case 6: speed = 22f; break;
                     case 7: speed = 21.5f; break;
-                    case 8: speed = 20.5f; break;
+                    case 8: speed = 21f; break;
                 }
 
                 //Debug.Log($"Key: {rider.Key},Value: {rider.Value}, Hero: {hero}, speed: {speed} ");
