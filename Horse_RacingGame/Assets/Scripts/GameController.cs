@@ -80,13 +80,20 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
 
         foreach (HorseBetBlock bet in betBlocks)
         {
-            if(bet.LoseAmount >0)
+            if (bet.LoseAmount > 0)
             {
                 totalCurrentBet += bet.LoseAmount;
-            }    
+            }
         }
 
         EnableGameControl(totalCurrentBet <= amount && totalCurrentBet > 0);
+
+        //Condition for bets exceeding the wallet balance
+        if (totalCurrentBet > amount)
+        {
+            AudioManager.Instance.PlayAudio(AudioManager.SFXType.pop);
+            PopMessage.Instance.SendMessage("Insufficient balance");
+        }
     }
 
 
@@ -119,6 +126,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         _loadPanel.SetActive(false);
 
         AudioManager.Instance.PlayAudio(AudioManager.SFXType.win);
+
     }
 
     private void SetIDAction(string obj)
@@ -135,7 +143,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     /// <param name="obj"></param>
     private void EnableGameControl(bool obj)
     {
-        _resetButton.interactable = obj;
+       // _resetButton.interactable = obj;
         _playButton.interactable = obj;
     }
 
@@ -197,7 +205,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
         }
 
         Network.Instance.SendResult(setAmount.ToString(), idText, Notification.Result.Win);
-        Actions.SetTheResult(ResultStat.success, setAmount.ToString());
+        Actions.SetTheResult(ResultStat.success, setAmount.ToString("F2"));
 
         float tempAmount = amount + setAmount - loseAmount;
 
@@ -218,8 +226,7 @@ public class GameController : MonoBehaviour,HorseTrackDelegate
     }
 
     public void PlayAction()
-    {
-
+    {                                    
         List<Horse.Hero> betedHorses = new List<Horse.Hero>();
 
         foreach (HorseBetBlock bet in betBlocks)

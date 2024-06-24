@@ -130,12 +130,17 @@ public class Network : MonoBehaviour
     {
         Actions.SetID += SetID;
 
-        WebSocketInit("ws://localhost:6060"); // 0 Game 
-        WebSocketInit("ws://localhost:6050");// 1 Wallet
-        WebSocketInit("ws://localhost:6040");// 2 Credit
-        WebSocketInit("ws://localhost:6030");// 3 Deduct
-        WebSocketInit("ws://localhost:6020");// 4 Data
+        WebSocketInit("wss://horse4.thecrypto360.com"); // 0 Game 6060
+        WebSocketInit("wss://horse3.thecrypto360.com");// 1 Wallet 6050
+        WebSocketInit("wss://horse2.thecrypto360.com");// 2 Credit 6040
+        WebSocketInit("wss://horse1.thecrypto360.com");// 3 Deduct 6030
+        WebSocketInit("wss://horse.thecrypto360.com");// 4 Data   6020
 
+        //WebSocketInit("ws://localhost:6060"); // 0 Game 
+        //WebSocketInit("ws://localhost:6050");// 1 Wallet
+        //WebSocketInit("ws://localhost:6040");// 2 Credit
+        //WebSocketInit("ws://localhost:6030");// 3 Deduct
+        //WebSocketInit("ws://localhost:6020");// 4 Data
     }
 
     public string GetSubstringBetween(string fullText, string startString, string endString)
